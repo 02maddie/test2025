@@ -1,5 +1,5 @@
 ---
-title: "homework_links"
+title: "Homework Links"
 author: "Maddie Winer"
 output: html_document
 ---
