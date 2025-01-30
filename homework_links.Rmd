@@ -8,6 +8,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[Week 3 Homework](Homework_3.Rmd)
+[Week 3 Homework](Homework_3.html)
 
 
