@@ -9,6 +9,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Example structure:
-  Week 1 Homework [HW1 Link](HW1.html)
+[Week 3 Homework](Homework_3.Rmd)
+
 
