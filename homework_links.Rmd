@@ -1,7 +1,6 @@
 ---
 title: "homework_links"
 author: "Maddie Winer"
-date: "2025-01-22"
 output: html_document
 ---
 
