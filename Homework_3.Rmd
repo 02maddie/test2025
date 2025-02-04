@@ -10,17 +10,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-#Question 1
-
+**Question 1**
+```
 Find \s{2,}
 
 \s{2,} - matches two or more spaces to avoid removing single spaces
 
 Replace ,
 , - replaces selected spaces with commas
-
-#Question 2
- 
+```
+**Question 2**
+```
  Find (\w+),\s(\w+),\s(.+)
  
  (\w+) — matches the last name (one or more letters)
@@ -34,9 +34,9 @@ Replace \2 \1 (\3)
 \2 — the first name capture from second capture group
 \1 — the last name capture from first capture group
 (\3) — the institution name capture from third capture group
-
-#Question 3
-
+```
+**Question 3**
+```
 Find (\d{4}.+?\.mp3)
 
 \d{4} — matches exactly four digits (the track number)
@@ -46,9 +46,9 @@ Find (\d{4}.+?\.mp3)
 Replace \1\n
 \1 - the full expression capture
 \n - followed by a singleline break after first capture
-
-#Question 4
-
+```
+**Question 4**
+```
 Find (\d{4})(.+?\.mp3)
 
 (\d{4}) - matches exactly four digits (the track number)
@@ -58,9 +58,9 @@ Replace \2_\1
 \2 - move second capture first with track name
 _ - insert _ in between captures
 \1 - move first capture last with four digits
-
-#Question 5
-
+```
+**Question 5**
+```
 Find (\w)(\w+),(\w+),[^,]+,([^,]+)
 
 (\w)(\w+), - matches the first character of the genus 
@@ -75,9 +75,10 @@ _ - includes _ in between captures
 \3 - third capture including species
 , - separates species from last number
 \4 - last number
+```
 
-#Question 6
-
+**Question 6**
+```
 Find (\w)(\w+),(.{4})\w+,[^,]+,([^,]+)
 
 (\w)(\w+), - matches the first character of genus
@@ -92,9 +93,10 @@ _ - includes _ in between captures
 \3 - third capture including species
 , - separates species from last number
 \4 - last number
+```
 
-#Question 7
-
+**Question 7**
+```
 Find (.{3})\w+,(.{3})\w+,(\d.+),(\d+)
 
 (.{3})\w+, - captures first three letters of the genus
@@ -107,9 +109,10 @@ Replace \1\2, \4, \3
 \1\2, - connects first three letters of genus and species together
 \4, - relocates last number to second position
 \3 - relocates decimcl number to third position
+```
 
-#Question 8
-
+**Question 8**
+```
 1) For pathogen_binary column:
 Although binary indicates that it should be a boolean determination, NA could indicate an issue with data sampling. It does not have to be adjusted to still be valueable data.
 
@@ -139,6 +142,7 @@ Find male -- match male within column
 
 Replace drone -- replaces male with drone
 
+```
 
 
 
