@@ -23,7 +23,7 @@ Replace ,
 ```
  Find (\w+),\s(\w+),\s(.+)
  
- (\w+) — matches the last name (one or more letters)
+(\w+) — matches the last name (one or more letters)
 ,\s — matches a comma followed by a space
 (\w+) — matches the first name (one or more letters)
 ,\s — another comma followed by a space
