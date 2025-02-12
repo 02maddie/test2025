@@ -37,9 +37,9 @@ print(sum_first_row)
 mean_first_row <- mean(transpose_matrix[1,])
 print(mean_first_row)
 
-sum_last_row <- sum(transpose_matrix[(length(n_dims)), ])
+sum_last_row <- sum(transpose_matrix[n_dims, ])
 print(sum_last_row)
-mean_last_row <- mean(transpose_matrix[(length(n_dims)), ])
+mean_last_row <- mean(transpose_matrix[n_dims, ])
 print(mean_last_row)
 
 # use eigen() function on matrix
