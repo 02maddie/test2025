@@ -118,7 +118,7 @@ my_df <- data.frame(my_unis,my_letters)
 print(my_df)
 
 # for the first variable, use a single line of code in R to select 4 random rows and replace the numerical values in those rows with NA
-my_df$my_unis[sample(0:nrow(my_df), 4)] <- NA
+my_df$my_unis[sample(1:nrow(my_df), 4)] <- NA
 print(my_df)
 
 # for the first variable, write a single line of R code to identify which rows have the missing values
