@@ -129,7 +129,7 @@ my_df <- my_df[order(my_df$my_letters), ]
 print(my_df)
 
 # calculate the column mean for the first variable
-mean_my_unis <- my_df$my_unis[mean(ncol(my_df))]
+mean_my_unis <- mean(my_df$my_unis, na.rm =TRUE)
 print(mean_my_unis)
 
 ```
