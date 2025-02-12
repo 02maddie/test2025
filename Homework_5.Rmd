@@ -1,0 +1,137 @@
+---
+title: "Homework 5"
+author: "Maddie Winer"
+date: "2025-02-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Question 1**
+```{r}
+# assign to the variable a single random integer between 3 and 10 using sample function
+n_dims <- sample(3:10, 1)
+print(n_dims)
+
+# create a vector of consecutive integers 1:n_dims^2
+my_vec <- 1:n_dims^2
+print(my_vec)
+
+# use the sample matrix to reshuffle these values
+my_vec <- sample(my_vec)
+print(my_vec)
+
+# create a square matrix with these elements and print matrix
+my_matrix <- matrix(data=(my_vec^2), nrow = n_dims, ncol = n_dims)
+print(my_matrix)
+
+# find a function in r to transpose the matrix and print again (it worked! it transposed the matrix!)
+transpose_matrix <- t(my_matrix)
+print(transpose_matrix)
+
+# calculate the sum and the mean of the elements in the first row and then the last row
+sum_first_row <- sum(transpose_matrix[1, ])
+print(sum_first_row)
+mean_first_row <- mean(transpose_matrix[1,])
+print(mean_first_row)
+
+sum_last_row <- sum(transpose_matrix[(length(n_dims)), ])
+print(sum_last_row)
+mean_last_row <- mean(transpose_matrix[(length(n_dims)), ])
+print(mean_last_row)
+
+# use eigen() function on matrix
+eigen_matrix <- eigen(transpose_matrix)
+print(eigen_matrix)
+
+# $values and $vectors- what kinds of numbers are these?
+##### outputs are complex numbers for square matrices
+
+#figure out their data type
+typeof(eigen_matrix)
+
+
+```
+
+**Question 2**
+```{r}
+# my_matrix: 4x4 matrix with random uniform values between 0 and 1
+my_matrix = matrix(runif(16), nrow = 4, ncol = 4)
+print(my_matrix)
+
+# my_logical: 100-element vector of TRUE/FALSE values and then assign some inequality (0.5)
+my_logical = runif(100) > 0.5 
+print(my_logical)
+
+# my_letters: 26-element vector with all lowercase letters in random order
+my_letters = sample(letters, 26)
+print(my_letters)
+
+# create list
+my_list <- list(my_matrix, my_logical, my_letters)
+
+# print the list
+print(my_list)
+
+# Using the original list (my_list)
+my_matrix_list <- my_matrix[2,2]
+my_logical_list <- my_logical[2]
+my_letters_list <- my_letters[2]
+
+# create new list
+new_list <- list(my_matrix_list,my_logical_list,my_letters_list)
+print(new_list)
+
+# Check the types of each component in the new list
+typeof(new_list[[1]]) 
+typeof(new_list[[2]]) 
+typeof(new_list[[3]]) 
+
+# Combine the elements into a single atomic vector
+combined_vector <- c(my_matrix_list, my_logical_list, my_letters_list)
+
+# Check the data type of the combined vector
+typeof(combined_vector)
+
+
+```
+
+
+**Question 3**
+
+```{r}
+# defining my_unis
+my_unis_10 <- sample(0:10)
+my_unis_20 <- sample(0:10)
+my_unis_26 <- sample(0:10, 4)
+my_unis <- c(my_unis_10,my_unis_20,my_unis_26)
+print(my_unis)
+
+#defining my_letters
+my_letters <- sample(LETTERS, 26)
+print(my_letters)
+
+# create data frame
+my_df <- data.frame(my_unis,my_letters)
+print(my_df)
+
+# for the first variable, use a single line of code in R to select 4 random rows and replace the numerical values in those rows with NA
+my_df$my_unis[sample(0:nrow(my_df), 4)] <- NA
+print(my_df)
+
+# for the first variable, write a single line of R code to identify which rows have the missing values
+which(!complete.cases(my_df$my_unis))
+
+# reorder the entire data frame to arrange the second variable in alphabetical order
+
+
+
+# calculate the column mean for the first variable
+mean_my_unis <- my_df$my_unis[mean(ncol(my_df))]
+
+
+```
+
+
