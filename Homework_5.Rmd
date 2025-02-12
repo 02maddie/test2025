@@ -109,7 +109,7 @@ my_unis_26 <- sample(0:10, 4)
 my_unis <- c(my_unis_10,my_unis_20,my_unis_26)
 print(my_unis)
 
-#defining my_letters
+# defining my_letters
 my_letters <- sample(LETTERS, 26)
 print(my_letters)
 
@@ -125,12 +125,12 @@ print(my_df)
 which(!complete.cases(my_df$my_unis))
 
 # reorder the entire data frame to arrange the second variable in alphabetical order
-
-
+my_df <- my_df[order(my_df$my_letters), ]
+print(my_df)
 
 # calculate the column mean for the first variable
 mean_my_unis <- my_df$my_unis[mean(ncol(my_df))]
-
+print(mean_my_unis)
 
 ```
 
