@@ -142,6 +142,10 @@ Find male -- match male within column
 
 Replace drone -- replaces male with drone
 
+There are empty whitespaces that need to be removed.
+
+Find " " and Replace with nothing to fully remove the whitespaces.
+
 ```
 
 
