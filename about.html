@@ -9,11 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Maddie Winer" />
 
-<meta name="date" content="2025-02-05" />
 
-<title>Homework 4</title>
+<title>About This Website</title>
 
 <script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -341,89 +339,12 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Homework 4</h1>
-<h4 class="author">Maddie Winer</h4>
-<h4 class="date">2025-02-05</h4>
+<h1 class="title toc-ignore">About This Website</h1>
 
 </div>
 
 
-<p><strong>Question 1</strong></p>
-<pre class="r"><code>x &lt;- 1.1
-a &lt;- 2.2
-b &lt;- 3.3
-
-#Part a 
-z &lt;- x^(a^b)
-print (z)</code></pre>
-<pre><code>## [1] 3.61714</code></pre>
-<pre class="r"><code>#Part b 
-z &lt;- (x^a)^b
-print(z)</code></pre>
-<pre><code>## [1] 1.997611</code></pre>
-<pre class="r"><code>#Part c
-z &lt;- 3*(x^3)+ 2*(x^2)+1
-print(z)</code></pre>
-<pre><code>## [1] 7.413</code></pre>
-<p><strong>Question 2</strong></p>
-<pre class="r"><code>#Part a
-my_vec &lt;- c(1:8,7:1)
-print(my_vec) </code></pre>
-<pre><code>##  [1] 1 2 3 4 5 6 7 8 7 6 5 4 3 2 1</code></pre>
-<pre class="r"><code>#Part b
-my_vec &lt;- c(1:5)
-rep(x=my_vec,times=my_vec)</code></pre>
-<pre><code>##  [1] 1 2 2 3 3 3 4 4 4 4 5 5 5 5 5</code></pre>
-<pre class="r"><code>#Part c
-my_vec &lt;- c(5:1)
-my_vec1 &lt;- c(1:5)
-rep(x=my_vec,times=my_vec1)</code></pre>
-<pre><code>##  [1] 5 4 4 3 3 3 2 2 2 2 1 1 1 1 1</code></pre>
-<p><strong>Question 3</strong></p>
-<pre class="r"><code>x &lt;- runif(1)
-y &lt;- runif(1)
-r &lt;- tan(y/x)
-theta &lt;- asin(y/r)
-polar &lt;- c(r,theta)
-print(polar)</code></pre>
-<pre><code>## [1] 0.4411003 0.1491366</code></pre>
-<p><strong>Question 4</strong></p>
-<pre class="r"><code>queue &lt;-c(&quot;sheep&quot;,&quot;fox&quot;,&quot;owl&quot;,&quot;ant&quot;)
-
-#Part a
-queue &lt;- c(queue, &quot;serpent&quot;)
-print(queue)</code></pre>
-<pre><code>## [1] &quot;sheep&quot;   &quot;fox&quot;     &quot;owl&quot;     &quot;ant&quot;     &quot;serpent&quot;</code></pre>
-<pre class="r"><code>#Part b 
-queue &lt;- queue[-1]
-print(queue)</code></pre>
-<pre><code>## [1] &quot;fox&quot;     &quot;owl&quot;     &quot;ant&quot;     &quot;serpent&quot;</code></pre>
-<pre class="r"><code>#Part c
-queue &lt;- c(&quot;donkey&quot;,queue)
-print(queue)</code></pre>
-<pre><code>## [1] &quot;donkey&quot;  &quot;fox&quot;     &quot;owl&quot;     &quot;ant&quot;     &quot;serpent&quot;</code></pre>
-<pre class="r"><code>#Part d
-queue &lt;- queue[-length(queue)]
-print(queue)</code></pre>
-<pre><code>## [1] &quot;donkey&quot; &quot;fox&quot;    &quot;owl&quot;    &quot;ant&quot;</code></pre>
-<pre class="r"><code>#Part e
-queue &lt;- queue[-3]
-print(queue)</code></pre>
-<pre><code>## [1] &quot;donkey&quot; &quot;fox&quot;    &quot;ant&quot;</code></pre>
-<pre class="r"><code>#Part f
-queue &lt;- c(queue[2],&quot;aphid&quot;,queue[3])
-print(queue)</code></pre>
-<pre><code>## [1] &quot;fox&quot;   &quot;aphid&quot; &quot;ant&quot;</code></pre>
-<pre class="r"><code>#Part g
-aphid_pos &lt;- which(queue == &quot;aphid&quot;)
-print(aphid_pos)</code></pre>
-<pre><code>## [1] 2</code></pre>
-<p><strong>Question 5</strong></p>
-<pre class="r"><code>numbers &lt;- 1:100
-my_vec &lt;- numbers[!(numbers %% 2 == 0 | numbers %% 3 == 0 | numbers %% 7 == 0)]
-print(my_vec)</code></pre>
-<pre><code>##  [1]  1  5 11 13 17 19 23 25 29 31 37 41 43 47 53 55 59 61 65 67 71 73 79 83 85
-## [26] 89 95 97</code></pre>
+<p>More about this website.</p>
 
 
 

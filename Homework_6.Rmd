@@ -11,10 +11,10 @@ knitr::opts_chunk$set(echo = TRUE)
 **Write code to create a random data set with a normal distribution and defined standard deviation, sample size, and mean.**
 ```{r}
 response_1 <- rnorm(n=100, mean=15, sd=2)
-print(my_data_x)
+print(response_1)
 response_2 <- rnorm(n=100, mean=30, sd=7)
-print(my_data_y)
-
+print(response_2)
+response <- c(response_1, response_2)
 ```
 
 **Organize these data into a data frame with the appropriate structure.**
@@ -38,17 +38,10 @@ print(plot)
 
 **For Loop Generation**
 ```{r}
-for (i in 1:length(my_df)) {
-  cat("i =",i,"my_df =",my_df[i],"\n")
+for (i in 1:length(response)) {
+  cat("count =",i,"conditions =",response[i],"\n")
 }
-length(my_df)
-
-
-z <- c(10,2,4)
-for (i in 1:length(z)) {
-  cat("i =",i, "z[i] =",z[i],"\n")
-}
-print(i)
+length(response)
 
 ```
 
@@ -59,12 +52,6 @@ print(i)
 ```
 
 ```{r}
-my_dat <- runif(1)
-for (i in 2:10) {
-  temp <- runif(1)
-  my_dat <- c(my_dat,temp) # do not change vector size in the loop!
-  cat("loop number =",i,"vector element =",my_dat[i],"\n")
-}
-length(my_dat)
+
 ```
 

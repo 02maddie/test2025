@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Maddie Winer" />
+
+<meta name="date" content="2025-02-19" />
+
+<title>Homework 6</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">My Website</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="homework_links.html">Homework</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Homework 6</h1>
+<h4 class="author">Maddie Winer</h4>
+<h4 class="date">2025-02-19</h4>
+
+</div>
+
+
+<p><strong>Write code to create a random data set with a normal
+distribution and defined standard deviation, sample size, and
+mean.</strong></p>
+<pre class="r"><code>response_1 &lt;- rnorm(n=100, mean=15, sd=2)
+print(response_1)</code></pre>
+<pre><code>##   [1] 11.734850 14.231005 15.769399 14.962330 18.747267 16.946018 13.861190
+##   [8] 11.058526 15.210649 16.890728 13.718489 15.325374 19.714669 15.222760
+##  [15] 12.334574 14.730239 14.707746 10.817877 13.577253 15.540222 16.218661
+##  [22] 16.460514 15.606708 15.149573 14.773282 16.137493 16.321982 12.907431
+##  [29] 13.800251 14.536851 13.898329 19.032375 15.551349 16.597079 12.837686
+##  [36] 14.393750 15.004981 11.822019 14.706266 16.180053 13.265400 13.294345
+##  [43] 15.261372 14.183594 11.556409 18.981935 18.745045 12.662630 15.711031
+##  [50] 15.304383 16.911760 13.566138 16.316586 15.037544 17.044666 13.349429
+##  [57] 11.542163 13.497450 13.767593 18.883160 16.921523 15.974602 12.175714
+##  [64] 13.199245 14.766139 18.478467 15.048144 15.490168 13.641930 18.196827
+##  [71]  9.952874 11.410621 13.006447 15.580293 13.658687 16.935452 11.925114
+##  [78] 13.340917 13.726311 17.576003 13.328720 15.784994 13.677619 15.906089
+##  [85] 16.984429 11.221399 11.889777 14.496151 12.383315 15.682564 15.177116
+##  [92] 16.296185 17.106336 17.636902 14.593428 13.018358 19.537854 11.478491
+##  [99] 15.534920 15.837043</code></pre>
+<pre class="r"><code>response_2 &lt;- rnorm(n=100, mean=30, sd=7)
+print(response_2)</code></pre>
+<pre><code>##   [1] 24.79589 37.99163 24.33184 30.13463 30.55682 48.27638 25.28813 30.63878
+##   [9] 39.11404 32.10751 29.37445 46.93245 41.64349 29.02651 34.13841 29.49397
+##  [17] 32.25835 17.25101 21.63024 30.17165 31.86562 30.84847 46.71267 31.43236
+##  [25] 23.40291 23.25238 42.65637 28.43033 25.37357 26.64082 38.70584 33.79494
+##  [33] 38.53864 33.67085 43.09952 35.71146 32.76366 26.47082 34.79804 24.78474
+##  [41] 21.90677 38.84682 32.20579 35.93295 31.28908 20.18618 39.14954 22.38299
+##  [49] 35.13478 41.65045 16.35509 26.52998 32.76680 37.48764 35.70371 29.80979
+##  [57] 20.13697 38.39314 26.94978 36.40849 35.04558 22.41599 37.81378 19.89968
+##  [65] 40.40347 24.24815 38.21565 24.25378 20.81945 42.87841 33.74579 28.22058
+##  [73] 47.92679 31.37610 34.36846 36.32366 37.09633 35.28746 34.38310 36.80947
+##  [81] 40.86677 43.23141 30.33441 35.66407 24.92434 26.26189 33.73392 38.75797
+##  [89] 37.81588 32.19332 36.39912 20.19457 31.71475 33.89763 39.83386 22.59485
+##  [97] 29.12640 18.64934 30.16014 24.54319</code></pre>
+<pre class="r"><code>response &lt;- c(response_1, response_2)</code></pre>
+<p><strong>Organize these data into a data frame with the appropriate
+structure.</strong></p>
+<pre class="r"><code>my_df_1 &lt;- data.frame (X = &quot;control&quot;, Y= response_1)
+print(my_df_1)</code></pre>
+<pre><code>##           X         Y
+## 1   control 11.734850
+## 2   control 14.231005
+## 3   control 15.769399
+## 4   control 14.962330
+## 5   control 18.747267
+## 6   control 16.946018
+## 7   control 13.861190
+## 8   control 11.058526
+## 9   control 15.210649
+## 10  control 16.890728
+## 11  control 13.718489
+## 12  control 15.325374
+## 13  control 19.714669
+## 14  control 15.222760
+## 15  control 12.334574
+## 16  control 14.730239
+## 17  control 14.707746
+## 18  control 10.817877
+## 19  control 13.577253
+## 20  control 15.540222
+## 21  control 16.218661
+## 22  control 16.460514
+## 23  control 15.606708
+## 24  control 15.149573
+## 25  control 14.773282
+## 26  control 16.137493
+## 27  control 16.321982
+## 28  control 12.907431
+## 29  control 13.800251
+## 30  control 14.536851
+## 31  control 13.898329
+## 32  control 19.032375
+## 33  control 15.551349
+## 34  control 16.597079
+## 35  control 12.837686
+## 36  control 14.393750
+## 37  control 15.004981
+## 38  control 11.822019
+## 39  control 14.706266
+## 40  control 16.180053
+## 41  control 13.265400
+## 42  control 13.294345
+## 43  control 15.261372
+## 44  control 14.183594
+## 45  control 11.556409
+## 46  control 18.981935
+## 47  control 18.745045
+## 48  control 12.662630
+## 49  control 15.711031
+## 50  control 15.304383
+## 51  control 16.911760
+## 52  control 13.566138
+## 53  control 16.316586
+## 54  control 15.037544
+## 55  control 17.044666
+## 56  control 13.349429
+## 57  control 11.542163
+## 58  control 13.497450
+## 59  control 13.767593
+## 60  control 18.883160
+## 61  control 16.921523
+## 62  control 15.974602
+## 63  control 12.175714
+## 64  control 13.199245
+## 65  control 14.766139
+## 66  control 18.478467
+## 67  control 15.048144
+## 68  control 15.490168
+## 69  control 13.641930
+## 70  control 18.196827
+## 71  control  9.952874
+## 72  control 11.410621
+## 73  control 13.006447
+## 74  control 15.580293
+## 75  control 13.658687
+## 76  control 16.935452
+## 77  control 11.925114
+## 78  control 13.340917
+## 79  control 13.726311
+## 80  control 17.576003
+## 81  control 13.328720
+## 82  control 15.784994
+## 83  control 13.677619
+## 84  control 15.906089
+## 85  control 16.984429
+## 86  control 11.221399
+## 87  control 11.889777
+## 88  control 14.496151
+## 89  control 12.383315
+## 90  control 15.682564
+## 91  control 15.177116
+## 92  control 16.296185
+## 93  control 17.106336
+## 94  control 17.636902
+## 95  control 14.593428
+## 96  control 13.018358
+## 97  control 19.537854
+## 98  control 11.478491
+## 99  control 15.534920
+## 100 control 15.837043</code></pre>
+<pre class="r"><code>my_df_2 &lt;- data.frame(X = &quot;treatment&quot;, Y = response_2)
+print(my_df_2)</code></pre>
+<pre><code>##             X        Y
+## 1   treatment 24.79589
+## 2   treatment 37.99163
+## 3   treatment 24.33184
+## 4   treatment 30.13463
+## 5   treatment 30.55682
+## 6   treatment 48.27638
+## 7   treatment 25.28813
+## 8   treatment 30.63878
+## 9   treatment 39.11404
+## 10  treatment 32.10751
+## 11  treatment 29.37445
+## 12  treatment 46.93245
+## 13  treatment 41.64349
+## 14  treatment 29.02651
+## 15  treatment 34.13841
+## 16  treatment 29.49397
+## 17  treatment 32.25835
+## 18  treatment 17.25101
+## 19  treatment 21.63024
+## 20  treatment 30.17165
+## 21  treatment 31.86562
+## 22  treatment 30.84847
+## 23  treatment 46.71267
+## 24  treatment 31.43236
+## 25  treatment 23.40291
+## 26  treatment 23.25238
+## 27  treatment 42.65637
+## 28  treatment 28.43033
+## 29  treatment 25.37357
+## 30  treatment 26.64082
+## 31  treatment 38.70584
+## 32  treatment 33.79494
+## 33  treatment 38.53864
+## 34  treatment 33.67085
+## 35  treatment 43.09952
+## 36  treatment 35.71146
+## 37  treatment 32.76366
+## 38  treatment 26.47082
+## 39  treatment 34.79804
+## 40  treatment 24.78474
+## 41  treatment 21.90677
+## 42  treatment 38.84682
+## 43  treatment 32.20579
+## 44  treatment 35.93295
+## 45  treatment 31.28908
+## 46  treatment 20.18618
+## 47  treatment 39.14954
+## 48  treatment 22.38299
+## 49  treatment 35.13478
+## 50  treatment 41.65045
+## 51  treatment 16.35509
+## 52  treatment 26.52998
+## 53  treatment 32.76680
+## 54  treatment 37.48764
+## 55  treatment 35.70371
+## 56  treatment 29.80979
+## 57  treatment 20.13697
+## 58  treatment 38.39314
+## 59  treatment 26.94978
+## 60  treatment 36.40849
+## 61  treatment 35.04558
+## 62  treatment 22.41599
+## 63  treatment 37.81378
+## 64  treatment 19.89968
+## 65  treatment 40.40347
+## 66  treatment 24.24815
+## 67  treatment 38.21565
+## 68  treatment 24.25378
+## 69  treatment 20.81945
+## 70  treatment 42.87841
+## 71  treatment 33.74579
+## 72  treatment 28.22058
+## 73  treatment 47.92679
+## 74  treatment 31.37610
+## 75  treatment 34.36846
+## 76  treatment 36.32366
+## 77  treatment 37.09633
+## 78  treatment 35.28746
+## 79  treatment 34.38310
+## 80  treatment 36.80947
+## 81  treatment 40.86677
+## 82  treatment 43.23141
+## 83  treatment 30.33441
+## 84  treatment 35.66407
+## 85  treatment 24.92434
+## 86  treatment 26.26189
+## 87  treatment 33.73392
+## 88  treatment 38.75797
+## 89  treatment 37.81588
+## 90  treatment 32.19332
+## 91  treatment 36.39912
+## 92  treatment 20.19457
+## 93  treatment 31.71475
+## 94  treatment 33.89763
+## 95  treatment 39.83386
+## 96  treatment 22.59485
+## 97  treatment 29.12640
+## 98  treatment 18.64934
+## 99  treatment 30.16014
+## 100 treatment 24.54319</code></pre>
+<pre class="r"><code>my_df &lt;- rbind(my_df_1, my_df_2)
+print(my_df)</code></pre>
+<pre><code>##             X         Y
+## 1     control 11.734850
+## 2     control 14.231005
+## 3     control 15.769399
+## 4     control 14.962330
+## 5     control 18.747267
+## 6     control 16.946018
+## 7     control 13.861190
+## 8     control 11.058526
+## 9     control 15.210649
+## 10    control 16.890728
+## 11    control 13.718489
+## 12    control 15.325374
+## 13    control 19.714669
+## 14    control 15.222760
+## 15    control 12.334574
+## 16    control 14.730239
+## 17    control 14.707746
+## 18    control 10.817877
+## 19    control 13.577253
+## 20    control 15.540222
+## 21    control 16.218661
+## 22    control 16.460514
+## 23    control 15.606708
+## 24    control 15.149573
+## 25    control 14.773282
+## 26    control 16.137493
+## 27    control 16.321982
+## 28    control 12.907431
+## 29    control 13.800251
+## 30    control 14.536851
+## 31    control 13.898329
+## 32    control 19.032375
+## 33    control 15.551349
+## 34    control 16.597079
+## 35    control 12.837686
+## 36    control 14.393750
+## 37    control 15.004981
+## 38    control 11.822019
+## 39    control 14.706266
+## 40    control 16.180053
+## 41    control 13.265400
+## 42    control 13.294345
+## 43    control 15.261372
+## 44    control 14.183594
+## 45    control 11.556409
+## 46    control 18.981935
+## 47    control 18.745045
+## 48    control 12.662630
+## 49    control 15.711031
+## 50    control 15.304383
+## 51    control 16.911760
+## 52    control 13.566138
+## 53    control 16.316586
+## 54    control 15.037544
+## 55    control 17.044666
+## 56    control 13.349429
+## 57    control 11.542163
+## 58    control 13.497450
+## 59    control 13.767593
+## 60    control 18.883160
+## 61    control 16.921523
+## 62    control 15.974602
+## 63    control 12.175714
+## 64    control 13.199245
+## 65    control 14.766139
+## 66    control 18.478467
+## 67    control 15.048144
+## 68    control 15.490168
+## 69    control 13.641930
+## 70    control 18.196827
+## 71    control  9.952874
+## 72    control 11.410621
+## 73    control 13.006447
+## 74    control 15.580293
+## 75    control 13.658687
+## 76    control 16.935452
+## 77    control 11.925114
+## 78    control 13.340917
+## 79    control 13.726311
+## 80    control 17.576003
+## 81    control 13.328720
+## 82    control 15.784994
+## 83    control 13.677619
+## 84    control 15.906089
+## 85    control 16.984429
+## 86    control 11.221399
+## 87    control 11.889777
+## 88    control 14.496151
+## 89    control 12.383315
+## 90    control 15.682564
+## 91    control 15.177116
+## 92    control 16.296185
+## 93    control 17.106336
+## 94    control 17.636902
+## 95    control 14.593428
+## 96    control 13.018358
+## 97    control 19.537854
+## 98    control 11.478491
+## 99    control 15.534920
+## 100   control 15.837043
+## 101 treatment 24.795886
+## 102 treatment 37.991629
+## 103 treatment 24.331838
+## 104 treatment 30.134632
+## 105 treatment 30.556823
+## 106 treatment 48.276378
+## 107 treatment 25.288133
+## 108 treatment 30.638775
+## 109 treatment 39.114043
+## 110 treatment 32.107509
+## 111 treatment 29.374448
+## 112 treatment 46.932454
+## 113 treatment 41.643492
+## 114 treatment 29.026513
+## 115 treatment 34.138414
+## 116 treatment 29.493971
+## 117 treatment 32.258351
+## 118 treatment 17.251011
+## 119 treatment 21.630244
+## 120 treatment 30.171654
+## 121 treatment 31.865620
+## 122 treatment 30.848472
+## 123 treatment 46.712667
+## 124 treatment 31.432361
+## 125 treatment 23.402914
+## 126 treatment 23.252378
+## 127 treatment 42.656370
+## 128 treatment 28.430331
+## 129 treatment 25.373570
+## 130 treatment 26.640818
+## 131 treatment 38.705842
+## 132 treatment 33.794939
+## 133 treatment 38.538638
+## 134 treatment 33.670855
+## 135 treatment 43.099515
+## 136 treatment 35.711462
+## 137 treatment 32.763657
+## 138 treatment 26.470823
+## 139 treatment 34.798043
+## 140 treatment 24.784741
+## 141 treatment 21.906772
+## 142 treatment 38.846823
+## 143 treatment 32.205793
+## 144 treatment 35.932950
+## 145 treatment 31.289076
+## 146 treatment 20.186184
+## 147 treatment 39.149543
+## 148 treatment 22.382992
+## 149 treatment 35.134776
+## 150 treatment 41.650452
+## 151 treatment 16.355088
+## 152 treatment 26.529976
+## 153 treatment 32.766796
+## 154 treatment 37.487636
+## 155 treatment 35.703713
+## 156 treatment 29.809788
+## 157 treatment 20.136971
+## 158 treatment 38.393138
+## 159 treatment 26.949781
+## 160 treatment 36.408488
+## 161 treatment 35.045577
+## 162 treatment 22.415986
+## 163 treatment 37.813776
+## 164 treatment 19.899683
+## 165 treatment 40.403472
+## 166 treatment 24.248145
+## 167 treatment 38.215655
+## 168 treatment 24.253780
+## 169 treatment 20.819453
+## 170 treatment 42.878412
+## 171 treatment 33.745793
+## 172 treatment 28.220577
+## 173 treatment 47.926785
+## 174 treatment 31.376099
+## 175 treatment 34.368457
+## 176 treatment 36.323661
+## 177 treatment 37.096335
+## 178 treatment 35.287456
+## 179 treatment 34.383103
+## 180 treatment 36.809473
+## 181 treatment 40.866765
+## 182 treatment 43.231406
+## 183 treatment 30.334411
+## 184 treatment 35.664069
+## 185 treatment 24.924343
+## 186 treatment 26.261889
+## 187 treatment 33.733923
+## 188 treatment 38.757973
+## 189 treatment 37.815875
+## 190 treatment 32.193322
+## 191 treatment 36.399118
+## 192 treatment 20.194565
+## 193 treatment 31.714745
+## 194 treatment 33.897631
+## 195 treatment 39.833858
+## 196 treatment 22.594851
+## 197 treatment 29.126403
+## 198 treatment 18.649338
+## 199 treatment 30.160138
+## 200 treatment 24.543190</code></pre>
+<p><strong>Analyze and graph the data.</strong></p>
+<pre class="r"><code>anova_data &lt;- aov(Y ~ X, data = my_df)
+summary(anova_data)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## X             1  14711   14711   512.3 &lt;2e-16 ***
+## Residuals   198   5686      29                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>library(ggplot2)
+plot &lt;- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x=&quot;Conditions&quot;,y=&quot;Responses&quot;)
+print(plot)</code></pre>
+<p><img src="Homework_6_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><strong>For Loop Generation</strong></p>
+<pre class="r"><code>for (i in 1:length(response)) {
+  cat(&quot;count =&quot;,i,&quot;conditions =&quot;,response[i],&quot;\n&quot;)
+}</code></pre>
+<pre><code>## count = 1 conditions = 11.73485 
+## count = 2 conditions = 14.23101 
+## count = 3 conditions = 15.7694 
+## count = 4 conditions = 14.96233 
+## count = 5 conditions = 18.74727 
+## count = 6 conditions = 16.94602 
+## count = 7 conditions = 13.86119 
+## count = 8 conditions = 11.05853 
+## count = 9 conditions = 15.21065 
+## count = 10 conditions = 16.89073 
+## count = 11 conditions = 13.71849 
+## count = 12 conditions = 15.32537 
+## count = 13 conditions = 19.71467 
+## count = 14 conditions = 15.22276 
+## count = 15 conditions = 12.33457 
+## count = 16 conditions = 14.73024 
+## count = 17 conditions = 14.70775 
+## count = 18 conditions = 10.81788 
+## count = 19 conditions = 13.57725 
+## count = 20 conditions = 15.54022 
+## count = 21 conditions = 16.21866 
+## count = 22 conditions = 16.46051 
+## count = 23 conditions = 15.60671 
+## count = 24 conditions = 15.14957 
+## count = 25 conditions = 14.77328 
+## count = 26 conditions = 16.13749 
+## count = 27 conditions = 16.32198 
+## count = 28 conditions = 12.90743 
+## count = 29 conditions = 13.80025 
+## count = 30 conditions = 14.53685 
+## count = 31 conditions = 13.89833 
+## count = 32 conditions = 19.03238 
+## count = 33 conditions = 15.55135 
+## count = 34 conditions = 16.59708 
+## count = 35 conditions = 12.83769 
+## count = 36 conditions = 14.39375 
+## count = 37 conditions = 15.00498 
+## count = 38 conditions = 11.82202 
+## count = 39 conditions = 14.70627 
+## count = 40 conditions = 16.18005 
+## count = 41 conditions = 13.2654 
+## count = 42 conditions = 13.29434 
+## count = 43 conditions = 15.26137 
+## count = 44 conditions = 14.18359 
+## count = 45 conditions = 11.55641 
+## count = 46 conditions = 18.98193 
+## count = 47 conditions = 18.74504 
+## count = 48 conditions = 12.66263 
+## count = 49 conditions = 15.71103 
+## count = 50 conditions = 15.30438 
+## count = 51 conditions = 16.91176 
+## count = 52 conditions = 13.56614 
+## count = 53 conditions = 16.31659 
+## count = 54 conditions = 15.03754 
+## count = 55 conditions = 17.04467 
+## count = 56 conditions = 13.34943 
+## count = 57 conditions = 11.54216 
+## count = 58 conditions = 13.49745 
+## count = 59 conditions = 13.76759 
+## count = 60 conditions = 18.88316 
+## count = 61 conditions = 16.92152 
+## count = 62 conditions = 15.9746 
+## count = 63 conditions = 12.17571 
+## count = 64 conditions = 13.19925 
+## count = 65 conditions = 14.76614 
+## count = 66 conditions = 18.47847 
+## count = 67 conditions = 15.04814 
+## count = 68 conditions = 15.49017 
+## count = 69 conditions = 13.64193 
+## count = 70 conditions = 18.19683 
+## count = 71 conditions = 9.952874 
+## count = 72 conditions = 11.41062 
+## count = 73 conditions = 13.00645 
+## count = 74 conditions = 15.58029 
+## count = 75 conditions = 13.65869 
+## count = 76 conditions = 16.93545 
+## count = 77 conditions = 11.92511 
+## count = 78 conditions = 13.34092 
+## count = 79 conditions = 13.72631 
+## count = 80 conditions = 17.576 
+## count = 81 conditions = 13.32872 
+## count = 82 conditions = 15.78499 
+## count = 83 conditions = 13.67762 
+## count = 84 conditions = 15.90609 
+## count = 85 conditions = 16.98443 
+## count = 86 conditions = 11.2214 
+## count = 87 conditions = 11.88978 
+## count = 88 conditions = 14.49615 
+## count = 89 conditions = 12.38332 
+## count = 90 conditions = 15.68256 
+## count = 91 conditions = 15.17712 
+## count = 92 conditions = 16.29619 
+## count = 93 conditions = 17.10634 
+## count = 94 conditions = 17.6369 
+## count = 95 conditions = 14.59343 
+## count = 96 conditions = 13.01836 
+## count = 97 conditions = 19.53785 
+## count = 98 conditions = 11.47849 
+## count = 99 conditions = 15.53492 
+## count = 100 conditions = 15.83704 
+## count = 101 conditions = 24.79589 
+## count = 102 conditions = 37.99163 
+## count = 103 conditions = 24.33184 
+## count = 104 conditions = 30.13463 
+## count = 105 conditions = 30.55682 
+## count = 106 conditions = 48.27638 
+## count = 107 conditions = 25.28813 
+## count = 108 conditions = 30.63878 
+## count = 109 conditions = 39.11404 
+## count = 110 conditions = 32.10751 
+## count = 111 conditions = 29.37445 
+## count = 112 conditions = 46.93245 
+## count = 113 conditions = 41.64349 
+## count = 114 conditions = 29.02651 
+## count = 115 conditions = 34.13841 
+## count = 116 conditions = 29.49397 
+## count = 117 conditions = 32.25835 
+## count = 118 conditions = 17.25101 
+## count = 119 conditions = 21.63024 
+## count = 120 conditions = 30.17165 
+## count = 121 conditions = 31.86562 
+## count = 122 conditions = 30.84847 
+## count = 123 conditions = 46.71267 
+## count = 124 conditions = 31.43236 
+## count = 125 conditions = 23.40291 
+## count = 126 conditions = 23.25238 
+## count = 127 conditions = 42.65637 
+## count = 128 conditions = 28.43033 
+## count = 129 conditions = 25.37357 
+## count = 130 conditions = 26.64082 
+## count = 131 conditions = 38.70584 
+## count = 132 conditions = 33.79494 
+## count = 133 conditions = 38.53864 
+## count = 134 conditions = 33.67085 
+## count = 135 conditions = 43.09952 
+## count = 136 conditions = 35.71146 
+## count = 137 conditions = 32.76366 
+## count = 138 conditions = 26.47082 
+## count = 139 conditions = 34.79804 
+## count = 140 conditions = 24.78474 
+## count = 141 conditions = 21.90677 
+## count = 142 conditions = 38.84682 
+## count = 143 conditions = 32.20579 
+## count = 144 conditions = 35.93295 
+## count = 145 conditions = 31.28908 
+## count = 146 conditions = 20.18618 
+## count = 147 conditions = 39.14954 
+## count = 148 conditions = 22.38299 
+## count = 149 conditions = 35.13478 
+## count = 150 conditions = 41.65045 
+## count = 151 conditions = 16.35509 
+## count = 152 conditions = 26.52998 
+## count = 153 conditions = 32.7668 
+## count = 154 conditions = 37.48764 
+## count = 155 conditions = 35.70371 
+## count = 156 conditions = 29.80979 
+## count = 157 conditions = 20.13697 
+## count = 158 conditions = 38.39314 
+## count = 159 conditions = 26.94978 
+## count = 160 conditions = 36.40849 
+## count = 161 conditions = 35.04558 
+## count = 162 conditions = 22.41599 
+## count = 163 conditions = 37.81378 
+## count = 164 conditions = 19.89968 
+## count = 165 conditions = 40.40347 
+## count = 166 conditions = 24.24815 
+## count = 167 conditions = 38.21565 
+## count = 168 conditions = 24.25378 
+## count = 169 conditions = 20.81945 
+## count = 170 conditions = 42.87841 
+## count = 171 conditions = 33.74579 
+## count = 172 conditions = 28.22058 
+## count = 173 conditions = 47.92679 
+## count = 174 conditions = 31.3761 
+## count = 175 conditions = 34.36846 
+## count = 176 conditions = 36.32366 
+## count = 177 conditions = 37.09633 
+## count = 178 conditions = 35.28746 
+## count = 179 conditions = 34.3831 
+## count = 180 conditions = 36.80947 
+## count = 181 conditions = 40.86677 
+## count = 182 conditions = 43.23141 
+## count = 183 conditions = 30.33441 
+## count = 184 conditions = 35.66407 
+## count = 185 conditions = 24.92434 
+## count = 186 conditions = 26.26189 
+## count = 187 conditions = 33.73392 
+## count = 188 conditions = 38.75797 
+## count = 189 conditions = 37.81588 
+## count = 190 conditions = 32.19332 
+## count = 191 conditions = 36.39912 
+## count = 192 conditions = 20.19457 
+## count = 193 conditions = 31.71475 
+## count = 194 conditions = 33.89763 
+## count = 195 conditions = 39.83386 
+## count = 196 conditions = 22.59485 
+## count = 197 conditions = 29.1264 
+## count = 198 conditions = 18.64934 
+## count = 199 conditions = 30.16014 
+## count = 200 conditions = 24.54319</code></pre>
+<pre class="r"><code>length(response)</code></pre>
+<pre><code>## [1] 200</code></pre>
+<p><strong>Minimum Sample Size</strong></p>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
