@@ -1,0 +1,70 @@
+---
+title: "Homework 6"
+author: "Maddie Winer"
+date: "2025-02-19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+**Write code to create a random data set with a normal distribution and defined standard deviation, sample size, and mean.**
+```{r}
+response_1 <- rnorm(n=100, mean=15, sd=2)
+print(my_data_x)
+response_2 <- rnorm(n=100, mean=30, sd=7)
+print(my_data_y)
+
+```
+
+**Organize these data into a data frame with the appropriate structure.**
+```{r}
+my_df_1 <- data.frame (X = "control", Y= response_1)
+print(my_df_1)
+my_df_2 <- data.frame(X = "treatment", Y = response_2)
+print(my_df_2)
+my_df <- rbind(my_df_1, my_df_2)
+print(my_df)
+```
+
+**Analyze and graph the data.**
+```{r}
+anova_data <- aov(Y ~ X, data = my_df)
+summary(anova_data)
+library(ggplot2)
+plot <- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x="Conditions",y="Responses")
+print(plot)
+```
+
+**For Loop Generation**
+```{r}
+for (i in 1:length(my_df)) {
+  cat("i =",i,"my_df =",my_df[i],"\n")
+}
+length(my_df)
+
+
+z <- c(10,2,4)
+for (i in 1:length(z)) {
+  cat("i =",i, "z[i] =",z[i],"\n")
+}
+print(i)
+
+```
+
+**Minimum Sample Size**
+```{r}
+
+
+```
+
+```{r}
+my_dat <- runif(1)
+for (i in 2:10) {
+  temp <- runif(1)
+  my_dat <- c(my_dat,temp) # do not change vector size in the loop!
+  cat("loop number =",i,"vector element =",my_dat[i],"\n")
+}
+length(my_dat)
+```
+
