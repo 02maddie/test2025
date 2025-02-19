@@ -353,667 +353,2773 @@ distribution and defined standard deviation, sample size, and
 mean.</strong></p>
 <pre class="r"><code>response_1 &lt;- rnorm(n=100, mean=15, sd=2)
 print(response_1)</code></pre>
-<pre><code>##   [1] 11.734850 14.231005 15.769399 14.962330 18.747267 16.946018 13.861190
-##   [8] 11.058526 15.210649 16.890728 13.718489 15.325374 19.714669 15.222760
-##  [15] 12.334574 14.730239 14.707746 10.817877 13.577253 15.540222 16.218661
-##  [22] 16.460514 15.606708 15.149573 14.773282 16.137493 16.321982 12.907431
-##  [29] 13.800251 14.536851 13.898329 19.032375 15.551349 16.597079 12.837686
-##  [36] 14.393750 15.004981 11.822019 14.706266 16.180053 13.265400 13.294345
-##  [43] 15.261372 14.183594 11.556409 18.981935 18.745045 12.662630 15.711031
-##  [50] 15.304383 16.911760 13.566138 16.316586 15.037544 17.044666 13.349429
-##  [57] 11.542163 13.497450 13.767593 18.883160 16.921523 15.974602 12.175714
-##  [64] 13.199245 14.766139 18.478467 15.048144 15.490168 13.641930 18.196827
-##  [71]  9.952874 11.410621 13.006447 15.580293 13.658687 16.935452 11.925114
-##  [78] 13.340917 13.726311 17.576003 13.328720 15.784994 13.677619 15.906089
-##  [85] 16.984429 11.221399 11.889777 14.496151 12.383315 15.682564 15.177116
-##  [92] 16.296185 17.106336 17.636902 14.593428 13.018358 19.537854 11.478491
-##  [99] 15.534920 15.837043</code></pre>
+<pre><code>##   [1] 13.136096 17.160084 11.627178 12.494546 13.877904 14.211642 15.713466
+##   [8] 17.180467 14.459378 12.585494 15.364660 14.023966 17.366390 17.220503
+##  [15] 13.690068 15.909078 11.541676 17.131460 18.239159 17.795442 15.037932
+##  [22] 15.542032 13.209922 15.643458 15.230379 16.497032 16.057598 15.126365
+##  [29] 13.629862 12.114472 17.770630 13.288504 19.081396 16.862608 15.021344
+##  [36] 14.015889 14.276691 11.515504  9.900504 15.805829 12.538143 18.684591
+##  [43] 13.634584 14.280544 12.238277 17.222707 10.725327 16.413818 17.963053
+##  [50] 13.459758 12.545816 15.061769 12.101747 15.933975 13.700513 15.493581
+##  [57] 14.509786 11.898829 17.770115 13.797079 15.651593 14.726400 15.528701
+##  [64] 18.640813 14.101947 12.510822 13.003673 14.111733 12.756979 15.537741
+##  [71] 16.203765 15.890613 18.085777 14.780367 10.080806 14.879633 18.719712
+##  [78] 14.160097 14.997937 16.461883 14.244234 13.681927 12.532519 14.466680
+##  [85] 12.305565 15.535461 12.613321  8.645674 17.825383 17.333914 16.232739
+##  [92] 11.916230 18.586367 12.644987 15.617334 14.432952 13.844269 16.370429
+##  [99] 19.810444 14.414836</code></pre>
 <pre class="r"><code>response_2 &lt;- rnorm(n=100, mean=30, sd=7)
 print(response_2)</code></pre>
-<pre><code>##   [1] 24.79589 37.99163 24.33184 30.13463 30.55682 48.27638 25.28813 30.63878
-##   [9] 39.11404 32.10751 29.37445 46.93245 41.64349 29.02651 34.13841 29.49397
-##  [17] 32.25835 17.25101 21.63024 30.17165 31.86562 30.84847 46.71267 31.43236
-##  [25] 23.40291 23.25238 42.65637 28.43033 25.37357 26.64082 38.70584 33.79494
-##  [33] 38.53864 33.67085 43.09952 35.71146 32.76366 26.47082 34.79804 24.78474
-##  [41] 21.90677 38.84682 32.20579 35.93295 31.28908 20.18618 39.14954 22.38299
-##  [49] 35.13478 41.65045 16.35509 26.52998 32.76680 37.48764 35.70371 29.80979
-##  [57] 20.13697 38.39314 26.94978 36.40849 35.04558 22.41599 37.81378 19.89968
-##  [65] 40.40347 24.24815 38.21565 24.25378 20.81945 42.87841 33.74579 28.22058
-##  [73] 47.92679 31.37610 34.36846 36.32366 37.09633 35.28746 34.38310 36.80947
-##  [81] 40.86677 43.23141 30.33441 35.66407 24.92434 26.26189 33.73392 38.75797
-##  [89] 37.81588 32.19332 36.39912 20.19457 31.71475 33.89763 39.83386 22.59485
-##  [97] 29.12640 18.64934 30.16014 24.54319</code></pre>
+<pre><code>##   [1] 17.11059 26.00746 32.54556 18.09421 35.25379 27.11117 24.39327 22.54037
+##   [9] 32.28817 22.18029 37.43899 32.99237 35.02922 28.82783 28.62182 20.41532
+##  [17] 23.88166 21.53587 27.13638 26.38265 39.74303 28.68554 27.64347 32.34503
+##  [25] 28.87517 23.42801 30.00663 36.85928 28.17883 34.44385 31.08111 37.82326
+##  [33] 18.65336 33.90817 40.03766 34.19793 29.53362 31.43297 40.33945 44.26572
+##  [41] 39.41960 29.88085 28.88971 25.97258 28.67480 33.63543 37.62820 26.20592
+##  [49] 39.21982 30.88200 32.52222 17.13766 20.59381 18.08234 24.06423 35.58349
+##  [57] 30.72804 33.50787 33.72018 23.85565 23.45693 47.02440 30.22311 32.11041
+##  [65] 38.67415 34.94570 31.02332 35.51105 28.24076 37.70848 34.77463 34.66187
+##  [73] 26.85067 36.85257 26.96121 28.15299 27.67674 17.81270 39.51255 24.49059
+##  [81] 39.07891 25.19169 22.66626 25.10167 27.04997 30.52926 34.36627 26.09390
+##  [89] 31.15571 15.93615 24.43732 43.19189 33.92189 26.96850 23.64040 37.31079
+##  [97] 20.57382 40.69982 25.97388 21.78612</code></pre>
 <pre class="r"><code>response &lt;- c(response_1, response_2)</code></pre>
 <p><strong>Organize these data into a data frame with the appropriate
 structure.</strong></p>
 <pre class="r"><code>my_df_1 &lt;- data.frame (X = &quot;control&quot;, Y= response_1)
 print(my_df_1)</code></pre>
 <pre><code>##           X         Y
-## 1   control 11.734850
-## 2   control 14.231005
-## 3   control 15.769399
-## 4   control 14.962330
-## 5   control 18.747267
-## 6   control 16.946018
-## 7   control 13.861190
-## 8   control 11.058526
-## 9   control 15.210649
-## 10  control 16.890728
-## 11  control 13.718489
-## 12  control 15.325374
-## 13  control 19.714669
-## 14  control 15.222760
-## 15  control 12.334574
-## 16  control 14.730239
-## 17  control 14.707746
-## 18  control 10.817877
-## 19  control 13.577253
-## 20  control 15.540222
-## 21  control 16.218661
-## 22  control 16.460514
-## 23  control 15.606708
-## 24  control 15.149573
-## 25  control 14.773282
-## 26  control 16.137493
-## 27  control 16.321982
-## 28  control 12.907431
-## 29  control 13.800251
-## 30  control 14.536851
-## 31  control 13.898329
-## 32  control 19.032375
-## 33  control 15.551349
-## 34  control 16.597079
-## 35  control 12.837686
-## 36  control 14.393750
-## 37  control 15.004981
-## 38  control 11.822019
-## 39  control 14.706266
-## 40  control 16.180053
-## 41  control 13.265400
-## 42  control 13.294345
-## 43  control 15.261372
-## 44  control 14.183594
-## 45  control 11.556409
-## 46  control 18.981935
-## 47  control 18.745045
-## 48  control 12.662630
-## 49  control 15.711031
-## 50  control 15.304383
-## 51  control 16.911760
-## 52  control 13.566138
-## 53  control 16.316586
-## 54  control 15.037544
-## 55  control 17.044666
-## 56  control 13.349429
-## 57  control 11.542163
-## 58  control 13.497450
-## 59  control 13.767593
-## 60  control 18.883160
-## 61  control 16.921523
-## 62  control 15.974602
-## 63  control 12.175714
-## 64  control 13.199245
-## 65  control 14.766139
-## 66  control 18.478467
-## 67  control 15.048144
-## 68  control 15.490168
-## 69  control 13.641930
-## 70  control 18.196827
-## 71  control  9.952874
-## 72  control 11.410621
-## 73  control 13.006447
-## 74  control 15.580293
-## 75  control 13.658687
-## 76  control 16.935452
-## 77  control 11.925114
-## 78  control 13.340917
-## 79  control 13.726311
-## 80  control 17.576003
-## 81  control 13.328720
-## 82  control 15.784994
-## 83  control 13.677619
-## 84  control 15.906089
-## 85  control 16.984429
-## 86  control 11.221399
-## 87  control 11.889777
-## 88  control 14.496151
-## 89  control 12.383315
-## 90  control 15.682564
-## 91  control 15.177116
-## 92  control 16.296185
-## 93  control 17.106336
-## 94  control 17.636902
-## 95  control 14.593428
-## 96  control 13.018358
-## 97  control 19.537854
-## 98  control 11.478491
-## 99  control 15.534920
-## 100 control 15.837043</code></pre>
+## 1   control 13.136096
+## 2   control 17.160084
+## 3   control 11.627178
+## 4   control 12.494546
+## 5   control 13.877904
+## 6   control 14.211642
+## 7   control 15.713466
+## 8   control 17.180467
+## 9   control 14.459378
+## 10  control 12.585494
+## 11  control 15.364660
+## 12  control 14.023966
+## 13  control 17.366390
+## 14  control 17.220503
+## 15  control 13.690068
+## 16  control 15.909078
+## 17  control 11.541676
+## 18  control 17.131460
+## 19  control 18.239159
+## 20  control 17.795442
+## 21  control 15.037932
+## 22  control 15.542032
+## 23  control 13.209922
+## 24  control 15.643458
+## 25  control 15.230379
+## 26  control 16.497032
+## 27  control 16.057598
+## 28  control 15.126365
+## 29  control 13.629862
+## 30  control 12.114472
+## 31  control 17.770630
+## 32  control 13.288504
+## 33  control 19.081396
+## 34  control 16.862608
+## 35  control 15.021344
+## 36  control 14.015889
+## 37  control 14.276691
+## 38  control 11.515504
+## 39  control  9.900504
+## 40  control 15.805829
+## 41  control 12.538143
+## 42  control 18.684591
+## 43  control 13.634584
+## 44  control 14.280544
+## 45  control 12.238277
+## 46  control 17.222707
+## 47  control 10.725327
+## 48  control 16.413818
+## 49  control 17.963053
+## 50  control 13.459758
+## 51  control 12.545816
+## 52  control 15.061769
+## 53  control 12.101747
+## 54  control 15.933975
+## 55  control 13.700513
+## 56  control 15.493581
+## 57  control 14.509786
+## 58  control 11.898829
+## 59  control 17.770115
+## 60  control 13.797079
+## 61  control 15.651593
+## 62  control 14.726400
+## 63  control 15.528701
+## 64  control 18.640813
+## 65  control 14.101947
+## 66  control 12.510822
+## 67  control 13.003673
+## 68  control 14.111733
+## 69  control 12.756979
+## 70  control 15.537741
+## 71  control 16.203765
+## 72  control 15.890613
+## 73  control 18.085777
+## 74  control 14.780367
+## 75  control 10.080806
+## 76  control 14.879633
+## 77  control 18.719712
+## 78  control 14.160097
+## 79  control 14.997937
+## 80  control 16.461883
+## 81  control 14.244234
+## 82  control 13.681927
+## 83  control 12.532519
+## 84  control 14.466680
+## 85  control 12.305565
+## 86  control 15.535461
+## 87  control 12.613321
+## 88  control  8.645674
+## 89  control 17.825383
+## 90  control 17.333914
+## 91  control 16.232739
+## 92  control 11.916230
+## 93  control 18.586367
+## 94  control 12.644987
+## 95  control 15.617334
+## 96  control 14.432952
+## 97  control 13.844269
+## 98  control 16.370429
+## 99  control 19.810444
+## 100 control 14.414836</code></pre>
 <pre class="r"><code>my_df_2 &lt;- data.frame(X = &quot;treatment&quot;, Y = response_2)
 print(my_df_2)</code></pre>
 <pre><code>##             X        Y
-## 1   treatment 24.79589
-## 2   treatment 37.99163
-## 3   treatment 24.33184
-## 4   treatment 30.13463
-## 5   treatment 30.55682
-## 6   treatment 48.27638
-## 7   treatment 25.28813
-## 8   treatment 30.63878
-## 9   treatment 39.11404
-## 10  treatment 32.10751
-## 11  treatment 29.37445
-## 12  treatment 46.93245
-## 13  treatment 41.64349
-## 14  treatment 29.02651
-## 15  treatment 34.13841
-## 16  treatment 29.49397
-## 17  treatment 32.25835
-## 18  treatment 17.25101
-## 19  treatment 21.63024
-## 20  treatment 30.17165
-## 21  treatment 31.86562
-## 22  treatment 30.84847
-## 23  treatment 46.71267
-## 24  treatment 31.43236
-## 25  treatment 23.40291
-## 26  treatment 23.25238
-## 27  treatment 42.65637
-## 28  treatment 28.43033
-## 29  treatment 25.37357
-## 30  treatment 26.64082
-## 31  treatment 38.70584
-## 32  treatment 33.79494
-## 33  treatment 38.53864
-## 34  treatment 33.67085
-## 35  treatment 43.09952
-## 36  treatment 35.71146
-## 37  treatment 32.76366
-## 38  treatment 26.47082
-## 39  treatment 34.79804
-## 40  treatment 24.78474
-## 41  treatment 21.90677
-## 42  treatment 38.84682
-## 43  treatment 32.20579
-## 44  treatment 35.93295
-## 45  treatment 31.28908
-## 46  treatment 20.18618
-## 47  treatment 39.14954
-## 48  treatment 22.38299
-## 49  treatment 35.13478
-## 50  treatment 41.65045
-## 51  treatment 16.35509
-## 52  treatment 26.52998
-## 53  treatment 32.76680
-## 54  treatment 37.48764
-## 55  treatment 35.70371
-## 56  treatment 29.80979
-## 57  treatment 20.13697
-## 58  treatment 38.39314
-## 59  treatment 26.94978
-## 60  treatment 36.40849
-## 61  treatment 35.04558
-## 62  treatment 22.41599
-## 63  treatment 37.81378
-## 64  treatment 19.89968
-## 65  treatment 40.40347
-## 66  treatment 24.24815
-## 67  treatment 38.21565
-## 68  treatment 24.25378
-## 69  treatment 20.81945
-## 70  treatment 42.87841
-## 71  treatment 33.74579
-## 72  treatment 28.22058
-## 73  treatment 47.92679
-## 74  treatment 31.37610
-## 75  treatment 34.36846
-## 76  treatment 36.32366
-## 77  treatment 37.09633
-## 78  treatment 35.28746
-## 79  treatment 34.38310
-## 80  treatment 36.80947
-## 81  treatment 40.86677
-## 82  treatment 43.23141
-## 83  treatment 30.33441
-## 84  treatment 35.66407
-## 85  treatment 24.92434
-## 86  treatment 26.26189
-## 87  treatment 33.73392
-## 88  treatment 38.75797
-## 89  treatment 37.81588
-## 90  treatment 32.19332
-## 91  treatment 36.39912
-## 92  treatment 20.19457
-## 93  treatment 31.71475
-## 94  treatment 33.89763
-## 95  treatment 39.83386
-## 96  treatment 22.59485
-## 97  treatment 29.12640
-## 98  treatment 18.64934
-## 99  treatment 30.16014
-## 100 treatment 24.54319</code></pre>
+## 1   treatment 17.11059
+## 2   treatment 26.00746
+## 3   treatment 32.54556
+## 4   treatment 18.09421
+## 5   treatment 35.25379
+## 6   treatment 27.11117
+## 7   treatment 24.39327
+## 8   treatment 22.54037
+## 9   treatment 32.28817
+## 10  treatment 22.18029
+## 11  treatment 37.43899
+## 12  treatment 32.99237
+## 13  treatment 35.02922
+## 14  treatment 28.82783
+## 15  treatment 28.62182
+## 16  treatment 20.41532
+## 17  treatment 23.88166
+## 18  treatment 21.53587
+## 19  treatment 27.13638
+## 20  treatment 26.38265
+## 21  treatment 39.74303
+## 22  treatment 28.68554
+## 23  treatment 27.64347
+## 24  treatment 32.34503
+## 25  treatment 28.87517
+## 26  treatment 23.42801
+## 27  treatment 30.00663
+## 28  treatment 36.85928
+## 29  treatment 28.17883
+## 30  treatment 34.44385
+## 31  treatment 31.08111
+## 32  treatment 37.82326
+## 33  treatment 18.65336
+## 34  treatment 33.90817
+## 35  treatment 40.03766
+## 36  treatment 34.19793
+## 37  treatment 29.53362
+## 38  treatment 31.43297
+## 39  treatment 40.33945
+## 40  treatment 44.26572
+## 41  treatment 39.41960
+## 42  treatment 29.88085
+## 43  treatment 28.88971
+## 44  treatment 25.97258
+## 45  treatment 28.67480
+## 46  treatment 33.63543
+## 47  treatment 37.62820
+## 48  treatment 26.20592
+## 49  treatment 39.21982
+## 50  treatment 30.88200
+## 51  treatment 32.52222
+## 52  treatment 17.13766
+## 53  treatment 20.59381
+## 54  treatment 18.08234
+## 55  treatment 24.06423
+## 56  treatment 35.58349
+## 57  treatment 30.72804
+## 58  treatment 33.50787
+## 59  treatment 33.72018
+## 60  treatment 23.85565
+## 61  treatment 23.45693
+## 62  treatment 47.02440
+## 63  treatment 30.22311
+## 64  treatment 32.11041
+## 65  treatment 38.67415
+## 66  treatment 34.94570
+## 67  treatment 31.02332
+## 68  treatment 35.51105
+## 69  treatment 28.24076
+## 70  treatment 37.70848
+## 71  treatment 34.77463
+## 72  treatment 34.66187
+## 73  treatment 26.85067
+## 74  treatment 36.85257
+## 75  treatment 26.96121
+## 76  treatment 28.15299
+## 77  treatment 27.67674
+## 78  treatment 17.81270
+## 79  treatment 39.51255
+## 80  treatment 24.49059
+## 81  treatment 39.07891
+## 82  treatment 25.19169
+## 83  treatment 22.66626
+## 84  treatment 25.10167
+## 85  treatment 27.04997
+## 86  treatment 30.52926
+## 87  treatment 34.36627
+## 88  treatment 26.09390
+## 89  treatment 31.15571
+## 90  treatment 15.93615
+## 91  treatment 24.43732
+## 92  treatment 43.19189
+## 93  treatment 33.92189
+## 94  treatment 26.96850
+## 95  treatment 23.64040
+## 96  treatment 37.31079
+## 97  treatment 20.57382
+## 98  treatment 40.69982
+## 99  treatment 25.97388
+## 100 treatment 21.78612</code></pre>
 <pre class="r"><code>my_df &lt;- rbind(my_df_1, my_df_2)
 print(my_df)</code></pre>
 <pre><code>##             X         Y
-## 1     control 11.734850
-## 2     control 14.231005
-## 3     control 15.769399
-## 4     control 14.962330
-## 5     control 18.747267
-## 6     control 16.946018
-## 7     control 13.861190
-## 8     control 11.058526
-## 9     control 15.210649
-## 10    control 16.890728
-## 11    control 13.718489
-## 12    control 15.325374
-## 13    control 19.714669
-## 14    control 15.222760
-## 15    control 12.334574
-## 16    control 14.730239
-## 17    control 14.707746
-## 18    control 10.817877
-## 19    control 13.577253
-## 20    control 15.540222
-## 21    control 16.218661
-## 22    control 16.460514
-## 23    control 15.606708
-## 24    control 15.149573
-## 25    control 14.773282
-## 26    control 16.137493
-## 27    control 16.321982
-## 28    control 12.907431
-## 29    control 13.800251
-## 30    control 14.536851
-## 31    control 13.898329
-## 32    control 19.032375
-## 33    control 15.551349
-## 34    control 16.597079
-## 35    control 12.837686
-## 36    control 14.393750
-## 37    control 15.004981
-## 38    control 11.822019
-## 39    control 14.706266
-## 40    control 16.180053
-## 41    control 13.265400
-## 42    control 13.294345
-## 43    control 15.261372
-## 44    control 14.183594
-## 45    control 11.556409
-## 46    control 18.981935
-## 47    control 18.745045
-## 48    control 12.662630
-## 49    control 15.711031
-## 50    control 15.304383
-## 51    control 16.911760
-## 52    control 13.566138
-## 53    control 16.316586
-## 54    control 15.037544
-## 55    control 17.044666
-## 56    control 13.349429
-## 57    control 11.542163
-## 58    control 13.497450
-## 59    control 13.767593
-## 60    control 18.883160
-## 61    control 16.921523
-## 62    control 15.974602
-## 63    control 12.175714
-## 64    control 13.199245
-## 65    control 14.766139
-## 66    control 18.478467
-## 67    control 15.048144
-## 68    control 15.490168
-## 69    control 13.641930
-## 70    control 18.196827
-## 71    control  9.952874
-## 72    control 11.410621
-## 73    control 13.006447
-## 74    control 15.580293
-## 75    control 13.658687
-## 76    control 16.935452
-## 77    control 11.925114
-## 78    control 13.340917
-## 79    control 13.726311
-## 80    control 17.576003
-## 81    control 13.328720
-## 82    control 15.784994
-## 83    control 13.677619
-## 84    control 15.906089
-## 85    control 16.984429
-## 86    control 11.221399
-## 87    control 11.889777
-## 88    control 14.496151
-## 89    control 12.383315
-## 90    control 15.682564
-## 91    control 15.177116
-## 92    control 16.296185
-## 93    control 17.106336
-## 94    control 17.636902
-## 95    control 14.593428
-## 96    control 13.018358
-## 97    control 19.537854
-## 98    control 11.478491
-## 99    control 15.534920
-## 100   control 15.837043
-## 101 treatment 24.795886
-## 102 treatment 37.991629
-## 103 treatment 24.331838
-## 104 treatment 30.134632
-## 105 treatment 30.556823
-## 106 treatment 48.276378
-## 107 treatment 25.288133
-## 108 treatment 30.638775
-## 109 treatment 39.114043
-## 110 treatment 32.107509
-## 111 treatment 29.374448
-## 112 treatment 46.932454
-## 113 treatment 41.643492
-## 114 treatment 29.026513
-## 115 treatment 34.138414
-## 116 treatment 29.493971
-## 117 treatment 32.258351
-## 118 treatment 17.251011
-## 119 treatment 21.630244
-## 120 treatment 30.171654
-## 121 treatment 31.865620
-## 122 treatment 30.848472
-## 123 treatment 46.712667
-## 124 treatment 31.432361
-## 125 treatment 23.402914
-## 126 treatment 23.252378
-## 127 treatment 42.656370
-## 128 treatment 28.430331
-## 129 treatment 25.373570
-## 130 treatment 26.640818
-## 131 treatment 38.705842
-## 132 treatment 33.794939
-## 133 treatment 38.538638
-## 134 treatment 33.670855
-## 135 treatment 43.099515
-## 136 treatment 35.711462
-## 137 treatment 32.763657
-## 138 treatment 26.470823
-## 139 treatment 34.798043
-## 140 treatment 24.784741
-## 141 treatment 21.906772
-## 142 treatment 38.846823
-## 143 treatment 32.205793
-## 144 treatment 35.932950
-## 145 treatment 31.289076
-## 146 treatment 20.186184
-## 147 treatment 39.149543
-## 148 treatment 22.382992
-## 149 treatment 35.134776
-## 150 treatment 41.650452
-## 151 treatment 16.355088
-## 152 treatment 26.529976
-## 153 treatment 32.766796
-## 154 treatment 37.487636
-## 155 treatment 35.703713
-## 156 treatment 29.809788
-## 157 treatment 20.136971
-## 158 treatment 38.393138
-## 159 treatment 26.949781
-## 160 treatment 36.408488
-## 161 treatment 35.045577
-## 162 treatment 22.415986
-## 163 treatment 37.813776
-## 164 treatment 19.899683
-## 165 treatment 40.403472
-## 166 treatment 24.248145
-## 167 treatment 38.215655
-## 168 treatment 24.253780
-## 169 treatment 20.819453
-## 170 treatment 42.878412
-## 171 treatment 33.745793
-## 172 treatment 28.220577
-## 173 treatment 47.926785
-## 174 treatment 31.376099
-## 175 treatment 34.368457
-## 176 treatment 36.323661
-## 177 treatment 37.096335
-## 178 treatment 35.287456
-## 179 treatment 34.383103
-## 180 treatment 36.809473
-## 181 treatment 40.866765
-## 182 treatment 43.231406
-## 183 treatment 30.334411
-## 184 treatment 35.664069
-## 185 treatment 24.924343
-## 186 treatment 26.261889
-## 187 treatment 33.733923
-## 188 treatment 38.757973
-## 189 treatment 37.815875
-## 190 treatment 32.193322
-## 191 treatment 36.399118
-## 192 treatment 20.194565
-## 193 treatment 31.714745
-## 194 treatment 33.897631
-## 195 treatment 39.833858
-## 196 treatment 22.594851
-## 197 treatment 29.126403
-## 198 treatment 18.649338
-## 199 treatment 30.160138
-## 200 treatment 24.543190</code></pre>
+## 1     control 13.136096
+## 2     control 17.160084
+## 3     control 11.627178
+## 4     control 12.494546
+## 5     control 13.877904
+## 6     control 14.211642
+## 7     control 15.713466
+## 8     control 17.180467
+## 9     control 14.459378
+## 10    control 12.585494
+## 11    control 15.364660
+## 12    control 14.023966
+## 13    control 17.366390
+## 14    control 17.220503
+## 15    control 13.690068
+## 16    control 15.909078
+## 17    control 11.541676
+## 18    control 17.131460
+## 19    control 18.239159
+## 20    control 17.795442
+## 21    control 15.037932
+## 22    control 15.542032
+## 23    control 13.209922
+## 24    control 15.643458
+## 25    control 15.230379
+## 26    control 16.497032
+## 27    control 16.057598
+## 28    control 15.126365
+## 29    control 13.629862
+## 30    control 12.114472
+## 31    control 17.770630
+## 32    control 13.288504
+## 33    control 19.081396
+## 34    control 16.862608
+## 35    control 15.021344
+## 36    control 14.015889
+## 37    control 14.276691
+## 38    control 11.515504
+## 39    control  9.900504
+## 40    control 15.805829
+## 41    control 12.538143
+## 42    control 18.684591
+## 43    control 13.634584
+## 44    control 14.280544
+## 45    control 12.238277
+## 46    control 17.222707
+## 47    control 10.725327
+## 48    control 16.413818
+## 49    control 17.963053
+## 50    control 13.459758
+## 51    control 12.545816
+## 52    control 15.061769
+## 53    control 12.101747
+## 54    control 15.933975
+## 55    control 13.700513
+## 56    control 15.493581
+## 57    control 14.509786
+## 58    control 11.898829
+## 59    control 17.770115
+## 60    control 13.797079
+## 61    control 15.651593
+## 62    control 14.726400
+## 63    control 15.528701
+## 64    control 18.640813
+## 65    control 14.101947
+## 66    control 12.510822
+## 67    control 13.003673
+## 68    control 14.111733
+## 69    control 12.756979
+## 70    control 15.537741
+## 71    control 16.203765
+## 72    control 15.890613
+## 73    control 18.085777
+## 74    control 14.780367
+## 75    control 10.080806
+## 76    control 14.879633
+## 77    control 18.719712
+## 78    control 14.160097
+## 79    control 14.997937
+## 80    control 16.461883
+## 81    control 14.244234
+## 82    control 13.681927
+## 83    control 12.532519
+## 84    control 14.466680
+## 85    control 12.305565
+## 86    control 15.535461
+## 87    control 12.613321
+## 88    control  8.645674
+## 89    control 17.825383
+## 90    control 17.333914
+## 91    control 16.232739
+## 92    control 11.916230
+## 93    control 18.586367
+## 94    control 12.644987
+## 95    control 15.617334
+## 96    control 14.432952
+## 97    control 13.844269
+## 98    control 16.370429
+## 99    control 19.810444
+## 100   control 14.414836
+## 101 treatment 17.110589
+## 102 treatment 26.007463
+## 103 treatment 32.545563
+## 104 treatment 18.094205
+## 105 treatment 35.253791
+## 106 treatment 27.111175
+## 107 treatment 24.393271
+## 108 treatment 22.540365
+## 109 treatment 32.288166
+## 110 treatment 22.180295
+## 111 treatment 37.438989
+## 112 treatment 32.992367
+## 113 treatment 35.029225
+## 114 treatment 28.827829
+## 115 treatment 28.621819
+## 116 treatment 20.415322
+## 117 treatment 23.881662
+## 118 treatment 21.535872
+## 119 treatment 27.136382
+## 120 treatment 26.382650
+## 121 treatment 39.743029
+## 122 treatment 28.685536
+## 123 treatment 27.643465
+## 124 treatment 32.345026
+## 125 treatment 28.875169
+## 126 treatment 23.428007
+## 127 treatment 30.006631
+## 128 treatment 36.859284
+## 129 treatment 28.178831
+## 130 treatment 34.443848
+## 131 treatment 31.081112
+## 132 treatment 37.823260
+## 133 treatment 18.653361
+## 134 treatment 33.908166
+## 135 treatment 40.037665
+## 136 treatment 34.197933
+## 137 treatment 29.533621
+## 138 treatment 31.432975
+## 139 treatment 40.339451
+## 140 treatment 44.265719
+## 141 treatment 39.419600
+## 142 treatment 29.880855
+## 143 treatment 28.889710
+## 144 treatment 25.972581
+## 145 treatment 28.674796
+## 146 treatment 33.635427
+## 147 treatment 37.628198
+## 148 treatment 26.205920
+## 149 treatment 39.219821
+## 150 treatment 30.882001
+## 151 treatment 32.522222
+## 152 treatment 17.137662
+## 153 treatment 20.593812
+## 154 treatment 18.082343
+## 155 treatment 24.064234
+## 156 treatment 35.583492
+## 157 treatment 30.728043
+## 158 treatment 33.507867
+## 159 treatment 33.720185
+## 160 treatment 23.855654
+## 161 treatment 23.456930
+## 162 treatment 47.024399
+## 163 treatment 30.223112
+## 164 treatment 32.110415
+## 165 treatment 38.674145
+## 166 treatment 34.945697
+## 167 treatment 31.023322
+## 168 treatment 35.511048
+## 169 treatment 28.240761
+## 170 treatment 37.708482
+## 171 treatment 34.774628
+## 172 treatment 34.661867
+## 173 treatment 26.850671
+## 174 treatment 36.852569
+## 175 treatment 26.961207
+## 176 treatment 28.152989
+## 177 treatment 27.676739
+## 178 treatment 17.812698
+## 179 treatment 39.512550
+## 180 treatment 24.490591
+## 181 treatment 39.078905
+## 182 treatment 25.191691
+## 183 treatment 22.666256
+## 184 treatment 25.101672
+## 185 treatment 27.049972
+## 186 treatment 30.529258
+## 187 treatment 34.366271
+## 188 treatment 26.093897
+## 189 treatment 31.155710
+## 190 treatment 15.936148
+## 191 treatment 24.437323
+## 192 treatment 43.191887
+## 193 treatment 33.921894
+## 194 treatment 26.968499
+## 195 treatment 23.640404
+## 196 treatment 37.310786
+## 197 treatment 20.573815
+## 198 treatment 40.699816
+## 199 treatment 25.973885
+## 200 treatment 21.786123</code></pre>
 <p><strong>Analyze and graph the data.</strong></p>
 <pre class="r"><code>anova_data &lt;- aov(Y ~ X, data = my_df)
-summary(anova_data)</code></pre>
-<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
-## X             1  14711   14711   512.3 &lt;2e-16 ***
-## Residuals   198   5686      29                   
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+summary &lt;- summary(anova_data)
+print(summary[[1]]$`Pr(&gt;F)`)</code></pre>
+<pre><code>## [1] 2.176367e-53           NA</code></pre>
 <pre class="r"><code>library(ggplot2)
 plot &lt;- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x=&quot;Conditions&quot;,y=&quot;Responses&quot;)
 print(plot)</code></pre>
 <p><img src="Homework_6_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p><strong>For Loop Generation</strong></p>
-<pre class="r"><code>for (i in 1:length(response)) {
-  cat(&quot;count =&quot;,i,&quot;conditions =&quot;,response[i],&quot;\n&quot;)
+<p><strong>For Loop Generation- ADJUSTING SAMPLE SIZE</strong></p>
+<pre class="r"><code>n &lt;- seq(50, 300, 10)
+for (i in 1:length(n)) {
+  print(n[i])
 }</code></pre>
-<pre><code>## count = 1 conditions = 11.73485 
-## count = 2 conditions = 14.23101 
-## count = 3 conditions = 15.7694 
-## count = 4 conditions = 14.96233 
-## count = 5 conditions = 18.74727 
-## count = 6 conditions = 16.94602 
-## count = 7 conditions = 13.86119 
-## count = 8 conditions = 11.05853 
-## count = 9 conditions = 15.21065 
-## count = 10 conditions = 16.89073 
-## count = 11 conditions = 13.71849 
-## count = 12 conditions = 15.32537 
-## count = 13 conditions = 19.71467 
-## count = 14 conditions = 15.22276 
-## count = 15 conditions = 12.33457 
-## count = 16 conditions = 14.73024 
-## count = 17 conditions = 14.70775 
-## count = 18 conditions = 10.81788 
-## count = 19 conditions = 13.57725 
-## count = 20 conditions = 15.54022 
-## count = 21 conditions = 16.21866 
-## count = 22 conditions = 16.46051 
-## count = 23 conditions = 15.60671 
-## count = 24 conditions = 15.14957 
-## count = 25 conditions = 14.77328 
-## count = 26 conditions = 16.13749 
-## count = 27 conditions = 16.32198 
-## count = 28 conditions = 12.90743 
-## count = 29 conditions = 13.80025 
-## count = 30 conditions = 14.53685 
-## count = 31 conditions = 13.89833 
-## count = 32 conditions = 19.03238 
-## count = 33 conditions = 15.55135 
-## count = 34 conditions = 16.59708 
-## count = 35 conditions = 12.83769 
-## count = 36 conditions = 14.39375 
-## count = 37 conditions = 15.00498 
-## count = 38 conditions = 11.82202 
-## count = 39 conditions = 14.70627 
-## count = 40 conditions = 16.18005 
-## count = 41 conditions = 13.2654 
-## count = 42 conditions = 13.29434 
-## count = 43 conditions = 15.26137 
-## count = 44 conditions = 14.18359 
-## count = 45 conditions = 11.55641 
-## count = 46 conditions = 18.98193 
-## count = 47 conditions = 18.74504 
-## count = 48 conditions = 12.66263 
-## count = 49 conditions = 15.71103 
-## count = 50 conditions = 15.30438 
-## count = 51 conditions = 16.91176 
-## count = 52 conditions = 13.56614 
-## count = 53 conditions = 16.31659 
-## count = 54 conditions = 15.03754 
-## count = 55 conditions = 17.04467 
-## count = 56 conditions = 13.34943 
-## count = 57 conditions = 11.54216 
-## count = 58 conditions = 13.49745 
-## count = 59 conditions = 13.76759 
-## count = 60 conditions = 18.88316 
-## count = 61 conditions = 16.92152 
-## count = 62 conditions = 15.9746 
-## count = 63 conditions = 12.17571 
-## count = 64 conditions = 13.19925 
-## count = 65 conditions = 14.76614 
-## count = 66 conditions = 18.47847 
-## count = 67 conditions = 15.04814 
-## count = 68 conditions = 15.49017 
-## count = 69 conditions = 13.64193 
-## count = 70 conditions = 18.19683 
-## count = 71 conditions = 9.952874 
-## count = 72 conditions = 11.41062 
-## count = 73 conditions = 13.00645 
-## count = 74 conditions = 15.58029 
-## count = 75 conditions = 13.65869 
-## count = 76 conditions = 16.93545 
-## count = 77 conditions = 11.92511 
-## count = 78 conditions = 13.34092 
-## count = 79 conditions = 13.72631 
-## count = 80 conditions = 17.576 
-## count = 81 conditions = 13.32872 
-## count = 82 conditions = 15.78499 
-## count = 83 conditions = 13.67762 
-## count = 84 conditions = 15.90609 
-## count = 85 conditions = 16.98443 
-## count = 86 conditions = 11.2214 
-## count = 87 conditions = 11.88978 
-## count = 88 conditions = 14.49615 
-## count = 89 conditions = 12.38332 
-## count = 90 conditions = 15.68256 
-## count = 91 conditions = 15.17712 
-## count = 92 conditions = 16.29619 
-## count = 93 conditions = 17.10634 
-## count = 94 conditions = 17.6369 
-## count = 95 conditions = 14.59343 
-## count = 96 conditions = 13.01836 
-## count = 97 conditions = 19.53785 
-## count = 98 conditions = 11.47849 
-## count = 99 conditions = 15.53492 
-## count = 100 conditions = 15.83704 
-## count = 101 conditions = 24.79589 
-## count = 102 conditions = 37.99163 
-## count = 103 conditions = 24.33184 
-## count = 104 conditions = 30.13463 
-## count = 105 conditions = 30.55682 
-## count = 106 conditions = 48.27638 
-## count = 107 conditions = 25.28813 
-## count = 108 conditions = 30.63878 
-## count = 109 conditions = 39.11404 
-## count = 110 conditions = 32.10751 
-## count = 111 conditions = 29.37445 
-## count = 112 conditions = 46.93245 
-## count = 113 conditions = 41.64349 
-## count = 114 conditions = 29.02651 
-## count = 115 conditions = 34.13841 
-## count = 116 conditions = 29.49397 
-## count = 117 conditions = 32.25835 
-## count = 118 conditions = 17.25101 
-## count = 119 conditions = 21.63024 
-## count = 120 conditions = 30.17165 
-## count = 121 conditions = 31.86562 
-## count = 122 conditions = 30.84847 
-## count = 123 conditions = 46.71267 
-## count = 124 conditions = 31.43236 
-## count = 125 conditions = 23.40291 
-## count = 126 conditions = 23.25238 
-## count = 127 conditions = 42.65637 
-## count = 128 conditions = 28.43033 
-## count = 129 conditions = 25.37357 
-## count = 130 conditions = 26.64082 
-## count = 131 conditions = 38.70584 
-## count = 132 conditions = 33.79494 
-## count = 133 conditions = 38.53864 
-## count = 134 conditions = 33.67085 
-## count = 135 conditions = 43.09952 
-## count = 136 conditions = 35.71146 
-## count = 137 conditions = 32.76366 
-## count = 138 conditions = 26.47082 
-## count = 139 conditions = 34.79804 
-## count = 140 conditions = 24.78474 
-## count = 141 conditions = 21.90677 
-## count = 142 conditions = 38.84682 
-## count = 143 conditions = 32.20579 
-## count = 144 conditions = 35.93295 
-## count = 145 conditions = 31.28908 
-## count = 146 conditions = 20.18618 
-## count = 147 conditions = 39.14954 
-## count = 148 conditions = 22.38299 
-## count = 149 conditions = 35.13478 
-## count = 150 conditions = 41.65045 
-## count = 151 conditions = 16.35509 
-## count = 152 conditions = 26.52998 
-## count = 153 conditions = 32.7668 
-## count = 154 conditions = 37.48764 
-## count = 155 conditions = 35.70371 
-## count = 156 conditions = 29.80979 
-## count = 157 conditions = 20.13697 
-## count = 158 conditions = 38.39314 
-## count = 159 conditions = 26.94978 
-## count = 160 conditions = 36.40849 
-## count = 161 conditions = 35.04558 
-## count = 162 conditions = 22.41599 
-## count = 163 conditions = 37.81378 
-## count = 164 conditions = 19.89968 
-## count = 165 conditions = 40.40347 
-## count = 166 conditions = 24.24815 
-## count = 167 conditions = 38.21565 
-## count = 168 conditions = 24.25378 
-## count = 169 conditions = 20.81945 
-## count = 170 conditions = 42.87841 
-## count = 171 conditions = 33.74579 
-## count = 172 conditions = 28.22058 
-## count = 173 conditions = 47.92679 
-## count = 174 conditions = 31.3761 
-## count = 175 conditions = 34.36846 
-## count = 176 conditions = 36.32366 
-## count = 177 conditions = 37.09633 
-## count = 178 conditions = 35.28746 
-## count = 179 conditions = 34.3831 
-## count = 180 conditions = 36.80947 
-## count = 181 conditions = 40.86677 
-## count = 182 conditions = 43.23141 
-## count = 183 conditions = 30.33441 
-## count = 184 conditions = 35.66407 
-## count = 185 conditions = 24.92434 
-## count = 186 conditions = 26.26189 
-## count = 187 conditions = 33.73392 
-## count = 188 conditions = 38.75797 
-## count = 189 conditions = 37.81588 
-## count = 190 conditions = 32.19332 
-## count = 191 conditions = 36.39912 
-## count = 192 conditions = 20.19457 
-## count = 193 conditions = 31.71475 
-## count = 194 conditions = 33.89763 
-## count = 195 conditions = 39.83386 
-## count = 196 conditions = 22.59485 
-## count = 197 conditions = 29.1264 
-## count = 198 conditions = 18.64934 
-## count = 199 conditions = 30.16014 
-## count = 200 conditions = 24.54319</code></pre>
-<pre class="r"><code>length(response)</code></pre>
-<pre><code>## [1] 200</code></pre>
-<p><strong>Minimum Sample Size</strong></p>
+<pre><code>## [1] 50
+## [1] 60
+## [1] 70
+## [1] 80
+## [1] 90
+## [1] 100
+## [1] 110
+## [1] 120
+## [1] 130
+## [1] 140
+## [1] 150
+## [1] 160
+## [1] 170
+## [1] 180
+## [1] 190
+## [1] 200
+## [1] 210
+## [1] 220
+## [1] 230
+## [1] 240
+## [1] 250
+## [1] 260
+## [1] 270
+## [1] 280
+## [1] 290
+## [1] 300</code></pre>
+<pre class="r"><code>response_1 &lt;- rnorm(n=n[i], mean=15, sd=2)
+print(response_1)</code></pre>
+<pre><code>##   [1] 15.913320 15.756934 13.746237 14.779061 13.987809 12.711177 14.390748
+##   [8] 14.935594 14.621749 13.798654 15.688211 10.606142 10.230606 13.782756
+##  [15] 17.790384 16.924541 18.543735 14.533474 14.702280 15.774356 16.871739
+##  [22] 13.851729 13.677365 13.564552 15.722315 16.091029 14.660484 18.314847
+##  [29] 12.894918 17.011683 15.430762 16.322336 15.481224 15.932966 14.710225
+##  [36] 18.332325 15.359996 11.882684 17.992422 13.046474 14.044185 13.916378
+##  [43] 16.323773 15.792784 13.348287 14.083589 13.279373 12.830423 16.421381
+##  [50] 15.338094 15.897746 16.676618 16.426070 10.795480 15.715837 17.464004
+##  [57] 16.499295 16.016627 12.322836 12.514155 14.712929 13.002697 13.187491
+##  [64] 13.904217 13.187979 17.965931 15.765681 17.552092 17.375064 17.789497
+##  [71] 12.941454 14.279326 17.325343 16.850516 13.901421 15.892719 16.659254
+##  [78] 11.517085 16.277159 15.210873 14.023726 15.419267 14.667030 11.956782
+##  [85] 11.662929 12.867252 12.201428 13.461541 16.022517 13.852763 19.760811
+##  [92] 15.184298 17.042985 16.023374 12.445182 15.105064 14.170174 17.220741
+##  [99] 15.415562 17.423435 18.168021 14.923406 12.639067 14.415230 18.684669
+## [106] 13.274621 15.170123 12.832269 14.307313 15.707933 14.995393 10.341125
+## [113] 14.000305 18.983644 13.778281 12.290429 17.032084 10.944243 15.803994
+## [120] 13.514372 19.978537 16.239082 17.750879 15.946105 13.842156 15.136999
+## [127] 17.068774 16.085529 16.290639 15.006675 14.032802 13.651124 17.482458
+## [134] 16.340414 14.792359 16.562378 17.418964 14.397930 14.798370 14.740536
+## [141] 17.282043 15.870480 15.659665 12.644201 19.798299 12.753005 17.633182
+## [148] 16.548130 16.077491 15.377292 13.440714 11.873189 13.872363 17.125913
+## [155] 13.204259 14.897500 14.498063 14.957636 16.039436 13.852588 16.954111
+## [162] 12.932627 14.657060 17.209752 16.019529 17.913734 17.650325 15.027264
+## [169] 14.280646 15.453480 15.056639 13.929901 15.120553 14.322400 15.687349
+## [176] 16.832465 15.842348 15.206640 15.821297 15.000121 18.279560 15.783586
+## [183] 11.998510 12.528892 17.548911 18.024903 13.628027 13.768251 15.762698
+## [190] 18.152179 15.265340 14.789445 13.289670 15.250938 17.316827 16.501835
+## [197] 14.699471 14.841160 19.518311 16.584730 15.203319 12.979510 13.836199
+## [204] 10.253668 15.328652 11.798621 15.043624 13.009314 16.361820 15.981239
+## [211] 17.464284 12.481339 15.281667 14.053742 12.000649 14.923767 14.515937
+## [218] 14.437890 17.446204 12.432547 16.760532 17.360602 15.893099 13.025124
+## [225] 13.518976 18.626355 16.434350 13.642474 14.532785 11.747886 16.225879
+## [232] 16.476210 17.710372 10.230375 16.390704 12.168594 17.809088 17.391687
+## [239] 14.434246 15.632968 12.958037 12.988993 14.511087 14.883551 15.219428
+## [246] 19.364242 15.978172 14.615231 14.745935 15.788691 16.869998 16.106464
+## [253] 15.532989 14.754277 12.969004  9.535279 15.505866 14.949821 12.693878
+## [260] 16.273469 14.085926 17.317450 15.321464 13.620381 12.734324 17.131446
+## [267] 16.145458 12.152542 15.889705 12.336644 12.367903 12.929053 18.535191
+## [274]  9.816709 13.792501 14.653969 13.233056 15.507080 14.661574 20.619053
+## [281] 15.819956 12.818524 17.089792 13.313406 16.403811 13.616541 15.268212
+## [288] 16.206601 15.338676 13.473563 15.957383 15.645363 14.895559 11.818485
+## [295] 16.861223 13.928655 18.780551 17.847127 14.895574 12.538799</code></pre>
+<pre class="r"><code>response_2 &lt;- rnorm(n=n[i], mean=30, sd=7)
+print(response_2)</code></pre>
+<pre><code>##   [1] 32.909571 45.110749 25.046257 33.167227 35.547496 31.342147 37.773084
+##   [8] 23.367171 38.823255 22.209091 31.453752 23.984308 38.147252 29.600805
+##  [15] 29.198093 19.420462 30.731875 27.862295 24.165520 26.984391 41.520294
+##  [22] 28.408572 35.417346 24.258210 35.045540 33.409243 26.940622 29.485941
+##  [29] 37.735359 32.825807 32.525412 29.771955 26.319685 35.978855 25.317475
+##  [36] 33.212492 31.183032 31.866105 25.261044 29.289702 31.680006 22.209560
+##  [43] 39.677012 43.457374 39.952239 33.982501 33.091472 36.542395 22.051890
+##  [50] 31.277417 15.895067 36.587595 32.937452 30.460284 17.916649 22.502923
+##  [57] 20.508256 42.186994 39.242237 22.301597 33.700499 31.535595 18.973949
+##  [64] 34.527642 33.468413 36.281753 18.100689 33.647926 35.137143 30.033732
+##  [71] 25.873618 35.888670 36.594050 26.777657 37.342889 21.559577 43.544833
+##  [78] 31.298374 38.253980 39.608824 31.597322 27.318764 30.315567 28.159992
+##  [85] 43.732221 37.799179 31.623694 27.654307 24.884212 37.238536 38.576719
+##  [92] 25.013815 21.929910 27.511741 32.017971 25.207921 29.140670 15.390091
+##  [99] 31.039488 32.272449 35.771689 29.690405 31.465418 22.395326 27.401314
+## [106] 26.103865 26.109038 31.609574 34.981505 10.825955 29.742522 32.487504
+## [113] 34.169327 43.226675 25.527766 27.074552 26.983042 31.863259 28.315513
+## [120] 44.633584 18.608628 25.914760 35.363487 39.831464 24.802099 20.154698
+## [127] 30.761190 33.561565 25.269130 37.880418 32.101963 22.510341 43.520366
+## [134] 39.909617 20.025637 25.374090 24.162256 40.610128 32.470750 32.908875
+## [141] 30.463550 26.611037 17.305832 26.392762 31.994310 35.708386 24.275706
+## [148] 36.221342 36.302100 33.993650 27.971778 42.513728 28.054502 33.428969
+## [155] 31.476376 32.765249 36.816343 29.207588 33.757296 29.433618 27.759578
+## [162] 24.188523 20.312261 29.790508 34.048532 37.870326 28.673607 24.318119
+## [169] 22.933202 27.103585 30.279540 22.807700 30.515909 32.139465 30.832972
+## [176] 35.752449 31.929003 32.767835 31.439184 38.995275 22.682615 29.614284
+## [183] 42.417369 33.873049 30.280976 28.057217 48.025962 19.296284 31.439817
+## [190] 32.887440 33.781504 40.557066 35.629861 38.455120 38.808967 34.839638
+## [197] 31.124960 39.236522 41.341480 20.773407 20.955874 44.542561 37.302181
+## [204] 24.248933 33.037386 36.176271 45.762523 28.600785 35.044412 36.727199
+## [211] 24.739564 35.265216 28.891344 31.583611 38.671476 28.281569 30.531500
+## [218] 31.967879 28.698910 40.196228 29.147133 21.661370 34.952366 29.456642
+## [225] 31.225471 29.492158 34.546156 28.265388 33.670196 30.948184  8.581203
+## [232] 17.836047 35.996404 34.368881 31.849066 26.207277 34.147709 31.161546
+## [239] 29.781590 29.445242 35.901996 29.311179 31.972662 23.596180 32.673990
+## [246] 39.829199 30.164215 22.860102 33.674214 34.046960 35.469787 40.363807
+## [253] 35.003720 26.814675 18.612093 25.581090 30.484145 48.718813 25.213486
+## [260] 31.546671 33.805176 16.715205 40.678200 30.004515 22.552424 26.925128
+## [267] 24.213395 31.381738 30.317050 34.058156 30.870081 37.198163 22.426480
+## [274] 12.247666 31.299280 18.151132 21.810050 45.612589 28.851830 28.025825
+## [281] 26.400703 23.318679 20.417819 17.997162 21.665846 22.732711 33.634635
+## [288] 26.125241 28.197420 31.097863 28.998122 32.963945 22.946679 30.697589
+## [295] 25.309802 20.496855 26.778190 34.201458 29.392490 26.060296</code></pre>
+<pre class="r"><code>response &lt;- c(response_1, response_2)
+
+my_df_1 &lt;- data.frame (X = &quot;control&quot;, Y= response_1)
+print(my_df_1)</code></pre>
+<pre><code>##           X         Y
+## 1   control 15.913320
+## 2   control 15.756934
+## 3   control 13.746237
+## 4   control 14.779061
+## 5   control 13.987809
+## 6   control 12.711177
+## 7   control 14.390748
+## 8   control 14.935594
+## 9   control 14.621749
+## 10  control 13.798654
+## 11  control 15.688211
+## 12  control 10.606142
+## 13  control 10.230606
+## 14  control 13.782756
+## 15  control 17.790384
+## 16  control 16.924541
+## 17  control 18.543735
+## 18  control 14.533474
+## 19  control 14.702280
+## 20  control 15.774356
+## 21  control 16.871739
+## 22  control 13.851729
+## 23  control 13.677365
+## 24  control 13.564552
+## 25  control 15.722315
+## 26  control 16.091029
+## 27  control 14.660484
+## 28  control 18.314847
+## 29  control 12.894918
+## 30  control 17.011683
+## 31  control 15.430762
+## 32  control 16.322336
+## 33  control 15.481224
+## 34  control 15.932966
+## 35  control 14.710225
+## 36  control 18.332325
+## 37  control 15.359996
+## 38  control 11.882684
+## 39  control 17.992422
+## 40  control 13.046474
+## 41  control 14.044185
+## 42  control 13.916378
+## 43  control 16.323773
+## 44  control 15.792784
+## 45  control 13.348287
+## 46  control 14.083589
+## 47  control 13.279373
+## 48  control 12.830423
+## 49  control 16.421381
+## 50  control 15.338094
+## 51  control 15.897746
+## 52  control 16.676618
+## 53  control 16.426070
+## 54  control 10.795480
+## 55  control 15.715837
+## 56  control 17.464004
+## 57  control 16.499295
+## 58  control 16.016627
+## 59  control 12.322836
+## 60  control 12.514155
+## 61  control 14.712929
+## 62  control 13.002697
+## 63  control 13.187491
+## 64  control 13.904217
+## 65  control 13.187979
+## 66  control 17.965931
+## 67  control 15.765681
+## 68  control 17.552092
+## 69  control 17.375064
+## 70  control 17.789497
+## 71  control 12.941454
+## 72  control 14.279326
+## 73  control 17.325343
+## 74  control 16.850516
+## 75  control 13.901421
+## 76  control 15.892719
+## 77  control 16.659254
+## 78  control 11.517085
+## 79  control 16.277159
+## 80  control 15.210873
+## 81  control 14.023726
+## 82  control 15.419267
+## 83  control 14.667030
+## 84  control 11.956782
+## 85  control 11.662929
+## 86  control 12.867252
+## 87  control 12.201428
+## 88  control 13.461541
+## 89  control 16.022517
+## 90  control 13.852763
+## 91  control 19.760811
+## 92  control 15.184298
+## 93  control 17.042985
+## 94  control 16.023374
+## 95  control 12.445182
+## 96  control 15.105064
+## 97  control 14.170174
+## 98  control 17.220741
+## 99  control 15.415562
+## 100 control 17.423435
+## 101 control 18.168021
+## 102 control 14.923406
+## 103 control 12.639067
+## 104 control 14.415230
+## 105 control 18.684669
+## 106 control 13.274621
+## 107 control 15.170123
+## 108 control 12.832269
+## 109 control 14.307313
+## 110 control 15.707933
+## 111 control 14.995393
+## 112 control 10.341125
+## 113 control 14.000305
+## 114 control 18.983644
+## 115 control 13.778281
+## 116 control 12.290429
+## 117 control 17.032084
+## 118 control 10.944243
+## 119 control 15.803994
+## 120 control 13.514372
+## 121 control 19.978537
+## 122 control 16.239082
+## 123 control 17.750879
+## 124 control 15.946105
+## 125 control 13.842156
+## 126 control 15.136999
+## 127 control 17.068774
+## 128 control 16.085529
+## 129 control 16.290639
+## 130 control 15.006675
+## 131 control 14.032802
+## 132 control 13.651124
+## 133 control 17.482458
+## 134 control 16.340414
+## 135 control 14.792359
+## 136 control 16.562378
+## 137 control 17.418964
+## 138 control 14.397930
+## 139 control 14.798370
+## 140 control 14.740536
+## 141 control 17.282043
+## 142 control 15.870480
+## 143 control 15.659665
+## 144 control 12.644201
+## 145 control 19.798299
+## 146 control 12.753005
+## 147 control 17.633182
+## 148 control 16.548130
+## 149 control 16.077491
+## 150 control 15.377292
+## 151 control 13.440714
+## 152 control 11.873189
+## 153 control 13.872363
+## 154 control 17.125913
+## 155 control 13.204259
+## 156 control 14.897500
+## 157 control 14.498063
+## 158 control 14.957636
+## 159 control 16.039436
+## 160 control 13.852588
+## 161 control 16.954111
+## 162 control 12.932627
+## 163 control 14.657060
+## 164 control 17.209752
+## 165 control 16.019529
+## 166 control 17.913734
+## 167 control 17.650325
+## 168 control 15.027264
+## 169 control 14.280646
+## 170 control 15.453480
+## 171 control 15.056639
+## 172 control 13.929901
+## 173 control 15.120553
+## 174 control 14.322400
+## 175 control 15.687349
+## 176 control 16.832465
+## 177 control 15.842348
+## 178 control 15.206640
+## 179 control 15.821297
+## 180 control 15.000121
+## 181 control 18.279560
+## 182 control 15.783586
+## 183 control 11.998510
+## 184 control 12.528892
+## 185 control 17.548911
+## 186 control 18.024903
+## 187 control 13.628027
+## 188 control 13.768251
+## 189 control 15.762698
+## 190 control 18.152179
+## 191 control 15.265340
+## 192 control 14.789445
+## 193 control 13.289670
+## 194 control 15.250938
+## 195 control 17.316827
+## 196 control 16.501835
+## 197 control 14.699471
+## 198 control 14.841160
+## 199 control 19.518311
+## 200 control 16.584730
+## 201 control 15.203319
+## 202 control 12.979510
+## 203 control 13.836199
+## 204 control 10.253668
+## 205 control 15.328652
+## 206 control 11.798621
+## 207 control 15.043624
+## 208 control 13.009314
+## 209 control 16.361820
+## 210 control 15.981239
+## 211 control 17.464284
+## 212 control 12.481339
+## 213 control 15.281667
+## 214 control 14.053742
+## 215 control 12.000649
+## 216 control 14.923767
+## 217 control 14.515937
+## 218 control 14.437890
+## 219 control 17.446204
+## 220 control 12.432547
+## 221 control 16.760532
+## 222 control 17.360602
+## 223 control 15.893099
+## 224 control 13.025124
+## 225 control 13.518976
+## 226 control 18.626355
+## 227 control 16.434350
+## 228 control 13.642474
+## 229 control 14.532785
+## 230 control 11.747886
+## 231 control 16.225879
+## 232 control 16.476210
+## 233 control 17.710372
+## 234 control 10.230375
+## 235 control 16.390704
+## 236 control 12.168594
+## 237 control 17.809088
+## 238 control 17.391687
+## 239 control 14.434246
+## 240 control 15.632968
+## 241 control 12.958037
+## 242 control 12.988993
+## 243 control 14.511087
+## 244 control 14.883551
+## 245 control 15.219428
+## 246 control 19.364242
+## 247 control 15.978172
+## 248 control 14.615231
+## 249 control 14.745935
+## 250 control 15.788691
+## 251 control 16.869998
+## 252 control 16.106464
+## 253 control 15.532989
+## 254 control 14.754277
+## 255 control 12.969004
+## 256 control  9.535279
+## 257 control 15.505866
+## 258 control 14.949821
+## 259 control 12.693878
+## 260 control 16.273469
+## 261 control 14.085926
+## 262 control 17.317450
+## 263 control 15.321464
+## 264 control 13.620381
+## 265 control 12.734324
+## 266 control 17.131446
+## 267 control 16.145458
+## 268 control 12.152542
+## 269 control 15.889705
+## 270 control 12.336644
+## 271 control 12.367903
+## 272 control 12.929053
+## 273 control 18.535191
+## 274 control  9.816709
+## 275 control 13.792501
+## 276 control 14.653969
+## 277 control 13.233056
+## 278 control 15.507080
+## 279 control 14.661574
+## 280 control 20.619053
+## 281 control 15.819956
+## 282 control 12.818524
+## 283 control 17.089792
+## 284 control 13.313406
+## 285 control 16.403811
+## 286 control 13.616541
+## 287 control 15.268212
+## 288 control 16.206601
+## 289 control 15.338676
+## 290 control 13.473563
+## 291 control 15.957383
+## 292 control 15.645363
+## 293 control 14.895559
+## 294 control 11.818485
+## 295 control 16.861223
+## 296 control 13.928655
+## 297 control 18.780551
+## 298 control 17.847127
+## 299 control 14.895574
+## 300 control 12.538799</code></pre>
+<pre class="r"><code>my_df_2 &lt;- data.frame(X = &quot;treatment&quot;, Y = response_2)
+print(my_df_2)</code></pre>
+<pre><code>##             X         Y
+## 1   treatment 32.909571
+## 2   treatment 45.110749
+## 3   treatment 25.046257
+## 4   treatment 33.167227
+## 5   treatment 35.547496
+## 6   treatment 31.342147
+## 7   treatment 37.773084
+## 8   treatment 23.367171
+## 9   treatment 38.823255
+## 10  treatment 22.209091
+## 11  treatment 31.453752
+## 12  treatment 23.984308
+## 13  treatment 38.147252
+## 14  treatment 29.600805
+## 15  treatment 29.198093
+## 16  treatment 19.420462
+## 17  treatment 30.731875
+## 18  treatment 27.862295
+## 19  treatment 24.165520
+## 20  treatment 26.984391
+## 21  treatment 41.520294
+## 22  treatment 28.408572
+## 23  treatment 35.417346
+## 24  treatment 24.258210
+## 25  treatment 35.045540
+## 26  treatment 33.409243
+## 27  treatment 26.940622
+## 28  treatment 29.485941
+## 29  treatment 37.735359
+## 30  treatment 32.825807
+## 31  treatment 32.525412
+## 32  treatment 29.771955
+## 33  treatment 26.319685
+## 34  treatment 35.978855
+## 35  treatment 25.317475
+## 36  treatment 33.212492
+## 37  treatment 31.183032
+## 38  treatment 31.866105
+## 39  treatment 25.261044
+## 40  treatment 29.289702
+## 41  treatment 31.680006
+## 42  treatment 22.209560
+## 43  treatment 39.677012
+## 44  treatment 43.457374
+## 45  treatment 39.952239
+## 46  treatment 33.982501
+## 47  treatment 33.091472
+## 48  treatment 36.542395
+## 49  treatment 22.051890
+## 50  treatment 31.277417
+## 51  treatment 15.895067
+## 52  treatment 36.587595
+## 53  treatment 32.937452
+## 54  treatment 30.460284
+## 55  treatment 17.916649
+## 56  treatment 22.502923
+## 57  treatment 20.508256
+## 58  treatment 42.186994
+## 59  treatment 39.242237
+## 60  treatment 22.301597
+## 61  treatment 33.700499
+## 62  treatment 31.535595
+## 63  treatment 18.973949
+## 64  treatment 34.527642
+## 65  treatment 33.468413
+## 66  treatment 36.281753
+## 67  treatment 18.100689
+## 68  treatment 33.647926
+## 69  treatment 35.137143
+## 70  treatment 30.033732
+## 71  treatment 25.873618
+## 72  treatment 35.888670
+## 73  treatment 36.594050
+## 74  treatment 26.777657
+## 75  treatment 37.342889
+## 76  treatment 21.559577
+## 77  treatment 43.544833
+## 78  treatment 31.298374
+## 79  treatment 38.253980
+## 80  treatment 39.608824
+## 81  treatment 31.597322
+## 82  treatment 27.318764
+## 83  treatment 30.315567
+## 84  treatment 28.159992
+## 85  treatment 43.732221
+## 86  treatment 37.799179
+## 87  treatment 31.623694
+## 88  treatment 27.654307
+## 89  treatment 24.884212
+## 90  treatment 37.238536
+## 91  treatment 38.576719
+## 92  treatment 25.013815
+## 93  treatment 21.929910
+## 94  treatment 27.511741
+## 95  treatment 32.017971
+## 96  treatment 25.207921
+## 97  treatment 29.140670
+## 98  treatment 15.390091
+## 99  treatment 31.039488
+## 100 treatment 32.272449
+## 101 treatment 35.771689
+## 102 treatment 29.690405
+## 103 treatment 31.465418
+## 104 treatment 22.395326
+## 105 treatment 27.401314
+## 106 treatment 26.103865
+## 107 treatment 26.109038
+## 108 treatment 31.609574
+## 109 treatment 34.981505
+## 110 treatment 10.825955
+## 111 treatment 29.742522
+## 112 treatment 32.487504
+## 113 treatment 34.169327
+## 114 treatment 43.226675
+## 115 treatment 25.527766
+## 116 treatment 27.074552
+## 117 treatment 26.983042
+## 118 treatment 31.863259
+## 119 treatment 28.315513
+## 120 treatment 44.633584
+## 121 treatment 18.608628
+## 122 treatment 25.914760
+## 123 treatment 35.363487
+## 124 treatment 39.831464
+## 125 treatment 24.802099
+## 126 treatment 20.154698
+## 127 treatment 30.761190
+## 128 treatment 33.561565
+## 129 treatment 25.269130
+## 130 treatment 37.880418
+## 131 treatment 32.101963
+## 132 treatment 22.510341
+## 133 treatment 43.520366
+## 134 treatment 39.909617
+## 135 treatment 20.025637
+## 136 treatment 25.374090
+## 137 treatment 24.162256
+## 138 treatment 40.610128
+## 139 treatment 32.470750
+## 140 treatment 32.908875
+## 141 treatment 30.463550
+## 142 treatment 26.611037
+## 143 treatment 17.305832
+## 144 treatment 26.392762
+## 145 treatment 31.994310
+## 146 treatment 35.708386
+## 147 treatment 24.275706
+## 148 treatment 36.221342
+## 149 treatment 36.302100
+## 150 treatment 33.993650
+## 151 treatment 27.971778
+## 152 treatment 42.513728
+## 153 treatment 28.054502
+## 154 treatment 33.428969
+## 155 treatment 31.476376
+## 156 treatment 32.765249
+## 157 treatment 36.816343
+## 158 treatment 29.207588
+## 159 treatment 33.757296
+## 160 treatment 29.433618
+## 161 treatment 27.759578
+## 162 treatment 24.188523
+## 163 treatment 20.312261
+## 164 treatment 29.790508
+## 165 treatment 34.048532
+## 166 treatment 37.870326
+## 167 treatment 28.673607
+## 168 treatment 24.318119
+## 169 treatment 22.933202
+## 170 treatment 27.103585
+## 171 treatment 30.279540
+## 172 treatment 22.807700
+## 173 treatment 30.515909
+## 174 treatment 32.139465
+## 175 treatment 30.832972
+## 176 treatment 35.752449
+## 177 treatment 31.929003
+## 178 treatment 32.767835
+## 179 treatment 31.439184
+## 180 treatment 38.995275
+## 181 treatment 22.682615
+## 182 treatment 29.614284
+## 183 treatment 42.417369
+## 184 treatment 33.873049
+## 185 treatment 30.280976
+## 186 treatment 28.057217
+## 187 treatment 48.025962
+## 188 treatment 19.296284
+## 189 treatment 31.439817
+## 190 treatment 32.887440
+## 191 treatment 33.781504
+## 192 treatment 40.557066
+## 193 treatment 35.629861
+## 194 treatment 38.455120
+## 195 treatment 38.808967
+## 196 treatment 34.839638
+## 197 treatment 31.124960
+## 198 treatment 39.236522
+## 199 treatment 41.341480
+## 200 treatment 20.773407
+## 201 treatment 20.955874
+## 202 treatment 44.542561
+## 203 treatment 37.302181
+## 204 treatment 24.248933
+## 205 treatment 33.037386
+## 206 treatment 36.176271
+## 207 treatment 45.762523
+## 208 treatment 28.600785
+## 209 treatment 35.044412
+## 210 treatment 36.727199
+## 211 treatment 24.739564
+## 212 treatment 35.265216
+## 213 treatment 28.891344
+## 214 treatment 31.583611
+## 215 treatment 38.671476
+## 216 treatment 28.281569
+## 217 treatment 30.531500
+## 218 treatment 31.967879
+## 219 treatment 28.698910
+## 220 treatment 40.196228
+## 221 treatment 29.147133
+## 222 treatment 21.661370
+## 223 treatment 34.952366
+## 224 treatment 29.456642
+## 225 treatment 31.225471
+## 226 treatment 29.492158
+## 227 treatment 34.546156
+## 228 treatment 28.265388
+## 229 treatment 33.670196
+## 230 treatment 30.948184
+## 231 treatment  8.581203
+## 232 treatment 17.836047
+## 233 treatment 35.996404
+## 234 treatment 34.368881
+## 235 treatment 31.849066
+## 236 treatment 26.207277
+## 237 treatment 34.147709
+## 238 treatment 31.161546
+## 239 treatment 29.781590
+## 240 treatment 29.445242
+## 241 treatment 35.901996
+## 242 treatment 29.311179
+## 243 treatment 31.972662
+## 244 treatment 23.596180
+## 245 treatment 32.673990
+## 246 treatment 39.829199
+## 247 treatment 30.164215
+## 248 treatment 22.860102
+## 249 treatment 33.674214
+## 250 treatment 34.046960
+## 251 treatment 35.469787
+## 252 treatment 40.363807
+## 253 treatment 35.003720
+## 254 treatment 26.814675
+## 255 treatment 18.612093
+## 256 treatment 25.581090
+## 257 treatment 30.484145
+## 258 treatment 48.718813
+## 259 treatment 25.213486
+## 260 treatment 31.546671
+## 261 treatment 33.805176
+## 262 treatment 16.715205
+## 263 treatment 40.678200
+## 264 treatment 30.004515
+## 265 treatment 22.552424
+## 266 treatment 26.925128
+## 267 treatment 24.213395
+## 268 treatment 31.381738
+## 269 treatment 30.317050
+## 270 treatment 34.058156
+## 271 treatment 30.870081
+## 272 treatment 37.198163
+## 273 treatment 22.426480
+## 274 treatment 12.247666
+## 275 treatment 31.299280
+## 276 treatment 18.151132
+## 277 treatment 21.810050
+## 278 treatment 45.612589
+## 279 treatment 28.851830
+## 280 treatment 28.025825
+## 281 treatment 26.400703
+## 282 treatment 23.318679
+## 283 treatment 20.417819
+## 284 treatment 17.997162
+## 285 treatment 21.665846
+## 286 treatment 22.732711
+## 287 treatment 33.634635
+## 288 treatment 26.125241
+## 289 treatment 28.197420
+## 290 treatment 31.097863
+## 291 treatment 28.998122
+## 292 treatment 32.963945
+## 293 treatment 22.946679
+## 294 treatment 30.697589
+## 295 treatment 25.309802
+## 296 treatment 20.496855
+## 297 treatment 26.778190
+## 298 treatment 34.201458
+## 299 treatment 29.392490
+## 300 treatment 26.060296</code></pre>
+<pre class="r"><code>my_df &lt;- rbind(my_df_1, my_df_2)
+print(my_df)</code></pre>
+<pre><code>##             X         Y
+## 1     control 15.913320
+## 2     control 15.756934
+## 3     control 13.746237
+## 4     control 14.779061
+## 5     control 13.987809
+## 6     control 12.711177
+## 7     control 14.390748
+## 8     control 14.935594
+## 9     control 14.621749
+## 10    control 13.798654
+## 11    control 15.688211
+## 12    control 10.606142
+## 13    control 10.230606
+## 14    control 13.782756
+## 15    control 17.790384
+## 16    control 16.924541
+## 17    control 18.543735
+## 18    control 14.533474
+## 19    control 14.702280
+## 20    control 15.774356
+## 21    control 16.871739
+## 22    control 13.851729
+## 23    control 13.677365
+## 24    control 13.564552
+## 25    control 15.722315
+## 26    control 16.091029
+## 27    control 14.660484
+## 28    control 18.314847
+## 29    control 12.894918
+## 30    control 17.011683
+## 31    control 15.430762
+## 32    control 16.322336
+## 33    control 15.481224
+## 34    control 15.932966
+## 35    control 14.710225
+## 36    control 18.332325
+## 37    control 15.359996
+## 38    control 11.882684
+## 39    control 17.992422
+## 40    control 13.046474
+## 41    control 14.044185
+## 42    control 13.916378
+## 43    control 16.323773
+## 44    control 15.792784
+## 45    control 13.348287
+## 46    control 14.083589
+## 47    control 13.279373
+## 48    control 12.830423
+## 49    control 16.421381
+## 50    control 15.338094
+## 51    control 15.897746
+## 52    control 16.676618
+## 53    control 16.426070
+## 54    control 10.795480
+## 55    control 15.715837
+## 56    control 17.464004
+## 57    control 16.499295
+## 58    control 16.016627
+## 59    control 12.322836
+## 60    control 12.514155
+## 61    control 14.712929
+## 62    control 13.002697
+## 63    control 13.187491
+## 64    control 13.904217
+## 65    control 13.187979
+## 66    control 17.965931
+## 67    control 15.765681
+## 68    control 17.552092
+## 69    control 17.375064
+## 70    control 17.789497
+## 71    control 12.941454
+## 72    control 14.279326
+## 73    control 17.325343
+## 74    control 16.850516
+## 75    control 13.901421
+## 76    control 15.892719
+## 77    control 16.659254
+## 78    control 11.517085
+## 79    control 16.277159
+## 80    control 15.210873
+## 81    control 14.023726
+## 82    control 15.419267
+## 83    control 14.667030
+## 84    control 11.956782
+## 85    control 11.662929
+## 86    control 12.867252
+## 87    control 12.201428
+## 88    control 13.461541
+## 89    control 16.022517
+## 90    control 13.852763
+## 91    control 19.760811
+## 92    control 15.184298
+## 93    control 17.042985
+## 94    control 16.023374
+## 95    control 12.445182
+## 96    control 15.105064
+## 97    control 14.170174
+## 98    control 17.220741
+## 99    control 15.415562
+## 100   control 17.423435
+## 101   control 18.168021
+## 102   control 14.923406
+## 103   control 12.639067
+## 104   control 14.415230
+## 105   control 18.684669
+## 106   control 13.274621
+## 107   control 15.170123
+## 108   control 12.832269
+## 109   control 14.307313
+## 110   control 15.707933
+## 111   control 14.995393
+## 112   control 10.341125
+## 113   control 14.000305
+## 114   control 18.983644
+## 115   control 13.778281
+## 116   control 12.290429
+## 117   control 17.032084
+## 118   control 10.944243
+## 119   control 15.803994
+## 120   control 13.514372
+## 121   control 19.978537
+## 122   control 16.239082
+## 123   control 17.750879
+## 124   control 15.946105
+## 125   control 13.842156
+## 126   control 15.136999
+## 127   control 17.068774
+## 128   control 16.085529
+## 129   control 16.290639
+## 130   control 15.006675
+## 131   control 14.032802
+## 132   control 13.651124
+## 133   control 17.482458
+## 134   control 16.340414
+## 135   control 14.792359
+## 136   control 16.562378
+## 137   control 17.418964
+## 138   control 14.397930
+## 139   control 14.798370
+## 140   control 14.740536
+## 141   control 17.282043
+## 142   control 15.870480
+## 143   control 15.659665
+## 144   control 12.644201
+## 145   control 19.798299
+## 146   control 12.753005
+## 147   control 17.633182
+## 148   control 16.548130
+## 149   control 16.077491
+## 150   control 15.377292
+## 151   control 13.440714
+## 152   control 11.873189
+## 153   control 13.872363
+## 154   control 17.125913
+## 155   control 13.204259
+## 156   control 14.897500
+## 157   control 14.498063
+## 158   control 14.957636
+## 159   control 16.039436
+## 160   control 13.852588
+## 161   control 16.954111
+## 162   control 12.932627
+## 163   control 14.657060
+## 164   control 17.209752
+## 165   control 16.019529
+## 166   control 17.913734
+## 167   control 17.650325
+## 168   control 15.027264
+## 169   control 14.280646
+## 170   control 15.453480
+## 171   control 15.056639
+## 172   control 13.929901
+## 173   control 15.120553
+## 174   control 14.322400
+## 175   control 15.687349
+## 176   control 16.832465
+## 177   control 15.842348
+## 178   control 15.206640
+## 179   control 15.821297
+## 180   control 15.000121
+## 181   control 18.279560
+## 182   control 15.783586
+## 183   control 11.998510
+## 184   control 12.528892
+## 185   control 17.548911
+## 186   control 18.024903
+## 187   control 13.628027
+## 188   control 13.768251
+## 189   control 15.762698
+## 190   control 18.152179
+## 191   control 15.265340
+## 192   control 14.789445
+## 193   control 13.289670
+## 194   control 15.250938
+## 195   control 17.316827
+## 196   control 16.501835
+## 197   control 14.699471
+## 198   control 14.841160
+## 199   control 19.518311
+## 200   control 16.584730
+## 201   control 15.203319
+## 202   control 12.979510
+## 203   control 13.836199
+## 204   control 10.253668
+## 205   control 15.328652
+## 206   control 11.798621
+## 207   control 15.043624
+## 208   control 13.009314
+## 209   control 16.361820
+## 210   control 15.981239
+## 211   control 17.464284
+## 212   control 12.481339
+## 213   control 15.281667
+## 214   control 14.053742
+## 215   control 12.000649
+## 216   control 14.923767
+## 217   control 14.515937
+## 218   control 14.437890
+## 219   control 17.446204
+## 220   control 12.432547
+## 221   control 16.760532
+## 222   control 17.360602
+## 223   control 15.893099
+## 224   control 13.025124
+## 225   control 13.518976
+## 226   control 18.626355
+## 227   control 16.434350
+## 228   control 13.642474
+## 229   control 14.532785
+## 230   control 11.747886
+## 231   control 16.225879
+## 232   control 16.476210
+## 233   control 17.710372
+## 234   control 10.230375
+## 235   control 16.390704
+## 236   control 12.168594
+## 237   control 17.809088
+## 238   control 17.391687
+## 239   control 14.434246
+## 240   control 15.632968
+## 241   control 12.958037
+## 242   control 12.988993
+## 243   control 14.511087
+## 244   control 14.883551
+## 245   control 15.219428
+## 246   control 19.364242
+## 247   control 15.978172
+## 248   control 14.615231
+## 249   control 14.745935
+## 250   control 15.788691
+## 251   control 16.869998
+## 252   control 16.106464
+## 253   control 15.532989
+## 254   control 14.754277
+## 255   control 12.969004
+## 256   control  9.535279
+## 257   control 15.505866
+## 258   control 14.949821
+## 259   control 12.693878
+## 260   control 16.273469
+## 261   control 14.085926
+## 262   control 17.317450
+## 263   control 15.321464
+## 264   control 13.620381
+## 265   control 12.734324
+## 266   control 17.131446
+## 267   control 16.145458
+## 268   control 12.152542
+## 269   control 15.889705
+## 270   control 12.336644
+## 271   control 12.367903
+## 272   control 12.929053
+## 273   control 18.535191
+## 274   control  9.816709
+## 275   control 13.792501
+## 276   control 14.653969
+## 277   control 13.233056
+## 278   control 15.507080
+## 279   control 14.661574
+## 280   control 20.619053
+## 281   control 15.819956
+## 282   control 12.818524
+## 283   control 17.089792
+## 284   control 13.313406
+## 285   control 16.403811
+## 286   control 13.616541
+## 287   control 15.268212
+## 288   control 16.206601
+## 289   control 15.338676
+## 290   control 13.473563
+## 291   control 15.957383
+## 292   control 15.645363
+## 293   control 14.895559
+## 294   control 11.818485
+## 295   control 16.861223
+## 296   control 13.928655
+## 297   control 18.780551
+## 298   control 17.847127
+## 299   control 14.895574
+## 300   control 12.538799
+## 301 treatment 32.909571
+## 302 treatment 45.110749
+## 303 treatment 25.046257
+## 304 treatment 33.167227
+## 305 treatment 35.547496
+## 306 treatment 31.342147
+## 307 treatment 37.773084
+## 308 treatment 23.367171
+## 309 treatment 38.823255
+## 310 treatment 22.209091
+## 311 treatment 31.453752
+## 312 treatment 23.984308
+## 313 treatment 38.147252
+## 314 treatment 29.600805
+## 315 treatment 29.198093
+## 316 treatment 19.420462
+## 317 treatment 30.731875
+## 318 treatment 27.862295
+## 319 treatment 24.165520
+## 320 treatment 26.984391
+## 321 treatment 41.520294
+## 322 treatment 28.408572
+## 323 treatment 35.417346
+## 324 treatment 24.258210
+## 325 treatment 35.045540
+## 326 treatment 33.409243
+## 327 treatment 26.940622
+## 328 treatment 29.485941
+## 329 treatment 37.735359
+## 330 treatment 32.825807
+## 331 treatment 32.525412
+## 332 treatment 29.771955
+## 333 treatment 26.319685
+## 334 treatment 35.978855
+## 335 treatment 25.317475
+## 336 treatment 33.212492
+## 337 treatment 31.183032
+## 338 treatment 31.866105
+## 339 treatment 25.261044
+## 340 treatment 29.289702
+## 341 treatment 31.680006
+## 342 treatment 22.209560
+## 343 treatment 39.677012
+## 344 treatment 43.457374
+## 345 treatment 39.952239
+## 346 treatment 33.982501
+## 347 treatment 33.091472
+## 348 treatment 36.542395
+## 349 treatment 22.051890
+## 350 treatment 31.277417
+## 351 treatment 15.895067
+## 352 treatment 36.587595
+## 353 treatment 32.937452
+## 354 treatment 30.460284
+## 355 treatment 17.916649
+## 356 treatment 22.502923
+## 357 treatment 20.508256
+## 358 treatment 42.186994
+## 359 treatment 39.242237
+## 360 treatment 22.301597
+## 361 treatment 33.700499
+## 362 treatment 31.535595
+## 363 treatment 18.973949
+## 364 treatment 34.527642
+## 365 treatment 33.468413
+## 366 treatment 36.281753
+## 367 treatment 18.100689
+## 368 treatment 33.647926
+## 369 treatment 35.137143
+## 370 treatment 30.033732
+## 371 treatment 25.873618
+## 372 treatment 35.888670
+## 373 treatment 36.594050
+## 374 treatment 26.777657
+## 375 treatment 37.342889
+## 376 treatment 21.559577
+## 377 treatment 43.544833
+## 378 treatment 31.298374
+## 379 treatment 38.253980
+## 380 treatment 39.608824
+## 381 treatment 31.597322
+## 382 treatment 27.318764
+## 383 treatment 30.315567
+## 384 treatment 28.159992
+## 385 treatment 43.732221
+## 386 treatment 37.799179
+## 387 treatment 31.623694
+## 388 treatment 27.654307
+## 389 treatment 24.884212
+## 390 treatment 37.238536
+## 391 treatment 38.576719
+## 392 treatment 25.013815
+## 393 treatment 21.929910
+## 394 treatment 27.511741
+## 395 treatment 32.017971
+## 396 treatment 25.207921
+## 397 treatment 29.140670
+## 398 treatment 15.390091
+## 399 treatment 31.039488
+## 400 treatment 32.272449
+## 401 treatment 35.771689
+## 402 treatment 29.690405
+## 403 treatment 31.465418
+## 404 treatment 22.395326
+## 405 treatment 27.401314
+## 406 treatment 26.103865
+## 407 treatment 26.109038
+## 408 treatment 31.609574
+## 409 treatment 34.981505
+## 410 treatment 10.825955
+## 411 treatment 29.742522
+## 412 treatment 32.487504
+## 413 treatment 34.169327
+## 414 treatment 43.226675
+## 415 treatment 25.527766
+## 416 treatment 27.074552
+## 417 treatment 26.983042
+## 418 treatment 31.863259
+## 419 treatment 28.315513
+## 420 treatment 44.633584
+## 421 treatment 18.608628
+## 422 treatment 25.914760
+## 423 treatment 35.363487
+## 424 treatment 39.831464
+## 425 treatment 24.802099
+## 426 treatment 20.154698
+## 427 treatment 30.761190
+## 428 treatment 33.561565
+## 429 treatment 25.269130
+## 430 treatment 37.880418
+## 431 treatment 32.101963
+## 432 treatment 22.510341
+## 433 treatment 43.520366
+## 434 treatment 39.909617
+## 435 treatment 20.025637
+## 436 treatment 25.374090
+## 437 treatment 24.162256
+## 438 treatment 40.610128
+## 439 treatment 32.470750
+## 440 treatment 32.908875
+## 441 treatment 30.463550
+## 442 treatment 26.611037
+## 443 treatment 17.305832
+## 444 treatment 26.392762
+## 445 treatment 31.994310
+## 446 treatment 35.708386
+## 447 treatment 24.275706
+## 448 treatment 36.221342
+## 449 treatment 36.302100
+## 450 treatment 33.993650
+## 451 treatment 27.971778
+## 452 treatment 42.513728
+## 453 treatment 28.054502
+## 454 treatment 33.428969
+## 455 treatment 31.476376
+## 456 treatment 32.765249
+## 457 treatment 36.816343
+## 458 treatment 29.207588
+## 459 treatment 33.757296
+## 460 treatment 29.433618
+## 461 treatment 27.759578
+## 462 treatment 24.188523
+## 463 treatment 20.312261
+## 464 treatment 29.790508
+## 465 treatment 34.048532
+## 466 treatment 37.870326
+## 467 treatment 28.673607
+## 468 treatment 24.318119
+## 469 treatment 22.933202
+## 470 treatment 27.103585
+## 471 treatment 30.279540
+## 472 treatment 22.807700
+## 473 treatment 30.515909
+## 474 treatment 32.139465
+## 475 treatment 30.832972
+## 476 treatment 35.752449
+## 477 treatment 31.929003
+## 478 treatment 32.767835
+## 479 treatment 31.439184
+## 480 treatment 38.995275
+## 481 treatment 22.682615
+## 482 treatment 29.614284
+## 483 treatment 42.417369
+## 484 treatment 33.873049
+## 485 treatment 30.280976
+## 486 treatment 28.057217
+## 487 treatment 48.025962
+## 488 treatment 19.296284
+## 489 treatment 31.439817
+## 490 treatment 32.887440
+## 491 treatment 33.781504
+## 492 treatment 40.557066
+## 493 treatment 35.629861
+## 494 treatment 38.455120
+## 495 treatment 38.808967
+## 496 treatment 34.839638
+## 497 treatment 31.124960
+## 498 treatment 39.236522
+## 499 treatment 41.341480
+## 500 treatment 20.773407
+## 501 treatment 20.955874
+## 502 treatment 44.542561
+## 503 treatment 37.302181
+## 504 treatment 24.248933
+## 505 treatment 33.037386
+## 506 treatment 36.176271
+## 507 treatment 45.762523
+## 508 treatment 28.600785
+## 509 treatment 35.044412
+## 510 treatment 36.727199
+## 511 treatment 24.739564
+## 512 treatment 35.265216
+## 513 treatment 28.891344
+## 514 treatment 31.583611
+## 515 treatment 38.671476
+## 516 treatment 28.281569
+## 517 treatment 30.531500
+## 518 treatment 31.967879
+## 519 treatment 28.698910
+## 520 treatment 40.196228
+## 521 treatment 29.147133
+## 522 treatment 21.661370
+## 523 treatment 34.952366
+## 524 treatment 29.456642
+## 525 treatment 31.225471
+## 526 treatment 29.492158
+## 527 treatment 34.546156
+## 528 treatment 28.265388
+## 529 treatment 33.670196
+## 530 treatment 30.948184
+## 531 treatment  8.581203
+## 532 treatment 17.836047
+## 533 treatment 35.996404
+## 534 treatment 34.368881
+## 535 treatment 31.849066
+## 536 treatment 26.207277
+## 537 treatment 34.147709
+## 538 treatment 31.161546
+## 539 treatment 29.781590
+## 540 treatment 29.445242
+## 541 treatment 35.901996
+## 542 treatment 29.311179
+## 543 treatment 31.972662
+## 544 treatment 23.596180
+## 545 treatment 32.673990
+## 546 treatment 39.829199
+## 547 treatment 30.164215
+## 548 treatment 22.860102
+## 549 treatment 33.674214
+## 550 treatment 34.046960
+## 551 treatment 35.469787
+## 552 treatment 40.363807
+## 553 treatment 35.003720
+## 554 treatment 26.814675
+## 555 treatment 18.612093
+## 556 treatment 25.581090
+## 557 treatment 30.484145
+## 558 treatment 48.718813
+## 559 treatment 25.213486
+## 560 treatment 31.546671
+## 561 treatment 33.805176
+## 562 treatment 16.715205
+## 563 treatment 40.678200
+## 564 treatment 30.004515
+## 565 treatment 22.552424
+## 566 treatment 26.925128
+## 567 treatment 24.213395
+## 568 treatment 31.381738
+## 569 treatment 30.317050
+## 570 treatment 34.058156
+## 571 treatment 30.870081
+## 572 treatment 37.198163
+## 573 treatment 22.426480
+## 574 treatment 12.247666
+## 575 treatment 31.299280
+## 576 treatment 18.151132
+## 577 treatment 21.810050
+## 578 treatment 45.612589
+## 579 treatment 28.851830
+## 580 treatment 28.025825
+## 581 treatment 26.400703
+## 582 treatment 23.318679
+## 583 treatment 20.417819
+## 584 treatment 17.997162
+## 585 treatment 21.665846
+## 586 treatment 22.732711
+## 587 treatment 33.634635
+## 588 treatment 26.125241
+## 589 treatment 28.197420
+## 590 treatment 31.097863
+## 591 treatment 28.998122
+## 592 treatment 32.963945
+## 593 treatment 22.946679
+## 594 treatment 30.697589
+## 595 treatment 25.309802
+## 596 treatment 20.496855
+## 597 treatment 26.778190
+## 598 treatment 34.201458
+## 599 treatment 29.392490
+## 600 treatment 26.060296</code></pre>
+<pre class="r"><code>anova_data &lt;- aov(Y ~ X, data = my_df)
+summary_sample &lt;- summary(anova_data)
+print(summary_sample[[1]]$`Pr(&gt;F)`)</code></pre>
+<pre><code>## [1] 1.978262e-162            NA</code></pre>
+<pre class="r"><code>library(ggplot2)
+plot &lt;- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x=&quot;Conditions&quot;,y=&quot;Responses&quot;)
+print(plot)</code></pre>
+<p><img src="Homework_6_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+<strong>For Loop Generation- ADJUSTING MEAN</strong></p>
+<pre class="r"><code>n &lt;- sample(1:30)
+for (i in 1:length(n)) {
+  print(n[i])
+}</code></pre>
+<pre><code>## [1] 23
+## [1] 5
+## [1] 17
+## [1] 20
+## [1] 28
+## [1] 21
+## [1] 25
+## [1] 6
+## [1] 18
+## [1] 1
+## [1] 14
+## [1] 2
+## [1] 26
+## [1] 13
+## [1] 4
+## [1] 27
+## [1] 16
+## [1] 24
+## [1] 8
+## [1] 19
+## [1] 3
+## [1] 15
+## [1] 7
+## [1] 22
+## [1] 9
+## [1] 30
+## [1] 12
+## [1] 10
+## [1] 11
+## [1] 29</code></pre>
+<pre class="r"><code>response_1 &lt;- rnorm(n=100, mean=n[i], sd=2)
+print(response_1)</code></pre>
+<pre><code>##   [1] 25.73260 28.94384 32.67111 26.88506 29.73146 29.26030 32.93228 31.32429
+##   [9] 29.45813 28.33091 27.74022 32.31658 28.61895 29.01136 26.01178 27.81747
+##  [17] 30.18797 29.43642 30.30002 27.72470 29.80609 26.38008 28.56786 33.97087
+##  [25] 32.45108 28.18277 32.59529 26.13597 30.20649 32.14799 26.66020 31.32870
+##  [33] 31.42776 28.38832 29.12819 30.47673 29.38252 27.90353 30.89403 28.98592
+##  [41] 29.01469 30.40393 27.48220 30.69315 31.49024 26.75299 31.28433 27.54663
+##  [49] 26.52676 31.52869 25.88811 32.42065 28.02937 28.58719 29.44149 30.81716
+##  [57] 25.93850 26.30132 29.49898 27.73982 23.79690 32.52434 27.37623 29.37476
+##  [65] 29.05528 26.42836 32.56167 27.36911 27.79714 28.66200 30.39291 27.35011
+##  [73] 30.31731 29.55821 30.32171 27.62549 30.24756 29.25870 29.18250 30.72734
+##  [81] 28.53931 31.86494 28.96575 27.12154 27.88027 24.74989 27.99099 26.21883
+##  [89] 31.88528 26.01961 29.80282 30.04294 28.84383 29.68944 28.13688 30.48713
+##  [97] 27.43612 32.28132 26.27355 35.12532</code></pre>
+<pre class="r"><code>response_2 &lt;- rnorm(n=100, mean=n[i], sd=7)
+print(response_2)</code></pre>
+<pre><code>##   [1] 21.69729 27.67408 27.63147 26.42387 42.84070 38.18750 27.10383 34.57670
+##   [9] 28.71381 23.54323 22.23700 15.49426 21.04354 33.52517 19.26987 31.42579
+##  [17] 36.04324 26.98541 31.16032 39.29478 38.29488 35.89206 34.40606 24.64503
+##  [25] 35.11163 36.54069 30.22462 22.72976 23.00285 23.57916 33.77015 26.62764
+##  [33] 24.14822 41.23273 20.41688 31.61433 37.14270 40.57772 31.58606 34.30426
+##  [41] 35.71441 24.37227 39.21463 38.58213 23.31682 19.09285 16.16671 26.88885
+##  [49] 22.10781 18.07740 26.70358 29.81177 36.46596 39.63505 38.72137 36.44435
+##  [57] 25.71546 26.36767 23.16180 26.48839 24.45477 18.54553 31.07628 27.15908
+##  [65] 25.11348 22.35667 31.65191 26.64848 35.89676 32.92689 30.89525 29.25970
+##  [73] 44.95228 30.81476 28.17273 22.89012 18.84515 34.45706 11.16047 27.78245
+##  [81] 28.50617 28.56168 25.35734 18.57103 25.73471 30.52833 22.61953 30.94998
+##  [89] 12.00458 30.23377 31.65705 16.90355 24.50430 35.88573 39.88851 26.58480
+##  [97] 17.09671 18.64683 24.28151 36.68614</code></pre>
+<pre class="r"><code>response &lt;- c(response_1, response_2)
+
+my_df_1 &lt;- data.frame (X = &quot;control&quot;, Y= response_1)
+print(my_df_1)</code></pre>
+<pre><code>##           X        Y
+## 1   control 25.73260
+## 2   control 28.94384
+## 3   control 32.67111
+## 4   control 26.88506
+## 5   control 29.73146
+## 6   control 29.26030
+## 7   control 32.93228
+## 8   control 31.32429
+## 9   control 29.45813
+## 10  control 28.33091
+## 11  control 27.74022
+## 12  control 32.31658
+## 13  control 28.61895
+## 14  control 29.01136
+## 15  control 26.01178
+## 16  control 27.81747
+## 17  control 30.18797
+## 18  control 29.43642
+## 19  control 30.30002
+## 20  control 27.72470
+## 21  control 29.80609
+## 22  control 26.38008
+## 23  control 28.56786
+## 24  control 33.97087
+## 25  control 32.45108
+## 26  control 28.18277
+## 27  control 32.59529
+## 28  control 26.13597
+## 29  control 30.20649
+## 30  control 32.14799
+## 31  control 26.66020
+## 32  control 31.32870
+## 33  control 31.42776
+## 34  control 28.38832
+## 35  control 29.12819
+## 36  control 30.47673
+## 37  control 29.38252
+## 38  control 27.90353
+## 39  control 30.89403
+## 40  control 28.98592
+## 41  control 29.01469
+## 42  control 30.40393
+## 43  control 27.48220
+## 44  control 30.69315
+## 45  control 31.49024
+## 46  control 26.75299
+## 47  control 31.28433
+## 48  control 27.54663
+## 49  control 26.52676
+## 50  control 31.52869
+## 51  control 25.88811
+## 52  control 32.42065
+## 53  control 28.02937
+## 54  control 28.58719
+## 55  control 29.44149
+## 56  control 30.81716
+## 57  control 25.93850
+## 58  control 26.30132
+## 59  control 29.49898
+## 60  control 27.73982
+## 61  control 23.79690
+## 62  control 32.52434
+## 63  control 27.37623
+## 64  control 29.37476
+## 65  control 29.05528
+## 66  control 26.42836
+## 67  control 32.56167
+## 68  control 27.36911
+## 69  control 27.79714
+## 70  control 28.66200
+## 71  control 30.39291
+## 72  control 27.35011
+## 73  control 30.31731
+## 74  control 29.55821
+## 75  control 30.32171
+## 76  control 27.62549
+## 77  control 30.24756
+## 78  control 29.25870
+## 79  control 29.18250
+## 80  control 30.72734
+## 81  control 28.53931
+## 82  control 31.86494
+## 83  control 28.96575
+## 84  control 27.12154
+## 85  control 27.88027
+## 86  control 24.74989
+## 87  control 27.99099
+## 88  control 26.21883
+## 89  control 31.88528
+## 90  control 26.01961
+## 91  control 29.80282
+## 92  control 30.04294
+## 93  control 28.84383
+## 94  control 29.68944
+## 95  control 28.13688
+## 96  control 30.48713
+## 97  control 27.43612
+## 98  control 32.28132
+## 99  control 26.27355
+## 100 control 35.12532</code></pre>
+<pre class="r"><code>my_df_2 &lt;- data.frame(X = &quot;treatment&quot;, Y = response_2)
+print(my_df_2)</code></pre>
+<pre><code>##             X        Y
+## 1   treatment 21.69729
+## 2   treatment 27.67408
+## 3   treatment 27.63147
+## 4   treatment 26.42387
+## 5   treatment 42.84070
+## 6   treatment 38.18750
+## 7   treatment 27.10383
+## 8   treatment 34.57670
+## 9   treatment 28.71381
+## 10  treatment 23.54323
+## 11  treatment 22.23700
+## 12  treatment 15.49426
+## 13  treatment 21.04354
+## 14  treatment 33.52517
+## 15  treatment 19.26987
+## 16  treatment 31.42579
+## 17  treatment 36.04324
+## 18  treatment 26.98541
+## 19  treatment 31.16032
+## 20  treatment 39.29478
+## 21  treatment 38.29488
+## 22  treatment 35.89206
+## 23  treatment 34.40606
+## 24  treatment 24.64503
+## 25  treatment 35.11163
+## 26  treatment 36.54069
+## 27  treatment 30.22462
+## 28  treatment 22.72976
+## 29  treatment 23.00285
+## 30  treatment 23.57916
+## 31  treatment 33.77015
+## 32  treatment 26.62764
+## 33  treatment 24.14822
+## 34  treatment 41.23273
+## 35  treatment 20.41688
+## 36  treatment 31.61433
+## 37  treatment 37.14270
+## 38  treatment 40.57772
+## 39  treatment 31.58606
+## 40  treatment 34.30426
+## 41  treatment 35.71441
+## 42  treatment 24.37227
+## 43  treatment 39.21463
+## 44  treatment 38.58213
+## 45  treatment 23.31682
+## 46  treatment 19.09285
+## 47  treatment 16.16671
+## 48  treatment 26.88885
+## 49  treatment 22.10781
+## 50  treatment 18.07740
+## 51  treatment 26.70358
+## 52  treatment 29.81177
+## 53  treatment 36.46596
+## 54  treatment 39.63505
+## 55  treatment 38.72137
+## 56  treatment 36.44435
+## 57  treatment 25.71546
+## 58  treatment 26.36767
+## 59  treatment 23.16180
+## 60  treatment 26.48839
+## 61  treatment 24.45477
+## 62  treatment 18.54553
+## 63  treatment 31.07628
+## 64  treatment 27.15908
+## 65  treatment 25.11348
+## 66  treatment 22.35667
+## 67  treatment 31.65191
+## 68  treatment 26.64848
+## 69  treatment 35.89676
+## 70  treatment 32.92689
+## 71  treatment 30.89525
+## 72  treatment 29.25970
+## 73  treatment 44.95228
+## 74  treatment 30.81476
+## 75  treatment 28.17273
+## 76  treatment 22.89012
+## 77  treatment 18.84515
+## 78  treatment 34.45706
+## 79  treatment 11.16047
+## 80  treatment 27.78245
+## 81  treatment 28.50617
+## 82  treatment 28.56168
+## 83  treatment 25.35734
+## 84  treatment 18.57103
+## 85  treatment 25.73471
+## 86  treatment 30.52833
+## 87  treatment 22.61953
+## 88  treatment 30.94998
+## 89  treatment 12.00458
+## 90  treatment 30.23377
+## 91  treatment 31.65705
+## 92  treatment 16.90355
+## 93  treatment 24.50430
+## 94  treatment 35.88573
+## 95  treatment 39.88851
+## 96  treatment 26.58480
+## 97  treatment 17.09671
+## 98  treatment 18.64683
+## 99  treatment 24.28151
+## 100 treatment 36.68614</code></pre>
+<pre class="r"><code>my_df &lt;- rbind(my_df_1, my_df_2)
+print(my_df)</code></pre>
+<pre><code>##             X        Y
+## 1     control 25.73260
+## 2     control 28.94384
+## 3     control 32.67111
+## 4     control 26.88506
+## 5     control 29.73146
+## 6     control 29.26030
+## 7     control 32.93228
+## 8     control 31.32429
+## 9     control 29.45813
+## 10    control 28.33091
+## 11    control 27.74022
+## 12    control 32.31658
+## 13    control 28.61895
+## 14    control 29.01136
+## 15    control 26.01178
+## 16    control 27.81747
+## 17    control 30.18797
+## 18    control 29.43642
+## 19    control 30.30002
+## 20    control 27.72470
+## 21    control 29.80609
+## 22    control 26.38008
+## 23    control 28.56786
+## 24    control 33.97087
+## 25    control 32.45108
+## 26    control 28.18277
+## 27    control 32.59529
+## 28    control 26.13597
+## 29    control 30.20649
+## 30    control 32.14799
+## 31    control 26.66020
+## 32    control 31.32870
+## 33    control 31.42776
+## 34    control 28.38832
+## 35    control 29.12819
+## 36    control 30.47673
+## 37    control 29.38252
+## 38    control 27.90353
+## 39    control 30.89403
+## 40    control 28.98592
+## 41    control 29.01469
+## 42    control 30.40393
+## 43    control 27.48220
+## 44    control 30.69315
+## 45    control 31.49024
+## 46    control 26.75299
+## 47    control 31.28433
+## 48    control 27.54663
+## 49    control 26.52676
+## 50    control 31.52869
+## 51    control 25.88811
+## 52    control 32.42065
+## 53    control 28.02937
+## 54    control 28.58719
+## 55    control 29.44149
+## 56    control 30.81716
+## 57    control 25.93850
+## 58    control 26.30132
+## 59    control 29.49898
+## 60    control 27.73982
+## 61    control 23.79690
+## 62    control 32.52434
+## 63    control 27.37623
+## 64    control 29.37476
+## 65    control 29.05528
+## 66    control 26.42836
+## 67    control 32.56167
+## 68    control 27.36911
+## 69    control 27.79714
+## 70    control 28.66200
+## 71    control 30.39291
+## 72    control 27.35011
+## 73    control 30.31731
+## 74    control 29.55821
+## 75    control 30.32171
+## 76    control 27.62549
+## 77    control 30.24756
+## 78    control 29.25870
+## 79    control 29.18250
+## 80    control 30.72734
+## 81    control 28.53931
+## 82    control 31.86494
+## 83    control 28.96575
+## 84    control 27.12154
+## 85    control 27.88027
+## 86    control 24.74989
+## 87    control 27.99099
+## 88    control 26.21883
+## 89    control 31.88528
+## 90    control 26.01961
+## 91    control 29.80282
+## 92    control 30.04294
+## 93    control 28.84383
+## 94    control 29.68944
+## 95    control 28.13688
+## 96    control 30.48713
+## 97    control 27.43612
+## 98    control 32.28132
+## 99    control 26.27355
+## 100   control 35.12532
+## 101 treatment 21.69729
+## 102 treatment 27.67408
+## 103 treatment 27.63147
+## 104 treatment 26.42387
+## 105 treatment 42.84070
+## 106 treatment 38.18750
+## 107 treatment 27.10383
+## 108 treatment 34.57670
+## 109 treatment 28.71381
+## 110 treatment 23.54323
+## 111 treatment 22.23700
+## 112 treatment 15.49426
+## 113 treatment 21.04354
+## 114 treatment 33.52517
+## 115 treatment 19.26987
+## 116 treatment 31.42579
+## 117 treatment 36.04324
+## 118 treatment 26.98541
+## 119 treatment 31.16032
+## 120 treatment 39.29478
+## 121 treatment 38.29488
+## 122 treatment 35.89206
+## 123 treatment 34.40606
+## 124 treatment 24.64503
+## 125 treatment 35.11163
+## 126 treatment 36.54069
+## 127 treatment 30.22462
+## 128 treatment 22.72976
+## 129 treatment 23.00285
+## 130 treatment 23.57916
+## 131 treatment 33.77015
+## 132 treatment 26.62764
+## 133 treatment 24.14822
+## 134 treatment 41.23273
+## 135 treatment 20.41688
+## 136 treatment 31.61433
+## 137 treatment 37.14270
+## 138 treatment 40.57772
+## 139 treatment 31.58606
+## 140 treatment 34.30426
+## 141 treatment 35.71441
+## 142 treatment 24.37227
+## 143 treatment 39.21463
+## 144 treatment 38.58213
+## 145 treatment 23.31682
+## 146 treatment 19.09285
+## 147 treatment 16.16671
+## 148 treatment 26.88885
+## 149 treatment 22.10781
+## 150 treatment 18.07740
+## 151 treatment 26.70358
+## 152 treatment 29.81177
+## 153 treatment 36.46596
+## 154 treatment 39.63505
+## 155 treatment 38.72137
+## 156 treatment 36.44435
+## 157 treatment 25.71546
+## 158 treatment 26.36767
+## 159 treatment 23.16180
+## 160 treatment 26.48839
+## 161 treatment 24.45477
+## 162 treatment 18.54553
+## 163 treatment 31.07628
+## 164 treatment 27.15908
+## 165 treatment 25.11348
+## 166 treatment 22.35667
+## 167 treatment 31.65191
+## 168 treatment 26.64848
+## 169 treatment 35.89676
+## 170 treatment 32.92689
+## 171 treatment 30.89525
+## 172 treatment 29.25970
+## 173 treatment 44.95228
+## 174 treatment 30.81476
+## 175 treatment 28.17273
+## 176 treatment 22.89012
+## 177 treatment 18.84515
+## 178 treatment 34.45706
+## 179 treatment 11.16047
+## 180 treatment 27.78245
+## 181 treatment 28.50617
+## 182 treatment 28.56168
+## 183 treatment 25.35734
+## 184 treatment 18.57103
+## 185 treatment 25.73471
+## 186 treatment 30.52833
+## 187 treatment 22.61953
+## 188 treatment 30.94998
+## 189 treatment 12.00458
+## 190 treatment 30.23377
+## 191 treatment 31.65705
+## 192 treatment 16.90355
+## 193 treatment 24.50430
+## 194 treatment 35.88573
+## 195 treatment 39.88851
+## 196 treatment 26.58480
+## 197 treatment 17.09671
+## 198 treatment 18.64683
+## 199 treatment 24.28151
+## 200 treatment 36.68614</code></pre>
+<pre class="r"><code>anova_data &lt;- aov(Y ~ X, data = my_df)
+summary_mean &lt;- summary(anova_data)
+print(summary_mean[[1]]$`Pr(&gt;F)`)</code></pre>
+<pre><code>## [1] 0.4101751        NA</code></pre>
+<pre class="r"><code>library(ggplot2)
+plot &lt;- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x=&quot;Conditions&quot;,y=&quot;Responses&quot;)
+print(plot)</code></pre>
+<p><img src="Homework_6_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><strong>For Loop Generation- ADJUSTING SD</strong></p>
+<pre class="r"><code>n &lt;- sample(1:20)
+for (i in 1:length(n)) {
+  print(n[i])
+}</code></pre>
+<pre><code>## [1] 20
+## [1] 8
+## [1] 1
+## [1] 7
+## [1] 13
+## [1] 2
+## [1] 14
+## [1] 10
+## [1] 11
+## [1] 15
+## [1] 5
+## [1] 12
+## [1] 17
+## [1] 16
+## [1] 6
+## [1] 3
+## [1] 4
+## [1] 9
+## [1] 19
+## [1] 18</code></pre>
+<pre class="r"><code>response_1 &lt;- rnorm(n=100, mean=15, sd=n[i])
+print(response_1)</code></pre>
+<pre><code>##   [1] -10.520702  22.074201   4.694252  34.523369  19.975860  27.732258
+##   [7]  18.526930  -2.717747  17.054659  28.759516  29.845653  23.372022
+##  [13]  -4.757849 -10.427208  17.865788  18.691022  21.834094  -7.379599
+##  [19] -10.858341  31.273498  11.062927  13.400758  33.127020  27.887449
+##  [25]   5.275681  39.045905  36.127328   9.073975  36.390483   9.391918
+##  [31]   6.666649  16.283086  11.787035  35.668711  17.390300   9.945179
+##  [37]  27.408524  39.065029  36.273019 -11.884741  30.739079  17.660179
+##  [43]  25.489800   3.609754  27.249275   3.116514  18.805923  -4.078925
+##  [49]  46.874855  13.737879 -25.160928  19.781926  27.219192  32.156610
+##  [55]  10.667312  44.591442  65.099564  -3.916855  13.659492  13.329205
+##  [61] -12.412099  48.497797  21.775174  29.218952   9.431401  27.382789
+##  [67]  16.928073  -5.007928  51.437668  26.938959  23.025839  40.593813
+##  [73]   5.254611  23.675000  17.642162 -14.392746  26.510765  26.726842
+##  [79]  33.250098  -7.696610   3.215675   2.419819  19.737353  10.776264
+##  [85]  19.487793  10.212055  18.835364  35.117981 -15.947956   9.324501
+##  [91]  59.363566  32.992623  17.996050   3.575045  -1.078236  20.138858
+##  [97]  26.266557  17.971466  18.048955  19.275603</code></pre>
+<pre class="r"><code>response_2 &lt;- rnorm(n=100, mean=30, sd=n[i])
+print(response_2)</code></pre>
+<pre><code>##   [1]  67.2901204   7.3688003  17.0910155   6.5758012  32.5304497  32.1670564
+##   [7]  27.3332801  36.0723495   8.9065867  28.5954180  38.4907009  38.7882659
+##  [13]  70.4943608  63.5347581  29.9822361  51.8365691  40.7145118  29.2292208
+##  [19]  -2.2496498  33.1653126  27.8528037   5.4968837  29.8677781   1.7780157
+##  [25]  25.6320789   1.6278323  34.8709202  43.4305834  81.1203481  51.4950502
+##  [31]  45.5257830  53.2760992  39.2051663  36.6258822  -0.2650905  60.4852430
+##  [37]  29.1761995  41.2561909  46.3358799  30.4498957  42.6109945  36.2073489
+##  [43]  47.2555658  65.9447452  85.2730720  42.6414753  27.3613553  14.1853201
+##  [49]  35.0938939  54.0733614  52.1983361  23.3211330  31.5375193  19.1144748
+##  [55]  34.2051555  19.4119827  32.5573987   3.3486550  38.8777586  12.2411075
+##  [61] -14.7810563  32.9466090   4.2897451  19.3636172   4.1526660  40.5257958
+##  [67]  50.0263657  20.1136954  43.0051345  50.0481339  17.1392757  23.8160851
+##  [73]  17.6777514  -1.4220445   7.0073822  37.6351904  52.6528176  -5.2902115
+##  [79]   8.2035609  48.7867958  14.0867885  55.9537723  28.3433266  96.8713811
+##  [85]  36.8197573  41.6658309  32.0181870  41.7866293  39.2773388  36.3332356
+##  [91]  60.8375325  23.8209294  71.3206424  13.5183148  60.1625417  42.0265737
+##  [97]  18.0372347  15.9057349  40.5702483  54.4001981</code></pre>
+<pre class="r"><code>response &lt;- c(response_1, response_2)
+
+my_df_1 &lt;- data.frame (X = &quot;control&quot;, Y= response_1)
+print(my_df_1)</code></pre>
+<pre><code>##           X          Y
+## 1   control -10.520702
+## 2   control  22.074201
+## 3   control   4.694252
+## 4   control  34.523369
+## 5   control  19.975860
+## 6   control  27.732258
+## 7   control  18.526930
+## 8   control  -2.717747
+## 9   control  17.054659
+## 10  control  28.759516
+## 11  control  29.845653
+## 12  control  23.372022
+## 13  control  -4.757849
+## 14  control -10.427208
+## 15  control  17.865788
+## 16  control  18.691022
+## 17  control  21.834094
+## 18  control  -7.379599
+## 19  control -10.858341
+## 20  control  31.273498
+## 21  control  11.062927
+## 22  control  13.400758
+## 23  control  33.127020
+## 24  control  27.887449
+## 25  control   5.275681
+## 26  control  39.045905
+## 27  control  36.127328
+## 28  control   9.073975
+## 29  control  36.390483
+## 30  control   9.391918
+## 31  control   6.666649
+## 32  control  16.283086
+## 33  control  11.787035
+## 34  control  35.668711
+## 35  control  17.390300
+## 36  control   9.945179
+## 37  control  27.408524
+## 38  control  39.065029
+## 39  control  36.273019
+## 40  control -11.884741
+## 41  control  30.739079
+## 42  control  17.660179
+## 43  control  25.489800
+## 44  control   3.609754
+## 45  control  27.249275
+## 46  control   3.116514
+## 47  control  18.805923
+## 48  control  -4.078925
+## 49  control  46.874855
+## 50  control  13.737879
+## 51  control -25.160928
+## 52  control  19.781926
+## 53  control  27.219192
+## 54  control  32.156610
+## 55  control  10.667312
+## 56  control  44.591442
+## 57  control  65.099564
+## 58  control  -3.916855
+## 59  control  13.659492
+## 60  control  13.329205
+## 61  control -12.412099
+## 62  control  48.497797
+## 63  control  21.775174
+## 64  control  29.218952
+## 65  control   9.431401
+## 66  control  27.382789
+## 67  control  16.928073
+## 68  control  -5.007928
+## 69  control  51.437668
+## 70  control  26.938959
+## 71  control  23.025839
+## 72  control  40.593813
+## 73  control   5.254611
+## 74  control  23.675000
+## 75  control  17.642162
+## 76  control -14.392746
+## 77  control  26.510765
+## 78  control  26.726842
+## 79  control  33.250098
+## 80  control  -7.696610
+## 81  control   3.215675
+## 82  control   2.419819
+## 83  control  19.737353
+## 84  control  10.776264
+## 85  control  19.487793
+## 86  control  10.212055
+## 87  control  18.835364
+## 88  control  35.117981
+## 89  control -15.947956
+## 90  control   9.324501
+## 91  control  59.363566
+## 92  control  32.992623
+## 93  control  17.996050
+## 94  control   3.575045
+## 95  control  -1.078236
+## 96  control  20.138858
+## 97  control  26.266557
+## 98  control  17.971466
+## 99  control  18.048955
+## 100 control  19.275603</code></pre>
+<pre class="r"><code>my_df_2 &lt;- data.frame(X = &quot;treatment&quot;, Y = response_2)
+print(my_df_2)</code></pre>
+<pre><code>##             X           Y
+## 1   treatment  67.2901204
+## 2   treatment   7.3688003
+## 3   treatment  17.0910155
+## 4   treatment   6.5758012
+## 5   treatment  32.5304497
+## 6   treatment  32.1670564
+## 7   treatment  27.3332801
+## 8   treatment  36.0723495
+## 9   treatment   8.9065867
+## 10  treatment  28.5954180
+## 11  treatment  38.4907009
+## 12  treatment  38.7882659
+## 13  treatment  70.4943608
+## 14  treatment  63.5347581
+## 15  treatment  29.9822361
+## 16  treatment  51.8365691
+## 17  treatment  40.7145118
+## 18  treatment  29.2292208
+## 19  treatment  -2.2496498
+## 20  treatment  33.1653126
+## 21  treatment  27.8528037
+## 22  treatment   5.4968837
+## 23  treatment  29.8677781
+## 24  treatment   1.7780157
+## 25  treatment  25.6320789
+## 26  treatment   1.6278323
+## 27  treatment  34.8709202
+## 28  treatment  43.4305834
+## 29  treatment  81.1203481
+## 30  treatment  51.4950502
+## 31  treatment  45.5257830
+## 32  treatment  53.2760992
+## 33  treatment  39.2051663
+## 34  treatment  36.6258822
+## 35  treatment  -0.2650905
+## 36  treatment  60.4852430
+## 37  treatment  29.1761995
+## 38  treatment  41.2561909
+## 39  treatment  46.3358799
+## 40  treatment  30.4498957
+## 41  treatment  42.6109945
+## 42  treatment  36.2073489
+## 43  treatment  47.2555658
+## 44  treatment  65.9447452
+## 45  treatment  85.2730720
+## 46  treatment  42.6414753
+## 47  treatment  27.3613553
+## 48  treatment  14.1853201
+## 49  treatment  35.0938939
+## 50  treatment  54.0733614
+## 51  treatment  52.1983361
+## 52  treatment  23.3211330
+## 53  treatment  31.5375193
+## 54  treatment  19.1144748
+## 55  treatment  34.2051555
+## 56  treatment  19.4119827
+## 57  treatment  32.5573987
+## 58  treatment   3.3486550
+## 59  treatment  38.8777586
+## 60  treatment  12.2411075
+## 61  treatment -14.7810563
+## 62  treatment  32.9466090
+## 63  treatment   4.2897451
+## 64  treatment  19.3636172
+## 65  treatment   4.1526660
+## 66  treatment  40.5257958
+## 67  treatment  50.0263657
+## 68  treatment  20.1136954
+## 69  treatment  43.0051345
+## 70  treatment  50.0481339
+## 71  treatment  17.1392757
+## 72  treatment  23.8160851
+## 73  treatment  17.6777514
+## 74  treatment  -1.4220445
+## 75  treatment   7.0073822
+## 76  treatment  37.6351904
+## 77  treatment  52.6528176
+## 78  treatment  -5.2902115
+## 79  treatment   8.2035609
+## 80  treatment  48.7867958
+## 81  treatment  14.0867885
+## 82  treatment  55.9537723
+## 83  treatment  28.3433266
+## 84  treatment  96.8713811
+## 85  treatment  36.8197573
+## 86  treatment  41.6658309
+## 87  treatment  32.0181870
+## 88  treatment  41.7866293
+## 89  treatment  39.2773388
+## 90  treatment  36.3332356
+## 91  treatment  60.8375325
+## 92  treatment  23.8209294
+## 93  treatment  71.3206424
+## 94  treatment  13.5183148
+## 95  treatment  60.1625417
+## 96  treatment  42.0265737
+## 97  treatment  18.0372347
+## 98  treatment  15.9057349
+## 99  treatment  40.5702483
+## 100 treatment  54.4001981</code></pre>
+<pre class="r"><code>my_df &lt;- rbind(my_df_1, my_df_2)
+print(my_df)</code></pre>
+<pre><code>##             X           Y
+## 1     control -10.5207020
+## 2     control  22.0742007
+## 3     control   4.6942523
+## 4     control  34.5233691
+## 5     control  19.9758600
+## 6     control  27.7322580
+## 7     control  18.5269299
+## 8     control  -2.7177466
+## 9     control  17.0546592
+## 10    control  28.7595163
+## 11    control  29.8456530
+## 12    control  23.3720222
+## 13    control  -4.7578487
+## 14    control -10.4272082
+## 15    control  17.8657879
+## 16    control  18.6910222
+## 17    control  21.8340941
+## 18    control  -7.3795994
+## 19    control -10.8583413
+## 20    control  31.2734976
+## 21    control  11.0629270
+## 22    control  13.4007585
+## 23    control  33.1270199
+## 24    control  27.8874490
+## 25    control   5.2756808
+## 26    control  39.0459053
+## 27    control  36.1273283
+## 28    control   9.0739753
+## 29    control  36.3904831
+## 30    control   9.3919185
+## 31    control   6.6666493
+## 32    control  16.2830862
+## 33    control  11.7870346
+## 34    control  35.6687108
+## 35    control  17.3903001
+## 36    control   9.9451789
+## 37    control  27.4085235
+## 38    control  39.0650291
+## 39    control  36.2730194
+## 40    control -11.8847407
+## 41    control  30.7390787
+## 42    control  17.6601785
+## 43    control  25.4897999
+## 44    control   3.6097542
+## 45    control  27.2492753
+## 46    control   3.1165137
+## 47    control  18.8059234
+## 48    control  -4.0789252
+## 49    control  46.8748548
+## 50    control  13.7378794
+## 51    control -25.1609283
+## 52    control  19.7819261
+## 53    control  27.2191921
+## 54    control  32.1566100
+## 55    control  10.6673124
+## 56    control  44.5914424
+## 57    control  65.0995645
+## 58    control  -3.9168545
+## 59    control  13.6594916
+## 60    control  13.3292049
+## 61    control -12.4120985
+## 62    control  48.4977968
+## 63    control  21.7751742
+## 64    control  29.2189518
+## 65    control   9.4314011
+## 66    control  27.3827894
+## 67    control  16.9280727
+## 68    control  -5.0079277
+## 69    control  51.4376678
+## 70    control  26.9389591
+## 71    control  23.0258392
+## 72    control  40.5938134
+## 73    control   5.2546109
+## 74    control  23.6750000
+## 75    control  17.6421623
+## 76    control -14.3927457
+## 77    control  26.5107647
+## 78    control  26.7268422
+## 79    control  33.2500984
+## 80    control  -7.6966101
+## 81    control   3.2156753
+## 82    control   2.4198189
+## 83    control  19.7373534
+## 84    control  10.7762642
+## 85    control  19.4877934
+## 86    control  10.2120552
+## 87    control  18.8353636
+## 88    control  35.1179812
+## 89    control -15.9479561
+## 90    control   9.3245005
+## 91    control  59.3635662
+## 92    control  32.9926231
+## 93    control  17.9960502
+## 94    control   3.5750454
+## 95    control  -1.0782361
+## 96    control  20.1388578
+## 97    control  26.2665571
+## 98    control  17.9714656
+## 99    control  18.0489545
+## 100   control  19.2756026
+## 101 treatment  67.2901204
+## 102 treatment   7.3688003
+## 103 treatment  17.0910155
+## 104 treatment   6.5758012
+## 105 treatment  32.5304497
+## 106 treatment  32.1670564
+## 107 treatment  27.3332801
+## 108 treatment  36.0723495
+## 109 treatment   8.9065867
+## 110 treatment  28.5954180
+## 111 treatment  38.4907009
+## 112 treatment  38.7882659
+## 113 treatment  70.4943608
+## 114 treatment  63.5347581
+## 115 treatment  29.9822361
+## 116 treatment  51.8365691
+## 117 treatment  40.7145118
+## 118 treatment  29.2292208
+## 119 treatment  -2.2496498
+## 120 treatment  33.1653126
+## 121 treatment  27.8528037
+## 122 treatment   5.4968837
+## 123 treatment  29.8677781
+## 124 treatment   1.7780157
+## 125 treatment  25.6320789
+## 126 treatment   1.6278323
+## 127 treatment  34.8709202
+## 128 treatment  43.4305834
+## 129 treatment  81.1203481
+## 130 treatment  51.4950502
+## 131 treatment  45.5257830
+## 132 treatment  53.2760992
+## 133 treatment  39.2051663
+## 134 treatment  36.6258822
+## 135 treatment  -0.2650905
+## 136 treatment  60.4852430
+## 137 treatment  29.1761995
+## 138 treatment  41.2561909
+## 139 treatment  46.3358799
+## 140 treatment  30.4498957
+## 141 treatment  42.6109945
+## 142 treatment  36.2073489
+## 143 treatment  47.2555658
+## 144 treatment  65.9447452
+## 145 treatment  85.2730720
+## 146 treatment  42.6414753
+## 147 treatment  27.3613553
+## 148 treatment  14.1853201
+## 149 treatment  35.0938939
+## 150 treatment  54.0733614
+## 151 treatment  52.1983361
+## 152 treatment  23.3211330
+## 153 treatment  31.5375193
+## 154 treatment  19.1144748
+## 155 treatment  34.2051555
+## 156 treatment  19.4119827
+## 157 treatment  32.5573987
+## 158 treatment   3.3486550
+## 159 treatment  38.8777586
+## 160 treatment  12.2411075
+## 161 treatment -14.7810563
+## 162 treatment  32.9466090
+## 163 treatment   4.2897451
+## 164 treatment  19.3636172
+## 165 treatment   4.1526660
+## 166 treatment  40.5257958
+## 167 treatment  50.0263657
+## 168 treatment  20.1136954
+## 169 treatment  43.0051345
+## 170 treatment  50.0481339
+## 171 treatment  17.1392757
+## 172 treatment  23.8160851
+## 173 treatment  17.6777514
+## 174 treatment  -1.4220445
+## 175 treatment   7.0073822
+## 176 treatment  37.6351904
+## 177 treatment  52.6528176
+## 178 treatment  -5.2902115
+## 179 treatment   8.2035609
+## 180 treatment  48.7867958
+## 181 treatment  14.0867885
+## 182 treatment  55.9537723
+## 183 treatment  28.3433266
+## 184 treatment  96.8713811
+## 185 treatment  36.8197573
+## 186 treatment  41.6658309
+## 187 treatment  32.0181870
+## 188 treatment  41.7866293
+## 189 treatment  39.2773388
+## 190 treatment  36.3332356
+## 191 treatment  60.8375325
+## 192 treatment  23.8209294
+## 193 treatment  71.3206424
+## 194 treatment  13.5183148
+## 195 treatment  60.1625417
+## 196 treatment  42.0265737
+## 197 treatment  18.0372347
+## 198 treatment  15.9057349
+## 199 treatment  40.5702483
+## 200 treatment  54.4001981</code></pre>
+<pre class="r"><code>anova_data &lt;- aov(Y ~ X, data = my_df)
+summary_sd &lt;- summary(anova_data)
+print(summary_sd[[1]]$`Pr(&gt;F)`)</code></pre>
+<pre><code>## [1] 2.258223e-08           NA</code></pre>
+<pre class="r"><code>library(ggplot2)
+plot &lt;- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x=&quot;Conditions&quot;,y=&quot;Responses&quot;)
+print(plot)</code></pre>
+<p><img src="Homework_6_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><strong>Comparing p-values</strong></p>
+<pre class="r"><code>print(summary[[1]]$`Pr(&gt;F)`)</code></pre>
+<pre><code>## [1] 2.176367e-53           NA</code></pre>
+<pre class="r"><code>print(summary_sample[[1]]$`Pr(&gt;F)`)</code></pre>
+<pre><code>## [1] 1.978262e-162            NA</code></pre>
+<pre class="r"><code>print(summary_mean[[1]]$`Pr(&gt;F)`)</code></pre>
+<pre><code>## [1] 0.4101751        NA</code></pre>
+<pre class="r"><code>print(summary_sd[[1]]$`Pr(&gt;F)`)</code></pre>
+<pre><code>## [1] 2.258223e-08           NA</code></pre>
+<p><strong>Discussion on p-values</strong></p>
 
 
 

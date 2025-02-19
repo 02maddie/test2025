@@ -360,59 +360,59 @@ print(my_vec)</code></pre>
 <pre class="r"><code># use the sample matrix to reshuffle these values
 my_vec &lt;- sample(my_vec)
 print(my_vec)</code></pre>
-<pre><code>##  [1]  2 16 12 21  1 17 23  5 18 14 20 15 22  9 19 25  4  3 11  6 10 24  8 13  7</code></pre>
+<pre><code>##  [1]  2 17 15 20 25 21  4 24 12 14  3 13 10 18  9 16 23  7 11  6 19  5  8  1 22</code></pre>
 <pre class="r"><code># create a square matrix with these elements and print matrix
 my_matrix &lt;- matrix(data=(my_vec^2), nrow = n_dims, ncol = n_dims)
 print(my_matrix)</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4] [,5]
-## [1,]    4  289  400  625  100
-## [2,]  256  529  225   16  576
-## [3,]  144   25  484    9   64
-## [4,]  441  324   81  121  169
-## [5,]    1  196  361   36   49</code></pre>
+## [1,]    4  441    9  256  361
+## [2,]  289   16  169  529   25
+## [3,]  225  576  100   49   64
+## [4,]  400  144  324  121    1
+## [5,]  625  196   81   36  484</code></pre>
 <pre class="r"><code># find a function in r to transpose the matrix and print again (it worked! it transposed the matrix!)
 transpose_matrix &lt;- t(my_matrix)
 print(transpose_matrix)</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4] [,5]
-## [1,]    4  256  144  441    1
-## [2,]  289  529   25  324  196
-## [3,]  400  225  484   81  361
-## [4,]  625   16    9  121   36
-## [5,]  100  576   64  169   49</code></pre>
+## [1,]    4  289  225  400  625
+## [2,]  441   16  576  144  196
+## [3,]    9  169  100  324   81
+## [4,]  256  529   49  121   36
+## [5,]  361   25   64    1  484</code></pre>
 <pre class="r"><code># calculate the sum and the mean of the elements in the first row and then the last row
 sum_first_row &lt;- sum(transpose_matrix[1, ])
 print(sum_first_row)</code></pre>
-<pre><code>## [1] 846</code></pre>
+<pre><code>## [1] 1543</code></pre>
 <pre class="r"><code>mean_first_row &lt;- mean(transpose_matrix[1,])
 print(mean_first_row)</code></pre>
-<pre><code>## [1] 169.2</code></pre>
+<pre><code>## [1] 308.6</code></pre>
 <pre class="r"><code>sum_last_row &lt;- sum(transpose_matrix[n_dims, ])
 print(sum_last_row)</code></pre>
-<pre><code>## [1] 958</code></pre>
+<pre><code>## [1] 935</code></pre>
 <pre class="r"><code>mean_last_row &lt;- mean(transpose_matrix[n_dims, ])
 print(mean_last_row)</code></pre>
-<pre><code>## [1] 191.6</code></pre>
+<pre><code>## [1] 187</code></pre>
 <pre class="r"><code># use eigen() function on matrix
 eigen_matrix &lt;- eigen(transpose_matrix)
 print(eigen_matrix)</code></pre>
 <pre><code>## eigen() decomposition
 ## $values
-## [1] 1061.1178+  0.0000i -495.4949+  0.0000i  383.4306+129.7553i
-## [4]  383.4306-129.7553i -145.4841+  0.0000i
+## [1] 1099.2766+  0.0000i  465.3701+  0.0000i -294.2051+209.7766i
+## [4] -294.2051-209.7766i -251.2366+  0.0000i
 ## 
 ## $vectors
-##              [,1]           [,2]                   [,3]                   [,4]
-## [1,] 0.3085974+0i  0.67257199+0i -0.04389087+0.1566320i -0.04389087-0.1566320i
-## [2,] 0.4858901+0i  0.01285373+0i  0.22868580-0.2852545i  0.22868580+0.2852545i
-## [3,] 0.6797400+0i -0.26004083+0i -0.78933295+0.0000000i -0.78933295+0.0000000i
-## [4,] 0.2348395+0i -0.68457342+0i  0.04087567+0.2882204i  0.04087567-0.2882204i
-## [5,] 0.3892073+0i  0.10592307+0i  0.11682507-0.3441456i  0.11682507+0.3441456i
-##               [,5]
-## [1,] -0.1777119+0i
-## [2,] -0.3124930+0i
-## [3,] -0.2896055+0i
-## [4,]  0.3343421+0i
-## [5,]  0.8216511+0i</code></pre>
+##               [,1]           [,2]                    [,3]
+## [1,] -0.5708693+0i  0.06783346+0i -0.31518326+0.10168912i
+## [2,] -0.5035864+0i -0.34987844+0i  0.66697421+0.00000000i
+## [3,] -0.2670772+0i -0.43483841+0i -0.04179261+0.26037667i
+## [4,] -0.4492059+0i -0.47838915+0i -0.49118898-0.33889113i
+## [5,] -0.3839178+0i  0.67456881+0i  0.13724901-0.03115292i
+##                         [,4]          [,5]
+## [1,] -0.31518326-0.10168912i  0.5134497+0i
+## [2,]  0.66697421+0.00000000i -0.6008306+0i
+## [3,] -0.04179261-0.26037667i -0.1767540+0i
+## [4,] -0.49118898+0.33889113i  0.5450034+0i
+## [5,]  0.13724901+0.03115292i -0.2170285+0i</code></pre>
 <pre class="r"><code># $values and $vectors- what kinds of numbers are these?
 ##### outputs are complex numbers for square matrices
 
@@ -423,54 +423,54 @@ typeof(eigen_matrix)</code></pre>
 <pre class="r"><code># my_matrix: 4x4 matrix with random uniform values between 0 and 1
 my_matrix = matrix(runif(16), nrow = 4, ncol = 4)
 print(my_matrix)</code></pre>
-<pre><code>##           [,1]       [,2]      [,3]      [,4]
-## [1,] 0.2615120 0.60732804 0.8250716 0.3689256
-## [2,] 0.2904565 0.01052187 0.3010180 0.2486324
-## [3,] 0.4060901 0.38437644 0.1998539 0.7140247
-## [4,] 0.1032876 0.33858525 0.2775999 0.2151753</code></pre>
+<pre><code>##           [,1]      [,2]       [,3]      [,4]
+## [1,] 0.7777615 0.8107349 0.08548422 0.9941761
+## [2,] 0.5487666 0.2438363 0.83108944 0.3379648
+## [3,] 0.7203425 0.4584201 0.05790244 0.7077237
+## [4,] 0.7821808 0.1269151 0.84425930 0.3551555</code></pre>
 <pre class="r"><code># my_logical: 100-element vector of TRUE/FALSE values and then assign some inequality (0.5)
 my_logical = runif(100) &gt; 0.5 
 print(my_logical)</code></pre>
-<pre><code>##   [1]  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE  TRUE
-##  [13]  TRUE FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE  TRUE  TRUE FALSE FALSE
-##  [25]  TRUE  TRUE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE
-##  [37]  TRUE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE
-##  [49]  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE
-##  [61]  TRUE  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE FALSE
-##  [73]  TRUE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE  TRUE
-##  [85]  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE
-##  [97]  TRUE FALSE  TRUE  TRUE</code></pre>
+<pre><code>##   [1]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE
+##  [13]  TRUE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE
+##  [25]  TRUE FALSE FALSE  TRUE  TRUE  TRUE FALSE FALSE  TRUE FALSE FALSE FALSE
+##  [37] FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE
+##  [49] FALSE FALSE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE
+##  [61] FALSE  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE  TRUE
+##  [73]  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE FALSE  TRUE  TRUE
+##  [85]  TRUE  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE FALSE FALSE  TRUE  TRUE
+##  [97]  TRUE  TRUE  TRUE FALSE</code></pre>
 <pre class="r"><code># my_letters: 26-element vector with all lowercase letters in random order
 my_letters = sample(letters, 26)
 print(my_letters)</code></pre>
-<pre><code>##  [1] &quot;b&quot; &quot;q&quot; &quot;a&quot; &quot;m&quot; &quot;n&quot; &quot;p&quot; &quot;g&quot; &quot;s&quot; &quot;t&quot; &quot;w&quot; &quot;i&quot; &quot;k&quot; &quot;x&quot; &quot;f&quot; &quot;d&quot; &quot;u&quot; &quot;c&quot; &quot;o&quot; &quot;e&quot;
-## [20] &quot;v&quot; &quot;r&quot; &quot;j&quot; &quot;y&quot; &quot;l&quot; &quot;h&quot; &quot;z&quot;</code></pre>
+<pre><code>##  [1] &quot;p&quot; &quot;g&quot; &quot;a&quot; &quot;m&quot; &quot;c&quot; &quot;v&quot; &quot;h&quot; &quot;w&quot; &quot;s&quot; &quot;i&quot; &quot;n&quot; &quot;o&quot; &quot;b&quot; &quot;t&quot; &quot;q&quot; &quot;f&quot; &quot;x&quot; &quot;u&quot; &quot;z&quot;
+## [20] &quot;k&quot; &quot;r&quot; &quot;j&quot; &quot;y&quot; &quot;d&quot; &quot;e&quot; &quot;l&quot;</code></pre>
 <pre class="r"><code># create list
 my_list &lt;- list(my_matrix, my_logical, my_letters)
 
 # print the list
 print(my_list)</code></pre>
 <pre><code>## [[1]]
-##           [,1]       [,2]      [,3]      [,4]
-## [1,] 0.2615120 0.60732804 0.8250716 0.3689256
-## [2,] 0.2904565 0.01052187 0.3010180 0.2486324
-## [3,] 0.4060901 0.38437644 0.1998539 0.7140247
-## [4,] 0.1032876 0.33858525 0.2775999 0.2151753
+##           [,1]      [,2]       [,3]      [,4]
+## [1,] 0.7777615 0.8107349 0.08548422 0.9941761
+## [2,] 0.5487666 0.2438363 0.83108944 0.3379648
+## [3,] 0.7203425 0.4584201 0.05790244 0.7077237
+## [4,] 0.7821808 0.1269151 0.84425930 0.3551555
 ## 
 ## [[2]]
-##   [1]  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE  TRUE
-##  [13]  TRUE FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE  TRUE  TRUE FALSE FALSE
-##  [25]  TRUE  TRUE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE
-##  [37]  TRUE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE
-##  [49]  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE
-##  [61]  TRUE  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE FALSE
-##  [73]  TRUE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE  TRUE
-##  [85]  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE
-##  [97]  TRUE FALSE  TRUE  TRUE
+##   [1]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE
+##  [13]  TRUE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE
+##  [25]  TRUE FALSE FALSE  TRUE  TRUE  TRUE FALSE FALSE  TRUE FALSE FALSE FALSE
+##  [37] FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE
+##  [49] FALSE FALSE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE
+##  [61] FALSE  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE  TRUE
+##  [73]  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE FALSE  TRUE  TRUE
+##  [85]  TRUE  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE FALSE FALSE  TRUE  TRUE
+##  [97]  TRUE  TRUE  TRUE FALSE
 ## 
 ## [[3]]
-##  [1] &quot;b&quot; &quot;q&quot; &quot;a&quot; &quot;m&quot; &quot;n&quot; &quot;p&quot; &quot;g&quot; &quot;s&quot; &quot;t&quot; &quot;w&quot; &quot;i&quot; &quot;k&quot; &quot;x&quot; &quot;f&quot; &quot;d&quot; &quot;u&quot; &quot;c&quot; &quot;o&quot; &quot;e&quot;
-## [20] &quot;v&quot; &quot;r&quot; &quot;j&quot; &quot;y&quot; &quot;l&quot; &quot;h&quot; &quot;z&quot;</code></pre>
+##  [1] &quot;p&quot; &quot;g&quot; &quot;a&quot; &quot;m&quot; &quot;c&quot; &quot;v&quot; &quot;h&quot; &quot;w&quot; &quot;s&quot; &quot;i&quot; &quot;n&quot; &quot;o&quot; &quot;b&quot; &quot;t&quot; &quot;q&quot; &quot;f&quot; &quot;x&quot; &quot;u&quot; &quot;z&quot;
+## [20] &quot;k&quot; &quot;r&quot; &quot;j&quot; &quot;y&quot; &quot;d&quot; &quot;e&quot; &quot;l&quot;</code></pre>
 <pre class="r"><code># Using the original list (my_list)
 my_matrix_list &lt;- my_matrix[2,2]
 my_logical_list &lt;- my_logical[2]
@@ -480,13 +480,13 @@ my_letters_list &lt;- my_letters[2]
 new_list &lt;- list(my_matrix_list,my_logical_list,my_letters_list)
 print(new_list)</code></pre>
 <pre><code>## [[1]]
-## [1] 0.01052187
+## [1] 0.2438363
 ## 
 ## [[2]]
-## [1] FALSE
+## [1] TRUE
 ## 
 ## [[3]]
-## [1] &quot;q&quot;</code></pre>
+## [1] &quot;g&quot;</code></pre>
 <pre class="r"><code># Check the types of each component in the new list
 typeof(new_list[[1]]) </code></pre>
 <pre><code>## [1] &quot;double&quot;</code></pre>
@@ -507,110 +507,110 @@ my_unis_20 &lt;- sample(0:10)
 my_unis_26 &lt;- sample(0:10, 4)
 my_unis &lt;- c(my_unis_10,my_unis_20,my_unis_26)
 print(my_unis)</code></pre>
-<pre><code>##  [1]  3  1  4  2  9  6  0  5  7 10  8  1 10  8  3  4  6  5  2  0  7  9  8  2  9
-## [26]  7</code></pre>
+<pre><code>##  [1]  0  5  6  2  4  1  3  7 10  8  9  7  9  8  5  1  4  0  6 10  3  2  3  0  6
+## [26] 10</code></pre>
 <pre class="r"><code># defining my_letters
 my_letters &lt;- sample(LETTERS, 26)
 print(my_letters)</code></pre>
-<pre><code>##  [1] &quot;E&quot; &quot;J&quot; &quot;S&quot; &quot;D&quot; &quot;F&quot; &quot;Q&quot; &quot;C&quot; &quot;M&quot; &quot;W&quot; &quot;R&quot; &quot;V&quot; &quot;U&quot; &quot;Z&quot; &quot;T&quot; &quot;B&quot; &quot;N&quot; &quot;K&quot; &quot;O&quot; &quot;G&quot;
-## [20] &quot;H&quot; &quot;X&quot; &quot;L&quot; &quot;P&quot; &quot;I&quot; &quot;Y&quot; &quot;A&quot;</code></pre>
+<pre><code>##  [1] &quot;H&quot; &quot;X&quot; &quot;J&quot; &quot;K&quot; &quot;F&quot; &quot;G&quot; &quot;U&quot; &quot;C&quot; &quot;W&quot; &quot;O&quot; &quot;E&quot; &quot;Y&quot; &quot;M&quot; &quot;Q&quot; &quot;A&quot; &quot;P&quot; &quot;R&quot; &quot;S&quot; &quot;B&quot;
+## [20] &quot;Z&quot; &quot;V&quot; &quot;L&quot; &quot;N&quot; &quot;T&quot; &quot;D&quot; &quot;I&quot;</code></pre>
 <pre class="r"><code># create data frame
 my_df &lt;- data.frame(my_unis,my_letters)
 print(my_df)</code></pre>
 <pre><code>##    my_unis my_letters
-## 1        3          E
-## 2        1          J
-## 3        4          S
-## 4        2          D
-## 5        9          F
-## 6        6          Q
-## 7        0          C
-## 8        5          M
-## 9        7          W
-## 10      10          R
-## 11       8          V
-## 12       1          U
-## 13      10          Z
-## 14       8          T
-## 15       3          B
-## 16       4          N
-## 17       6          K
-## 18       5          O
-## 19       2          G
-## 20       0          H
-## 21       7          X
-## 22       9          L
-## 23       8          P
-## 24       2          I
-## 25       9          Y
-## 26       7          A</code></pre>
+## 1        0          H
+## 2        5          X
+## 3        6          J
+## 4        2          K
+## 5        4          F
+## 6        1          G
+## 7        3          U
+## 8        7          C
+## 9       10          W
+## 10       8          O
+## 11       9          E
+## 12       7          Y
+## 13       9          M
+## 14       8          Q
+## 15       5          A
+## 16       1          P
+## 17       4          R
+## 18       0          S
+## 19       6          B
+## 20      10          Z
+## 21       3          V
+## 22       2          L
+## 23       3          N
+## 24       0          T
+## 25       6          D
+## 26      10          I</code></pre>
 <pre class="r"><code># for the first variable, use a single line of code in R to select 4 random rows and replace the numerical values in those rows with NA
 my_df$my_unis[sample(1:nrow(my_df), 4)] &lt;- NA
 print(my_df)</code></pre>
 <pre><code>##    my_unis my_letters
-## 1        3          E
-## 2       NA          J
-## 3        4          S
-## 4        2          D
-## 5        9          F
-## 6        6          Q
-## 7        0          C
-## 8        5          M
-## 9        7          W
-## 10      10          R
-## 11      NA          V
-## 12       1          U
-## 13      10          Z
-## 14       8          T
-## 15       3          B
-## 16       4          N
-## 17      NA          K
-## 18       5          O
-## 19       2          G
-## 20       0          H
-## 21      NA          X
-## 22       9          L
-## 23       8          P
-## 24       2          I
-## 25       9          Y
-## 26       7          A</code></pre>
+## 1        0          H
+## 2        5          X
+## 3        6          J
+## 4        2          K
+## 5        4          F
+## 6       NA          G
+## 7       NA          U
+## 8       NA          C
+## 9       10          W
+## 10       8          O
+## 11       9          E
+## 12       7          Y
+## 13       9          M
+## 14       8          Q
+## 15       5          A
+## 16       1          P
+## 17       4          R
+## 18       0          S
+## 19       6          B
+## 20      10          Z
+## 21       3          V
+## 22       2          L
+## 23       3          N
+## 24       0          T
+## 25       6          D
+## 26      NA          I</code></pre>
 <pre class="r"><code># for the first variable, write a single line of R code to identify which rows have the missing values
 which(!complete.cases(my_df$my_unis))</code></pre>
-<pre><code>## [1]  2 11 17 21</code></pre>
+<pre><code>## [1]  6  7  8 26</code></pre>
 <pre class="r"><code># reorder the entire data frame to arrange the second variable in alphabetical order
 my_df &lt;- my_df[order(my_df$my_letters), ]
 print(my_df)</code></pre>
 <pre><code>##    my_unis my_letters
-## 26       7          A
-## 15       3          B
-## 7        0          C
-## 4        2          D
-## 1        3          E
-## 5        9          F
-## 19       2          G
-## 20       0          H
-## 24       2          I
-## 2       NA          J
-## 17      NA          K
-## 22       9          L
-## 8        5          M
-## 16       4          N
-## 18       5          O
-## 23       8          P
-## 6        6          Q
-## 10      10          R
-## 3        4          S
-## 14       8          T
-## 12       1          U
-## 11      NA          V
-## 9        7          W
-## 21      NA          X
-## 25       9          Y
-## 13      10          Z</code></pre>
+## 15       5          A
+## 19       6          B
+## 8       NA          C
+## 25       6          D
+## 11       9          E
+## 5        4          F
+## 6       NA          G
+## 1        0          H
+## 26      NA          I
+## 3        6          J
+## 4        2          K
+## 22       2          L
+## 13       9          M
+## 23       3          N
+## 10       8          O
+## 16       1          P
+## 14       8          Q
+## 17       4          R
+## 18       0          S
+## 24       0          T
+## 7       NA          U
+## 21       3          V
+## 9       10          W
+## 2        5          X
+## 12       7          Y
+## 20      10          Z</code></pre>
 <pre class="r"><code># calculate the column mean for the first variable
 mean_my_unis &lt;- mean(my_df$my_unis, na.rm =TRUE)
 print(mean_my_unis)</code></pre>
-<pre><code>## [1] 5.181818</code></pre>
+<pre><code>## [1] 4.909091</code></pre>
 
 
 

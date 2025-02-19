@@ -30,27 +30,107 @@ print(my_df)
 **Analyze and graph the data.**
 ```{r}
 anova_data <- aov(Y ~ X, data = my_df)
-summary(anova_data)
+summary <- summary(anova_data)
+print(summary[[1]]$`Pr(>F)`)
 library(ggplot2)
 plot <- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x="Conditions",y="Responses")
 print(plot)
 ```
 
-**For Loop Generation**
+**For Loop Generation- ADJUSTING SAMPLE SIZE**
 ```{r}
-for (i in 1:length(response)) {
-  cat("count =",i,"conditions =",response[i],"\n")
+n <- seq(50, 300, 10)
+for (i in 1:length(n)) {
+  print(n[i])
 }
-length(response)
 
+response_1 <- rnorm(n=n[i], mean=15, sd=2)
+print(response_1)
+response_2 <- rnorm(n=n[i], mean=30, sd=7)
+print(response_2)
+response <- c(response_1, response_2)
+
+my_df_1 <- data.frame (X = "control", Y= response_1)
+print(my_df_1)
+my_df_2 <- data.frame(X = "treatment", Y = response_2)
+print(my_df_2)
+my_df <- rbind(my_df_1, my_df_2)
+print(my_df)
+
+anova_data <- aov(Y ~ X, data = my_df)
+summary_sample <- summary(anova_data)
+print(summary_sample[[1]]$`Pr(>F)`)
+library(ggplot2)
+plot <- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x="Conditions",y="Responses")
+print(plot)
 ```
-
-**Minimum Sample Size**
+**For Loop Generation- ADJUSTING MEAN**
 ```{r}
+n <- sample(1:30)
+for (i in 1:length(n)) {
+  print(n[i])
+}
 
+response_1 <- rnorm(n=100, mean=n[i], sd=2)
+print(response_1)
+response_2 <- rnorm(n=100, mean=n[i], sd=7)
+print(response_2)
+response <- c(response_1, response_2)
+
+my_df_1 <- data.frame (X = "control", Y= response_1)
+print(my_df_1)
+my_df_2 <- data.frame(X = "treatment", Y = response_2)
+print(my_df_2)
+my_df <- rbind(my_df_1, my_df_2)
+print(my_df)
+
+anova_data <- aov(Y ~ X, data = my_df)
+summary_mean <- summary(anova_data)
+print(summary_mean[[1]]$`Pr(>F)`)
+library(ggplot2)
+plot <- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x="Conditions",y="Responses")
+print(plot)
 
 ```
 
+
+**For Loop Generation- ADJUSTING SD**
+```{r}
+n <- sample(1:20)
+for (i in 1:length(n)) {
+  print(n[i])
+}
+
+response_1 <- rnorm(n=100, mean=15, sd=n[i])
+print(response_1)
+response_2 <- rnorm(n=100, mean=30, sd=n[i])
+print(response_2)
+response <- c(response_1, response_2)
+
+my_df_1 <- data.frame (X = "control", Y= response_1)
+print(my_df_1)
+my_df_2 <- data.frame(X = "treatment", Y = response_2)
+print(my_df_2)
+my_df <- rbind(my_df_1, my_df_2)
+print(my_df)
+
+anova_data <- aov(Y ~ X, data = my_df)
+summary_sd <- summary(anova_data)
+print(summary_sd[[1]]$`Pr(>F)`)
+library(ggplot2)
+plot <- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x="Conditions",y="Responses")
+print(plot)
+```
+
+**Comparing p-values**
+```{r}
+print(summary[[1]]$`Pr(>F)`)
+print(summary_sample[[1]]$`Pr(>F)`)
+print(summary_mean[[1]]$`Pr(>F)`)
+print(summary_sd[[1]]$`Pr(>F)`)
+
+```
+**Discussion on p-values**
 ```{r}
 
 ```
