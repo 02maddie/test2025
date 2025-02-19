@@ -131,7 +131,9 @@ print(summary_sd[[1]]$`Pr(>F)`)
 
 ```
 **Discussion on p-values**
-```{r}
+-
+(1) When changing the sample size, the p-value became more significant.
+(2) When changing the mean, the p-value became insignificant. 
+(3) When changing the standard deviation, the p-value became more significant. 
 
-```
 
