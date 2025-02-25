@@ -348,7 +348,8 @@ div.tocify {
 </div>
 
 
-<p><strong>Question 1</strong></p>
+<div id="question-1" class="section level2">
+<h2><strong>Question 1</strong></h2>
 <pre class="r"><code>x &lt;- 1.1
 a &lt;- 2.2
 b &lt;- 3.3
@@ -365,7 +366,9 @@ print(z)</code></pre>
 z &lt;- 3*(x^3)+ 2*(x^2)+1
 print(z)</code></pre>
 <pre><code>## [1] 7.413</code></pre>
-<p><strong>Question 2</strong></p>
+</div>
+<div id="question-2" class="section level2">
+<h2><strong>Question 2</strong></h2>
 <pre class="r"><code>#Part a
 my_vec &lt;- c(1:8,7:1)
 print(my_vec) </code></pre>
@@ -379,15 +382,19 @@ my_vec &lt;- c(5:1)
 my_vec1 &lt;- c(1:5)
 rep(x=my_vec,times=my_vec1)</code></pre>
 <pre><code>##  [1] 5 4 4 3 3 3 2 2 2 2 1 1 1 1 1</code></pre>
-<p><strong>Question 3</strong></p>
+</div>
+<div id="question-3" class="section level2">
+<h2><strong>Question 3</strong></h2>
 <pre class="r"><code>x &lt;- runif(1)
 y &lt;- runif(1)
 r &lt;- tan(y/x)
 theta &lt;- asin(y/r)
 polar &lt;- c(r,theta)
 print(polar)</code></pre>
-<pre><code>## [1] -0.900763 -1.414861</code></pre>
-<p><strong>Question 4</strong></p>
+<pre><code>## [1] 0.02236264 0.78926572</code></pre>
+</div>
+<div id="question-4" class="section level2">
+<h2><strong>Question 4</strong></h2>
 <pre class="r"><code>queue &lt;-c(&quot;sheep&quot;,&quot;fox&quot;,&quot;owl&quot;,&quot;ant&quot;)
 
 #Part a
@@ -418,12 +425,15 @@ print(queue)</code></pre>
 aphid_pos &lt;- which(queue == &quot;aphid&quot;)
 print(aphid_pos)</code></pre>
 <pre><code>## [1] 2</code></pre>
-<p><strong>Question 5</strong></p>
+</div>
+<div id="question-5" class="section level2">
+<h2><strong>Question 5</strong></h2>
 <pre class="r"><code>numbers &lt;- 1:100
 my_vec &lt;- numbers[!(numbers %% 2 == 0 | numbers %% 3 == 0 | numbers %% 7 == 0)]
 print(my_vec)</code></pre>
 <pre><code>##  [1]  1  5 11 13 17 19 23 25 29 31 37 41 43 47 53 55 59 61 65 67 71 73 79 83 85
 ## [26] 89 95 97</code></pre>
+</div>
 
 
 

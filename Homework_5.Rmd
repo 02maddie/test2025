@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 **Question 1**
+-
 ```{r}
 # assign to the variable a single random integer between 3 and 10 using sample function
 n_dims <- sample(3:10, 1)
@@ -56,6 +57,7 @@ typeof(eigen_matrix)
 ```
 
 **Question 2**
+-
 ```{r}
 # my_matrix: 4x4 matrix with random uniform values between 0 and 1
 my_matrix = matrix(runif(16), nrow = 4, ncol = 4)
@@ -100,6 +102,7 @@ typeof(combined_vector)
 
 
 **Question 3**
+-
 
 ```{r}
 # defining my_unis

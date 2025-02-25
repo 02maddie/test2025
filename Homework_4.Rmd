@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 **Question 1**
+-
 ```{r}
 x <- 1.1
 a <- 2.2
@@ -31,6 +32,7 @@ print(z)
 
 
 **Question 2**
+-
 ```{r}
 #Part a
 my_vec <- c(1:8,7:1)
@@ -47,6 +49,7 @@ rep(x=my_vec,times=my_vec1)
 ```
 
 **Question 3**
+-
 ```{r}
 x <- runif(1)
 y <- runif(1)
@@ -57,6 +60,7 @@ print(polar)
 ```
 
 **Question 4**
+-
 ```{r}
 queue <-c("sheep","fox","owl","ant")
 
@@ -90,6 +94,7 @@ print(aphid_pos)
 ```
 
 **Question 5**
+-
 ```{r}
 numbers <- 1:100
 my_vec <- numbers[!(numbers %% 2 == 0 | numbers %% 3 == 0 | numbers %% 7 == 0)]
