@@ -9,6 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 **Write code to create a random data set with a normal distribution and defined standard deviation, sample size, and mean.**
+-
 ```{r}
 response_1 <- rnorm(n=100, mean=15, sd=2)
 print(response_1)
@@ -18,6 +19,7 @@ response <- c(response_1, response_2)
 ```
 
 **Organize these data into a data frame with the appropriate structure.**
+-
 ```{r}
 my_df_1 <- data.frame (X = "control", Y= response_1)
 print(my_df_1)
@@ -28,6 +30,7 @@ print(my_df)
 ```
 
 **Analyze and graph the data.**
+-
 ```{r}
 anova_data <- aov(Y ~ X, data = my_df)
 summary <- summary(anova_data)
@@ -38,6 +41,7 @@ print(plot)
 ```
 
 **For Loop Generation- ADJUSTING SAMPLE SIZE**
+-
 ```{r}
 n <- seq(50, 300, 10)
 for (i in 1:length(n)) {
@@ -65,6 +69,7 @@ plot <- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x="Conditions",y="Respo
 print(plot)
 ```
 **For Loop Generation- ADJUSTING MEAN**
+-
 ```{r}
 n <- sample(1:30)
 for (i in 1:length(n)) {
@@ -95,6 +100,7 @@ print(plot)
 
 
 **For Loop Generation- ADJUSTING SD**
+-
 ```{r}
 n <- sample(1:20)
 for (i in 1:length(n)) {
@@ -123,6 +129,7 @@ print(plot)
 ```
 
 **Comparing p-values**
+-
 ```{r}
 print(summary[[1]]$`Pr(>F)`)
 print(summary_sample[[1]]$`Pr(>F)`)
