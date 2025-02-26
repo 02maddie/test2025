@@ -1,0 +1,78 @@
+---
+title: "Homework 7"
+author: "Maddie Winer"
+date: "2025-02-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Question 1**
+-
+There are 150 observations and 5 variables in the dataset (iris).
+```{r}
+library(tidyverse)
+data(iris)
+class(iris)
+```
+
+**Question 2**
+-
+There are 56 observations and 5 variables in the dataset (iris1).
+```{r}
+iris1 <- iris%>%
+  filter(Species %in% c("virginica","versicolor"), Sepal.Length > 6.0, Sepal.Width > 2.5)
+```
+
+**Question 3**
+-
+There are 56 observations and 3 variables in the dataset (iris2).
+```{r}
+iris2 <- iris1%>%
+  select("Species","Sepal.Length","Sepal.Width")
+```
+
+**Question 4**
+-
+```{r}
+iris3 <- iris2%>%
+  arrange(by=Sepal.Length)
+head(iris3)
+```
+
+**Question 5**
+-
+```{r}
+iris4 <- iris3%>%
+  mutate(Sepal.Area=Sepal.Length*Sepal.Width)
+```
+
+**Question 6**
+-
+```{r}
+iris5 <- iris4%>%
+  summarize(Avg.Sepal.Length=mean(Sepal.Length),Avg.Sepal.Width=mean(Sepal.Width),Sample.Size=n())
+print(iris5)
+```
+
+**Question 7**
+-
+```{r}
+iris6 <- iris%>%
+  summarize(Avg.Sepal.Length=mean(Sepal.Length),Avg.Sepal.Width=mean(Sepal.Width),Sample.Size=n())
+print(iris6)
+```
+
+**Question 8**
+-
+We have used pipes for all previous questions. 
+
+**Question 9**
+-
+```{r}
+iris%>%
+  pivot_longer(col=Sepal.Length:Petal.Width, names_to="Measure",values_to="Value")
+```
+
