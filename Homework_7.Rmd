@@ -20,16 +20,16 @@ class(iris)
 
 **Question 2**
 -
-There are 56 observations and 3 variables in the dataset (iris1).
+There are 28 observations and 5 variables in the dataset (iris1).
 ```{r}
 iris1 <- iris%>%
-  select(-(Petal.Length:Petal.Width))%>%
-  filter(Species %in% c("virginica","versicolor"), Sepal.Length > 6.0, Sepal.Width > 2.5)
+  #select(-(Petal.Length:Petal.Width))%>%
+  filter(Species == c("virginica","versicolor"), Sepal.Length > 6.0, Sepal.Width > 2.5)
 ```
 
 **Question 3**
 -
-There are 56 observations and 3 variables in the dataset (iris2).
+There are 28 observations and 3 variables in the dataset (iris2).
 ```{r}
 iris2 <- iris1%>%
   select("Species","Sepal.Length","Sepal.Width")
@@ -61,14 +61,27 @@ print(iris5)
 **Question 7**
 -
 ```{r}
-iris6 <- iris%>%
+iris6 <- iris4%>%
+  group_by(Species) %>%
   summarize(Avg.Sepal.Length=mean(Sepal.Length),Avg.Sepal.Width=mean(Sepal.Width),Sample.Size=n())
 print(iris6)
 ```
 
 **Question 8**
 -
-We have used pipes for all previous questions. 
+```{r}
+irisFinal<- iris%>%
+  filter(Species == c("virginica","versicolor"), Sepal.Length > 6.0, Sepal.Width > 2.5)%>% #iris1
+  select("Species","Sepal.Length","Sepal.Width")%>% #iris2
+  arrange(by=Sepal.Length)%>% #iris3
+  mutate(Sepal.Area=Sepal.Length*Sepal.Width)%>% #iris4
+  group_by(Species) %>% #iris6
+  summarize(Avg.Sepal.Length=mean(Sepal.Length),Avg.Sepal.Width=mean(Sepal.Width),Sample.Size=n()) #iris6
+print(irisFinal)
+  
+  
+
+```
 
 **Question 9**
 -
