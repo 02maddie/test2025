@@ -20,9 +20,10 @@ class(iris)
 
 **Question 2**
 -
-There are 56 observations and 5 variables in the dataset (iris1).
+There are 56 observations and 3 variables in the dataset (iris1).
 ```{r}
 iris1 <- iris%>%
+  select(-(Petal.Length:Petal.Width))%>%
   filter(Species %in% c("virginica","versicolor"), Sepal.Length > 6.0, Sepal.Width > 2.5)
 ```
 

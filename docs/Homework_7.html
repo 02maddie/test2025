@@ -368,8 +368,9 @@ class(iris)</code></pre>
 </div>
 <div id="question-2" class="section level2">
 <h2><strong>Question 2</strong></h2>
-<p>There are 56 observations and 5 variables in the dataset (iris1).</p>
+<p>There are 56 observations and 3 variables in the dataset (iris1).</p>
 <pre class="r"><code>iris1 &lt;- iris%&gt;%
+  select(-(Petal.Length:Petal.Width))%&gt;%
   filter(Species %in% c(&quot;virginica&quot;,&quot;versicolor&quot;), Sepal.Length &gt; 6.0, Sepal.Width &gt; 2.5)</code></pre>
 </div>
 <div id="question-3" class="section level2">
