@@ -42,6 +42,7 @@ library(ggplot2)
 plot <- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x="Conditions",y="Responses")
 print(plot)
 ```
+
 Part 4
 -
 **For Loop Generation- ADJUSTING SAMPLE SIZE**
@@ -71,6 +72,7 @@ library(ggplot2)
 plot <- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x="Conditions",y="Responses")
 print(plot)
 ```
+
 Part 5
 -
 **For Loop Generation- ADJUSTING MEAN**
@@ -133,6 +135,7 @@ library(ggplot2)
 plot <- ggplot(my_df, aes(X, Y)) + geom_boxplot() + labs(x="Conditions",y="Responses")
 print(plot)
 ```
+
 Part 7
 -
 **Comparing p-values**
