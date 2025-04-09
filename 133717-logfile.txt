@@ -1,0 +1,32 @@
+logfile: 133717-logfile.txt
+#######################
+R version: R version 4.4.1 (2024-06-14)
+platform: aarch64-apple-darwin20
+running: macOS Sonoma 14.6.1
+#----------------------
+random number seed: 103278531
+timestamp: Wed Mar 26 13:37:17 2025
+#----------------------
+libraries loaded:
+devtools pryr upscaler usethis
+#######################
+.
+INFO  [26-Mar 13:37:18] memory_used=120 MB; i= i
+.
+INFO  [26-Mar 13:37:18] memory_used=120 MB; i= i
+.
+INFO  [26-Mar 13:37:18] memory_used=120 MB; i= i
+.
+INFO  [26-Mar 13:37:18] memory_used=120 MB; i= i
+.
+INFO  [26-Mar 13:37:18] memory_used=120 MB; i= i
+.
+INFO  [26-Mar 13:37:18] memory_used=121 MB; i= i
+.
+INFO  [26-Mar 13:37:18] memory_used=128 MB; i= i
+.
+INFO  [26-Mar 13:37:18] memory_used=200 MB; i= i
+.
+INFO  [26-Mar 13:37:19] memory_used=920 MB; i= i
+10
+INFO  [26-Mar 13:37:23] memory_used=8120 MB; i= i
