@@ -8,7 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-**Create FOUR visualizations using ggplot**
+**Create FOUR visualizations using ggplot**  
 Download libraries and packages for data.
 ```{r}
 library(ggplot2)
@@ -23,9 +23,7 @@ library(beeswarm)
 tuesdata <- tidytuesdayR::tt_load('2022-02-01')
 #tuesdata <- tidytuesdayR::tt_load(2022, week = 5)
 
-dogs <- tuesdata$breed_traits
-
-
+breed_traits <- tuesdata$breed_traits
 ```
 
 
@@ -33,7 +31,7 @@ dogs <- tuesdata$breed_traits
 -
 Waffle plot to look at range of subplots at site.
 ```{r}
-tabled_data <- as.data.frame(table(coat_type=dogs$`Coat Type`))
+tabled_data <- as.data.frame(table(coat_type=breed_traits$`Coat Type`))
 
 waffle <- ggplot(data=tabled_data) +
   aes(fill = coat_type, values = Freq) +
@@ -49,7 +47,7 @@ waffle
 -
 Ridgeline plot compare coat type with how well the breed 
 ```{r}
-d <- data.frame(Breed=breed_traits$Breed ,With_Children =breed_traits$`Good With Young Children`, Other_Dogs = breed_traits$`Good With Other Dogs`, Coat_Type=breed_traits$`Coat Type`, Bark_Rating = breed_traits$`Barking Level`)
+d <- data.frame(Breed=breed_traits$Breed ,With_Children=breed_traits$`Good With Young Children`, Other_Dogs = breed_traits$`Good With Other Dogs`, Coat_Type=breed_traits$`Coat Type`, Bark_Rating = breed_traits$`Barking Level`)
 ridgeline <- ggplot(data=d) +
   aes(x=With_Children,y=Coat_Type,fill=Coat_Type) + 
   ggridges::geom_density_ridges() +
@@ -98,3 +96,5 @@ Lollipop <- ggplot(data=edit_d) +
     plot.title = element_text(hjust = 0))  
 Lollipop
 ```
+
+
