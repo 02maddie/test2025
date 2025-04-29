@@ -1,20 +1,4 @@
----
-title: "Homework_9"
-author: "Maddie Winer"
-date: "2025-03-26"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(root.dir = "~/Desktop/UVM/CompBio Spring2025/CompBio/Week 2/test2025")
-
-```
-**Question 1**
--
-Setup upscaler and other packages into code.
-
-```{r}
+#Preliminary
 
 library(devtools)
 library(usethis)
@@ -23,12 +7,10 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 
-```
 
-**Question 2**
--
-Using for loops, iterate through each year’s folders to gather the file names of these “countdata” .csv files. 
-```{r}
+#Question 2**
+# Using for loops, iterate through each year’s folders to gather the file names of these “countdata” .csv files. 
+
 
 filesearch <- list.files("~/Desktop/UVM/CompBio Spring2025/CompBio/Week 2/test2025/NEON_count-landbird")
 
@@ -40,70 +22,65 @@ for(i in 1:10) {
 }
 filenames
 
-```
 
-**Question 3**
--
-Pseudocode to generate functions.
-```{r}
+
+# **Question 3**
+#  Pseudocode to generate functions.
+
 
 #2015
 setwd("~/Desktop/UVM/CompBio Spring2025/CompBio/Week 2/test2025/NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2015-06.basic.20250129T000730Z.RELEASE-2025")
-data2015 <-read.csv(file= "NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2015-06.basic.20250129T000730Z.RELEASE-2025/NEON.D01.BART.DP1.10003.001.brd_countdata.2015-06.basic.20241118T065914Z.csv")
+data2015 <-read.csv(file= "NEON.D01.BART.DP1.10003.001.brd_countdata.2015-06.basic.20241118T065914Z.csv")
 
 #2016
 setwd("~/Desktop/UVM/CompBio Spring2025/CompBio/Week 2/test2025/NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2016-06.basic.20250129T000730Z.RELEASE-2025")
-data2016 <-read.csv(file="NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2016-06.basic.20250129T000730Z.RELEASE-2025/NEON.D01.BART.DP1.10003.001.brd_countdata.2016-06.basic.20241118T142515Z.csv")
+data2016 <-read.csv(file="NEON.D01.BART.DP1.10003.001.brd_countdata.2016-06.basic.20241118T142515Z.csv")
 
 #2017
 setwd("~/Desktop/UVM/CompBio Spring2025/CompBio/Week 2/test2025/NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2017-06.basic.20250129T000730Z.RELEASE-2025")
-data2017 <-read.csv(file="NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2017-06.basic.20250129T000730Z.RELEASE-2025/NEON.D01.BART.DP1.10003.001.brd_countdata.2017-06.basic.20241118T043125Z.csv")
+data2017 <-read.csv(file="NEON.D01.BART.DP1.10003.001.brd_countdata.2017-06.basic.20241118T043125Z.csv")
 
 #2018
 setwd("~/Desktop/UVM/CompBio Spring2025/CompBio/Week 2/test2025/NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2018-06.basic.20250129T000730Z.RELEASE-2025")
-data2018 <-read.csv(file="NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2018-06.basic.20250129T000730Z.RELEASE-2025/NEON.D01.BART.DP1.10003.001.brd_countdata.2018-06.basic.20241118T105926Z.csv")
+data2018 <-read.csv(file="NEON.D01.BART.DP1.10003.001.brd_countdata.2018-06.basic.20241118T105926Z.csv")
 
 #2019
 setwd("~/Desktop/UVM/CompBio Spring2025/CompBio/Week 2/test2025/NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2019-06.basic.20250129T000730Z.RELEASE-2025")
-data2019 <-read.csv(file="NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2019-06.basic.20250129T000730Z.RELEASE-2025/NEON.D01.BART.DP1.10003.001.brd_countdata.2019-06.basic.20241118T064156Z.csv")
+data2019 <-read.csv(file="NEON.D01.BART.DP1.10003.001.brd_countdata.2019-06.basic.20241118T064156Z.csv")
 
 #2020
 setwd("~/Desktop/UVM/CompBio Spring2025/CompBio/Week 2/test2025/NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2020-06.basic.20250129T000730Z.RELEASE-2025")
-data2020a <-read.csv(file="NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2020-06.basic.20250129T000730Z.RELEASE-2025/NEON.D01.BART.DP1.10003.001.brd_countdata.2020-06.basic.20241118T184512Z.csv")
+data2020a <-read.csv(file="NEON.D01.BART.DP1.10003.001.brd_countdata.2020-06.basic.20241118T184512Z.csv")
 
 setwd("~/Desktop/UVM/CompBio Spring2025/CompBio/Week 2/test2025/NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2020-07.basic.20250129T000730Z.RELEASE-2025")
-data2020b <-read.csv(file="NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2020-07.basic.20250129T000730Z.RELEASE-2025/NEON.D01.BART.DP1.10003.001.brd_countdata.2020-07.basic.20241118T010504Z.csv")
+data2020b <-read.csv(file="NEON.D01.BART.DP1.10003.001.brd_countdata.2020-07.basic.20241118T010504Z.csv")
 
 #2021
 setwd("~/Desktop/UVM/CompBio Spring2025/CompBio/Week 2/test2025/NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2021-06.basic.20250129T000730Z.RELEASE-2025")
-data2021 <-read.csv(file="NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2021-06.basic.20250129T000730Z.RELEASE-2025/NEON.D01.BART.DP1.10003.001.brd_countdata.2021-06.basic.20241118T105538Z.csv")
+data2021 <-read.csv(file="NEON.D01.BART.DP1.10003.001.brd_countdata.2021-06.basic.20241118T105538Z.csv")
 
 #2022
 setwd("~/Desktop/UVM/CompBio Spring2025/CompBio/Week 2/test2025/NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2022-06.basic.20250129T000730Z.RELEASE-2025")
-data2022 <-read.csv(file="NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2022-06.basic.20250129T000730Z.RELEASE-2025/NEON.D01.BART.DP1.10003.001.brd_countdata.2022-06.basic.20241118T033934Z.csv")
+data2022 <-read.csv(file="NEON.D01.BART.DP1.10003.001.brd_countdata.2022-06.basic.20241118T033934Z.csv")
 
 #2023
 setwd("~/Desktop/UVM/CompBio Spring2025/CompBio/Week 2/test2025/NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2023-06.basic.20250129T000730Z.RELEASE-2025")
-data2023 <-read.csv(file="NEON_count-landbird/NEON.D01.BART.DP1.10003.001.2023-06.basic.20250129T000730Z.RELEASE-2025/NEON.D01.BART.DP1.10003.001.brd_countdata.2023-06.basic.20241118T091043Z.csv")
-```
+data2023 <-read.csv(file="NEON.D01.BART.DP1.10003.001.brd_countdata.2023-06.basic.20241118T091043Z.csv")
 
-```{r}
+
+
 # Cleaning the data for any empty/missing cases
 remove_missing_rows <- function(filename){
   cleaned_data <- na.omit(filename)
   return(cleaned_data)
 }
 
-# Extract the year from each file name
-print(years)
-
-
 # Calculate Abundance for each year (Total number of individuals found)
 calculate_abundance <- function(filenames) {
   abundance <- nrow(filenames)
   return(abundance)
 }
-  
+
 calculate_richness <- function(filenames) {
   richness <- n_distinct(filenames$scientificName)
   return(richness)
@@ -177,47 +154,8 @@ data1 <- rbind(aa,bb,cc,dd,ee,ff,gg,hh,ii,jj)
 colnames(data1) <- c("year","abundance", "richness")
 data1
 
-#linear regression
-regression <- ggplot(data1, aes(x = abundance, y = richness)) +
-  geom_point() +  
-  geom_smooth(method = "lm", se = FALSE, color = "blue") +  
-  labs(title = "Linear Regression: Species Richness vs Abundance",
-       x = "Abundance",
-       y = "Species Richness")
-regression
-
-# Generate histograms for both Abundance and Species Richness (S) and store the plots
-abundance_histogram <- ggplot(data1, aes(x = abundance)) +
-  geom_histogram(fill = "goldenrod", color = "black",) +
-  labs(title = "Histogram- Abundance", x = "Abundance", y = "Frequency") +
-  theme_minimal()
-abundance_histogram
-
-richness_histogram <- ggplot(data1, aes(x = richness)) +
-  geom_histogram(fill = "coral", color = "black", ) + 
-  labs(title = "Histogram of Species Richness", x = "Species Richness", y = "Frequency") +
-  theme_minimal()
-richness_histogram
-```
-**Question 4**
-- 
-Empty dataframes for summary statistics.
-```{r}
-#Raw Abundance and Richness Data per Year
-data1 <- rbind(aa,bb,cc,dd,ee,ff,gg,hh,ii,jj)
-colnames(data1) <- c("year","abundance", "richness")
-data1
-
-#Regression Summary Statistics
-#summary_stat <- 
+write.csv(data1, "Raw_data.csv")
 
 
-```
 
-**Question 5**
-- 
-Empty dataframes for summary statistics.
-```{r}
-
-```
 
