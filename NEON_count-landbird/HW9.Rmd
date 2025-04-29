@@ -1,5 +1,5 @@
 ---
-title: "HW9_Test"
+title: "Homework 9"
 author: "Maddie Winer"
 date: "2025-04-16"
 output: html_document
@@ -41,7 +41,5 @@ regression_summary <- summary(model)
 regression_summary<- as.data.frame(regression_summary$coefficients)
 colnames(regression_summary) <- c("Estimate", "StdError", "tValue", "pValue")
 regression_summary
-
-
 
 ```

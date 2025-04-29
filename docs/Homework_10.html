@@ -365,7 +365,7 @@ tuesdata &lt;- tidytuesdayR::tt_load(&#39;2022-02-01&#39;)</code></pre>
 <pre><code>## --- There are 3 files available ---
 ## 
 ## 
-## ── Downloading files ───────────────────────────────────────────────────────────
+## ── Downloading files ────────────────────────────────────────────
 ## 
 ##   1 of 3: &quot;breed_traits.csv&quot;
 ##   2 of 3: &quot;trait_description.csv&quot;
@@ -407,10 +407,10 @@ Each dot represents one breed.</p>
   aes(x=Coat_Type,y=Other_Dogs,color=Coat_Type) + 
   ggbeeswarm::geom_beeswarm(method = &quot;center&quot;,size=2) 
 beeswarm</code></pre>
-<pre><code>## Warning: In `position_beeswarm`, method `center` discretizes the data axis (a.k.a the
-## continuous or non-grouped axis).
-## This may result in changes to the position of the points along that axis,
-## proportional to the value of `cex`.
+<pre><code>## Warning: In `position_beeswarm`, method `center` discretizes the data
+## axis (a.k.a the continuous or non-grouped axis).
+## This may result in changes to the position of the points along
+## that axis, proportional to the value of `cex`.
 ## This warning is displayed once per session.</code></pre>
 <p><img src="Homework_10_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
