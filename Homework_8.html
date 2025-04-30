@@ -367,12 +367,12 @@ z &lt;- data.frame(1:3000,z)
 names(z) &lt;- list(&quot;ID&quot;,&quot;myVar&quot;)
 z &lt;- z[z$myVar&gt;0,]
 str(z)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    1742 obs. of  2 variables:
-##  $ ID   : int  1 2 3 5 7 8 9 10 14 16 ...
-##  $ myVar: num  0.717 1.644 1.363 0.832 0.286 ...</code></pre>
+<pre><code>## &#39;data.frame&#39;:    1722 obs. of  2 variables:
+##  $ ID   : int  1 2 4 5 7 8 9 10 12 14 ...
+##  $ myVar: num  0.715 0.992 1.271 1.378 0.216 ...</code></pre>
 <pre class="r"><code>summary(z$myVar)</code></pre>
 <pre><code>##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-## 0.000134 0.380037 0.751109 0.872370 1.241853 3.955696</code></pre>
+## 0.000369 0.357862 0.743560 0.863523 1.225528 3.488606</code></pre>
 <pre class="r"><code>#plot histogram 
 p1 &lt;- ggplot(data=z, aes(x=myVar, y=..density..)) +
   geom_histogram(color=&quot;grey60&quot;,fill=&quot;cornsilk&quot;,linewidth=0.2) 
@@ -402,24 +402,24 @@ p1 &lt;-  p1 +  geom_density(linetype=&quot;dotted&quot;,size=0.75)</code></pre>
 normPars &lt;- fitdistr(z$myVar,&quot;normal&quot;)
 print(normPars)</code></pre>
 <pre><code>##       mean          sd    
-##   0.87236952   0.63262510 
-##  (0.01515732) (0.01071784)</code></pre>
+##   0.86352320   0.63680477 
+##  (0.01534581) (0.01085112)</code></pre>
 <pre class="r"><code>str(normPars)</code></pre>
 <pre><code>## List of 5
-##  $ estimate: Named num [1:2] 0.872 0.633
+##  $ estimate: Named num [1:2] 0.864 0.637
 ##   ..- attr(*, &quot;names&quot;)= chr [1:2] &quot;mean&quot; &quot;sd&quot;
-##  $ sd      : Named num [1:2] 0.0152 0.0107
+##  $ sd      : Named num [1:2] 0.0153 0.0109
 ##   ..- attr(*, &quot;names&quot;)= chr [1:2] &quot;mean&quot; &quot;sd&quot;
-##  $ vcov    : num [1:2, 1:2] 0.00023 0 0 0.000115
+##  $ vcov    : num [1:2, 1:2] 0.000235 0 0 0.000118
 ##   ..- attr(*, &quot;dimnames&quot;)=List of 2
 ##   .. ..$ : chr [1:2] &quot;mean&quot; &quot;sd&quot;
 ##   .. ..$ : chr [1:2] &quot;mean&quot; &quot;sd&quot;
-##  $ n       : int 1742
-##  $ loglik  : num -1674
+##  $ n       : int 1722
+##  $ loglik  : num -1666
 ##  - attr(*, &quot;class&quot;)= chr &quot;fitdistr&quot;</code></pre>
 <pre class="r"><code>normPars$estimate[&quot;mean&quot;] </code></pre>
 <pre><code>##      mean 
-## 0.8723695</code></pre>
+## 0.8635232</code></pre>
 <pre class="r"><code>#plot normal probability density
 meanML &lt;- normPars$estimate[&quot;mean&quot;]
 sdML &lt;- normPars$estimate[&quot;sd&quot;]
@@ -471,7 +471,6 @@ pSpecial &lt;- ggplot(data=z, aes(x=myVar/(max(myVar + 0.1)), y=..density..)) +
 
 betaPars &lt;- fitdistr(x=z$myVar/max(z$myVar + 0.1),start=list(shape1=1,shape2=2),&quot;beta&quot;)</code></pre>
 <pre><code>## Warning in densfun(x, parm[1], parm[2], ...): NaNs produced
-## Warning in densfun(x, parm[1], parm[2], ...): NaNs produced
 ## Warning in densfun(x, parm[1], parm[2], ...): NaNs produced
 ## Warning in densfun(x, parm[1], parm[2], ...): NaNs produced
 ## Warning in densfun(x, parm[1], parm[2], ...): NaNs produced</code></pre>
@@ -897,10 +896,10 @@ d &lt;- d[d$height&gt;0,]
 str(d)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    29 obs. of  2 variables:
 ##  $ ID    : int  1 2 3 4 5 6 7 8 9 10 ...
-##  $ height: num  180 178 179 177 177 ...</code></pre>
+##  $ height: num  179 179 178 179 178 ...</code></pre>
 <pre class="r"><code>summary(d$height)</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##   176.6   177.8   178.4   178.4   179.1   180.2</code></pre>
+##   176.7   177.9   178.7   178.7   179.5   180.9</code></pre>
 <pre class="r"><code>#plot histogram
 p1 &lt;- ggplot(data=d, aes(x=height, y=..density..)) +
   geom_histogram(color=&quot;grey60&quot;,fill=&quot;cornsilk&quot;,linewidth=0.2) 
